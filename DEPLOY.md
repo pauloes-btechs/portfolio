@@ -22,13 +22,13 @@ git push -u origin main
 3. Before the first deploy, add Environment Variables (all three environments):
    - `RESEND_API_KEY` — from resend.com → API Keys
    - `CONTACT_TO` — where messages land (e.g. `pauloes@btechs.io`)
-   - `CONTACT_FROM` — e.g. `Portfolio <hello@yourdomain.com>` (domain must be
+   - `CONTACT_FROM` — e.g. `Portfolio <hello@pauloes.com>` (domain must be
      verified in Resend first; until then you can use `onboarding@resend.dev`)
 4. Deploy. You'll get a `*.vercel.app` URL immediately.
 
 ## 3 · Your domain (Cloudflare)
 
-1. Vercel → Project → **Settings → Domains** → add `yourdomain.com` (and `www`).
+1. Vercel → Project → **Settings → Domains** → add `pauloes.com` (and `www.pauloes.com`).
    Vercel shows the target, currently a CNAME to `cname.vercel-dns.com`.
 2. Cloudflare dashboard → your domain → **DNS**:
    - `CNAME  @    cname.vercel-dns.com` (or the A record Vercel specifies for apex)
@@ -45,6 +45,6 @@ git push -u origin main
 
 ## 5 · Last touch
 
-In `lib/data.js`, set `site.url` to `https://yourdomain.com` (fixes canonical
+In `lib/data.js`, confirm `site.url` is `https://pauloes.com` (already set) (fixes canonical
 URLs and OpenGraph), commit, push — Vercel redeploys automatically on every push
 to `main`.
