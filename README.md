@@ -37,4 +37,4 @@ lib/data.js             # ALL site content — edit facts here, nothing is hardc
 1. Push this repo to `github.com/pauloes-btechs/<repo>`.
 2. Import it in Vercel; set `RESEND_API_KEY`, `CONTACT_TO`, `CONTACT_FROM`.
 3. Point your domain at Vercel via Cloudflare DNS (CNAME, **DNS-only/gray cloud**).
-4. Update `site.url` in `lib/data.js` to the real domain.
+4. `site.url` is already set to `https://pauloes.com` in `lib/data.js`.
