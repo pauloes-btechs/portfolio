@@ -249,3 +249,107 @@ main { position: relative; z-index: 1; }
   font-size: 13px; color: var(--ink-3);
 }
 .footer-inner .spacer { flex: 1; }
+
+/* ============================================================
+   v2 — story journey, era atmospheres, badges, fellowships
+   ============================================================ */
+
+/* story hero */
+.story-hero { padding: 100px 0 30px; text-align: center; }
+.story-hero .kicker {
+  font-family: var(--mono); font-size: 13px; color: var(--green-soft);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px;
+}
+.story-hero h1 { font-size: clamp(34px, 5.4vw, 54px); line-height: 1.08; letter-spacing: -0.5px; }
+.story-hero h1 .accent { color: var(--blue-soft); }
+.story-hero .sub { margin: 18px auto 0; max-width: 560px; color: var(--ink-2); font-size: 16.5px; }
+.scroll-cue { margin-top: 34px; color: var(--green-soft); font-size: 18px; animation: cue 1.8s ease-in-out infinite; }
+@keyframes cue { 0%,100% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(8px); opacity: 1; } }
+
+/* journey + spine */
+.journey { position: relative; z-index: 1; transition: background 1.2s ease; }
+.spine {
+  position: sticky; top: 0; height: 100vh; float: left;
+  width: 60px; margin-left: max(calc((100vw - var(--maxw)) / 2 - 30px), 8px);
+  pointer-events: none; z-index: 2;
+}
+@media (max-width: 1200px) { .spine { display: none; } }
+.spine-track {
+  position: absolute; left: 50%; top: 4%; bottom: 4%; width: 2px;
+  transform: translateX(-50%);
+  background: repeating-linear-gradient(180deg, var(--line) 0 6px, transparent 6px 12px);
+}
+.spine-fill {
+  position: absolute; left: 50%; top: 4%; max-height: 92%; width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--blue), var(--green-soft));
+  box-shadow: 0 0 10px var(--glow-blue);
+  transition: height .2s linear;
+}
+.spine-block {
+  position: absolute; left: 50%; transform: translate(-50%, -50%);
+  width: 26px; height: 26px; border-radius: 6px;
+  border: 1.5px solid var(--blue); background: var(--panel);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 12px; color: var(--green-soft);
+  transition: border-color .5s, box-shadow .5s, background .5s;
+}
+.spine-block.sealed {
+  border-color: var(--green-soft);
+  background: rgba(12,163,12,0.15);
+  box-shadow: 0 0 14px var(--glow-green);
+}
+
+/* chapters */
+.chapter {
+  min-height: 92vh; display: flex; align-items: center;
+  padding: 60px 24px; position: relative;
+  opacity: 0; transform: translateY(34px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+.chapter.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .chapter { opacity: 1; transform: none; min-height: auto; } }
+.chapter-inner { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+.chapter-year {
+  font-family: var(--mono); font-size: clamp(56px, 9vw, 110px); font-weight: 700;
+  color: transparent; -webkit-text-stroke: 1px var(--line);
+  line-height: 1; margin-bottom: -18px; user-select: none;
+}
+.chapter-head { display: flex; gap: 20px; align-items: center; margin-top: 26px; }
+.chapter-head h2 { font-size: clamp(22px, 3.4vw, 32px); line-height: 1.18; letter-spacing: -0.3px; }
+.chapter-meta { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); margin-top: 6px; }
+.chapter-text { margin-top: 20px; font-size: 16.5px; line-height: 1.78; color: var(--ink-2); }
+.chapter-foot { margin-top: 28px; display: flex; gap: 26px; align-items: center; flex-wrap: wrap; }
+.chapter-stat { display: flex; flex-direction: column; }
+.chapter-stat .n { font-size: 30px; font-weight: 750; color: var(--green-soft); }
+.chapter-stat .l { font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .7px; margin-top: 2px; }
+
+/* era atmospheres — each chapter carries its own backdrop wash */
+.chapter.era-foundation  { background: radial-gradient(900px 60% at 15% 50%, rgba(57,135,229,0.07), transparent 70%); }
+.chapter.era-fellowship  { background: radial-gradient(900px 60% at 85% 40%, rgba(25,158,112,0.08), transparent 70%); }
+.chapter.era-enterprise  { background: radial-gradient(900px 60% at 20% 35%, rgba(57,135,229,0.10), transparent 70%); }
+.chapter.era-founder     { background: radial-gradient(900px 60% at 80% 55%, rgba(12,163,12,0.09), transparent 70%); }
+.journey-end { min-height: 70vh; }
+
+/* per-page atmosphere for role pages */
+.page-founder    { background: radial-gradient(1100px 40% at 85% 0%, rgba(12,163,12,0.06), transparent 70%); }
+.page-enterprise { background: radial-gradient(1100px 40% at 15% 0%, rgba(57,135,229,0.08), transparent 70%); }
+.page-fellowship { background: radial-gradient(1100px 40% at 50% 0%, rgba(25,158,112,0.07), transparent 70%); }
+
+/* badges on cards + role heroes */
+.card-head { display: flex; align-items: center; gap: 14px; }
+.role-hero .hero-head { display: flex; align-items: center; gap: 20px; }
+.card.fellowship { border-left: 3px solid var(--aqua); }
+.card.nonprofit  { border-left: 3px solid var(--green-soft); }
+.card.freelance  { border-left: 3px solid var(--orange); }
+
+/* home story teaser band */
+.story-band {
+  margin: 54px 0 0; padding: 30px 34px;
+  background: linear-gradient(90deg, rgba(57,135,229,0.10), rgba(12,163,12,0.08));
+  border: 1px solid var(--line); border-radius: var(--radius);
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.story-band .t { font-size: 19px; font-weight: 700; }
+.story-band .s { color: var(--ink-3); font-size: 14px; margin-top: 3px; }
+.story-band .spacer { flex: 1; }

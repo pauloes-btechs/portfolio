@@ -1,7 +1,6 @@
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import ChainCanvas from "../components/ChainCanvas";
 import { site } from "../lib/data";
 
 export const metadata = {
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <ChainCanvas />
         <Nav />
         <main>{children}</main>
         <Footer />

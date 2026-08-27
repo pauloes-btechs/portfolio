@@ -1,10 +1,13 @@
 import ContactForm from "../../components/ContactForm";
+import ChainCanvas from "../../components/ChainCanvas";
 import { site } from "../../lib/data";
 
 export const metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (
+    <>
+    <ChainCanvas variant="minimal" />
     <div className="wrap">
       <section className="role-hero">
         <h1>Get in <span className="co">touch</span></h1>
@@ -19,5 +22,6 @@ export default function ContactPage() {
         <ContactForm />
       </section>
     </div>
+    </>
   );
 }
