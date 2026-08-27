@@ -3,16 +3,30 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Animated blockchain background:
- *  - drifting nodes that link up when near each other (network graph)
- *  - a slow "chain" of blocks along the lower band that fill, seal, and connect
- *  - gentle parallax on scroll
+ * Animated blockchain background with per-page atmospheres.
+ * variants:
+ *   home       — full network + sealing block chain (blue/green)
+ *   founder    — denser, green-weighted network + chain
+ *   enterprise — orderly blue network, no chain (grid-calm)
+ *   fellowship — sparse aqua/violet constellation, no chain
+ *   story      — very sparse drift; the page draws its own spine
+ *   minimal    — faint nodes only (contact)
  * Respects prefers-reduced-motion (renders a single static frame).
  */
-export default function ChainCanvas() {
+const VARIANTS = {
+  home:       { density: 42000, greenShare: 0.30, chain: true,  linkDist: 130, glow: [0.75, 0.15, "57,135,229"] },
+  founder:    { density: 34000, greenShare: 0.55, chain: true,  linkDist: 140, glow: [0.25, 0.20, "12,163,12"] },
+  enterprise: { density: 40000, greenShare: 0.10, chain: false, linkDist: 120, glow: [0.80, 0.12, "57,135,229"] },
+  fellowship: { density: 60000, greenShare: 0.40, chain: false, linkDist: 150, glow: [0.50, 0.10, "25,158,112"] },
+  story:      { density: 90000, greenShare: 0.35, chain: false, linkDist: 160, glow: [0.85, 0.30, "57,135,229"] },
+  minimal:    { density: 110000, greenShare: 0.25, chain: false, linkDist: 110, glow: [0.50, 0.85, "57,135,229"] },
+};
+
+export default function ChainCanvas({ variant = "home" }) {
   const ref = useRef(null);
 
   useEffect(() => {
+    const V = VARIANTS[variant] || VARIANTS.home;
     const canvas = ref.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -28,14 +42,14 @@ export default function ChainCanvas() {
     // --- network nodes ---
     let nodes = [];
     function seedNodes() {
-      const count = Math.max(26, Math.floor((w * h) / 42000));
+      const count = Math.max(18, Math.floor((w * h) / V.density));
       nodes = Array.from({ length: count }, () => ({
         x: rand(0, w),
         y: rand(0, h),
         vx: rand(-0.12, 0.12),
         vy: rand(-0.09, 0.09),
         r: rand(1.2, 2.6),
-        g: Math.random() < 0.3, // some nodes are green
+        g: Math.random() < V.greenShare, // era-weighted green share
       }));
     }
 
@@ -74,7 +88,7 @@ export default function ChainCanvas() {
         if (n.y < -20) n.y = h + 20; if (n.y > h + 20) n.y = -20;
       }
       // links
-      const maxD = 130;
+      const maxD = V.linkDist;
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const a = nodes[i], b = nodes[j];
@@ -163,14 +177,15 @@ export default function ChainCanvas() {
     function frame(t) {
       ctx.clearRect(0, 0, w, h);
       // deep vignette glow
-      const grad = ctx.createRadialGradient(w * 0.75, h * 0.15, 60, w * 0.75, h * 0.15, w * 0.7);
-      grad.addColorStop(0, "rgba(57,135,229,0.05)");
+      const [gx, gy, gc] = V.glow;
+      const grad = ctx.createRadialGradient(w * gx, h * gy, 60, w * gx, h * gy, w * 0.7);
+      grad.addColorStop(0, `rgba(${gc},0.06)`);
       grad.addColorStop(1, "rgba(0,0,0,0)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
 
       drawNetwork(t);
-      drawChain(t);
+      if (V.chain) drawChain(t);
       if (!reduced) raf = requestAnimationFrame(frame);
     }
 
@@ -185,7 +200,7 @@ export default function ChainCanvas() {
       window.removeEventListener("resize", resize);
       window.removeEventListener("scroll", onScroll);
     };
-  }, []);
+  }, [variant]);
 
   return <canvas ref={ref} className="chain-bg" aria-hidden="true" />;
 }
