@@ -171,11 +171,11 @@ export function ProgramChart() {
 
 /* ---------- 3. Bloomberg: audits row (status, icon + label) ---------- */
 export function AuditsRow() {
-  const audits = ["Audit 1", "Audit 2", "Audit 3", "Audit 4", "Audit 5", "Audit 6"];
+  const audits = ["GDPR", "CCPA", "ISO/IEC 27001", "ISO/IEC 27701", "SOC 2", "NIST CSF"];
   return (
     <div className="viz">
-      <div className="viz-title">GDPR / CCPA audits — 6 for 6</div>
-      <div className="viz-sub">100% pass rate across six privacy audits, privacy-by-design and consent frameworks</div>
+      <div className="viz-title">Audit frameworks — 6 for 6</div>
+      <div className="viz-sub">100% pass rate across privacy and security audit frameworks, with privacy-by-design built into the product</div>
       <div className="audits">
         {audits.map((a) => (
           <div className="audit" key={a}>
