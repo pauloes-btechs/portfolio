@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "../../../components/Reveal";
-import Badge from "../../../components/Badge";
+import CompanyMark from "../../../components/CompanyMark";
 import ChainCanvas from "../../../components/ChainCanvas";
 import {
   FeesChart, SpendChart, TimeChart, ProgramChart, AuditsRow, KpiRow,
@@ -9,6 +9,23 @@ import {
 import { roles, extraWork } from "../../../lib/data";
 
 const allRoles = [...roles, ...extraWork];
+
+function VendorChips({ vendors, small = false }) {
+  return (
+    <div className={`vendor-strip${small ? " small" : ""}`}>
+      {vendors.map((v) => (
+        <span className="vendor" key={v.name} title={v.name}>
+          {v.logo ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={v.logo} alt={v.name} loading="lazy" />
+          ) : (
+            <span className="vendor-name">{v.name}</span>
+          )}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export function generateStaticParams() {
   return allRoles.map((r) => ({ slug: r.slug }));
@@ -26,9 +43,18 @@ export function generateMetadata({ params }) {
 function RoleCharts({ slug }) {
   if (slug === "bitcoin-innovation-hub") {
     return (
-      <Reveal>
-        <FeesChart />
-      </Reveal>
+      <>
+        <Reveal>
+          <KpiRow
+            items={[
+              { n: "1,000+", l: "Refugees earned diplomas in financial literacy & Bitcoin P2P" },
+              { n: "125+", l: "3rd/4th-year CS students in two-day workshops" },
+              { n: "100+", l: "Blockstream Jade wallets granted · 2 miners to the university" },
+              { n: "4", l: "Flagship projects led by workshop graduates" },
+            ]}
+          />
+        </Reveal>
+      </>
     );
   }
   if (slug === "city-university") {
@@ -63,6 +89,20 @@ function RoleCharts({ slug }) {
           <AuditsRow />
         </Reveal>
       </>
+    );
+  }
+  if (slug === "btechs") {
+    return (
+      <Reveal>
+        <KpiRow
+          items={[
+            { n: "Live", l: "DCI Global Research Map in production" },
+            { n: "9", l: "Universities on the Global Mapping committee" },
+            { n: "4", l: "Applied AI/ML workshop tracks on Google Cloud" },
+            { n: "E2E", l: "Product, architecture, build & ops in one seat" },
+          ]}
+        />
+      </Reveal>
     );
   }
   if (slug === "google-cloud-fellow") {
@@ -116,7 +156,7 @@ export default function RolePage({ params }) {
               <Link href="/">home</Link> / <Link href="/story">story</Link> / {role.slug}
             </div>
             <div className="hero-head">
-              {role.badge && <Badge mark={role.badge.mark} hue={role.badge.hue} size={78} />}
+              <CompanyMark role={role} size={72} />
               <div>
                 <h1>
                   {role.title} <span className="co">· {role.company}</span>
@@ -163,6 +203,24 @@ export default function RolePage({ params }) {
                     </Reveal>
                   </>
                 )}
+                {role.slug === "bitcoin-innovation-hub" && (
+                  <>
+                    <div style={{ height: 16 }} />
+                    <Reveal>
+                      <FeesChart />
+                    </Reveal>
+                  </>
+                )}
+                {role.vendors && role.vendorsPlacement === "sidebar" && (
+                  <>
+                    <div style={{ height: 16 }} />
+                    <Reveal className="panel">
+                      <h3>{role.vendorsHeading || "Vendors & Partners"}</h3>
+                      {role.vendorsSub && <p className="panel-sub">{role.vendorsSub}</p>}
+                      <VendorChips vendors={role.vendors} small />
+                    </Reveal>
+                  </>
+                )}
               </div>
             </div>
           </section>
@@ -171,6 +229,16 @@ export default function RolePage({ params }) {
             <h2>Outcomes, plotted</h2>
             <RoleCharts slug={role.slug} />
           </section>
+
+          {role.vendors && role.vendorsPlacement !== "sidebar" && (
+            <section className="section">
+              <h2>{role.vendorsHeading || "Vendors & Partners"}</h2>
+              {role.vendorsSub && <p className="section-sub">{role.vendorsSub}</p>}
+              <Reveal>
+                <VendorChips vendors={role.vendors} />
+              </Reveal>
+            </section>
+          )}
 
           <section className="section" style={{ paddingBottom: 40 }}>
             <div className="cta-row">

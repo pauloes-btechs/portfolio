@@ -1,6 +1,7 @@
 import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Interactive from "../components/Interactive";
 import { site } from "../lib/data";
 
 export const metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Interactive />
         <Nav />
         <main>{children}</main>
         <Footer />

@@ -1,11 +1,11 @@
 // Monogram company badges — designed in the site's own language (hex block,
 // inner circuit ticks, per-era hue) rather than reproducing trademarked logos.
 const HUES = {
-  blue:   { stroke: "#3987E5", fill: "rgba(57,135,229,0.10)", text: "#7FB3E8" },
-  green:  { stroke: "#0CA30C", fill: "rgba(12,163,12,0.10)",  text: "#3FBE5A" },
-  aqua:   { stroke: "#199E70", fill: "rgba(25,158,112,0.10)", text: "#34C08E" },
+  blue:   { stroke: "#35618E", fill: "rgba(53,97,142,0.08)", text: "#2E5A87" },
+  green:  { stroke: "#2F7D45", fill: "rgba(47,125,69,0.08)",  text: "#256B3C" },
+  aqua:   { stroke: "#1F7A66", fill: "rgba(31,122,102,0.08)", text: "#1B6A59" },
   orange: { stroke: "#D95926", fill: "rgba(217,89,38,0.10)",  text: "#E8824F" },
-  violet: { stroke: "#8B7FE8", fill: "rgba(139,127,232,0.10)", text: "#A99FF0" },
+  violet: { stroke: "#5E55AE", fill: "rgba(94,85,174,0.08)", text: "#544A9E" },
 };
 
 export default function Badge({ mark = "?", hue = "blue", size = 54 }) {
