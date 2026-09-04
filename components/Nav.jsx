@@ -8,11 +8,11 @@ export default function Nav() {
           PAULOES BERHE<span className="dot"> ▮</span>
         </Link>
         <div className="nav-links">
-          <Link href="/story">The Story</Link>
+          <Link href="/story">Story</Link>
           <Link href="/portfolio">Portfolio</Link>
-          <Link href="/#now">Now Building</Link>
-          <Link href="/#track-record">Enterprise</Link>
-          <Link href="/#fellowships">Fellowships</Link>
+          <Link href="/#building">Building</Link>
+          <Link href="/#enterprise">Enterprise</Link>
+          <Link href="/#fellowship">Fellowship</Link>
           <Link href="/contact">Contact</Link>
         </div>
       </div>

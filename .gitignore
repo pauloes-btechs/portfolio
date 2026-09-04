@@ -7,3 +7,4 @@ out/
 *.log
 _to_delete/
 Claude outputs/
+._*
