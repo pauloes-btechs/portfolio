@@ -22,8 +22,8 @@ import { useEffect, useRef } from "react";
  * Respects prefers-reduced-motion (renders a single static frame).
  */
 const VARIANTS = {
-  home:       { density: 42000, greenShare: 0.30, chain: true,  grid: false, linkDist: 130, glow: [0.75, 0.15, "53,97,142"] },
-  founder:    { density: 34000, greenShare: 0.55, chain: true,  grid: false, linkDist: 140, glow: [0.25, 0.20, "47,125,69"] },
+  home:       { density: 42000, greenShare: 0.30, chain: false, grid: false, linkDist: 130, glow: [0.75, 0.15, "53,97,142"] },
+  founder:    { density: 34000, greenShare: 0.55, chain: false,  grid: false, linkDist: 140, glow: [0.25, 0.20, "47,125,69"] },
   enterprise: { density: 40000, greenShare: 0.10, chain: false, grid: false, linkDist: 120, glow: [0.80, 0.12, "53,97,142"] },
   fellowship: { density: 60000, greenShare: 0.40, chain: false, grid: false, linkDist: 150, glow: [0.50, 0.10, "25,158,112"] },
   portfolio:  { density: 68000, greenShare: 0.35, chain: false, grid: true,  linkDist: 130, glow: [0.50, 0.12, "53,97,142"] },
