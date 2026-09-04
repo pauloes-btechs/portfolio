@@ -3,48 +3,43 @@
 // blue #3987E5 · orange #D95926 · aqua #199E70 · emphasis-gray #4A545E · green #0CA30C.
 // Direct labels on every mark (no value-guessing); native <title> tooltips.
 
-const INK = "#E6EDF3";
-const INK3 = "#8B949E";
-const GRID = "#21262D";
-const BLUE = "#3987E5";
-const AQUA = "#199E70";
-const GREEN = "#0CA30C";
-const DEGRAY = "#4A545E";
+const INK = "#1F242B";
+const INK3 = "#66707C";
+const GRID = "#E2E6EA";
+const BLUE = "#35618E";
+const AQUA = "#1F7A66";
+const GREEN = "#2F7D45";
+const DEGRAY = "#9AA3AD";
 
 /* ---------- 1. Fees: before → after (emphasis form, indexed) ---------- */
 export function FeesChart() {
-  // Indexed: traditional rails = 100, Bitcoinized settlement < 10 (fees cut >90%).
-  const W = 560, H = 180, L = 190, max = 100, bw = 30;
+  // Compact, sidebar-friendly: labels sit above the bars so nothing clips.
+  const W = 360, bw = 22, max = 100;
   const rows = [
-    { label: "Traditional payment rails", v: 100, c: DEGRAY, vl: "100 (indexed)" },
+    { label: "Traditional payment rails", v: 100, c: DEGRAY, vl: "100" },
     { label: "Bitcoinized settlement (BTCPayServer)", v: 9, c: GREEN, vl: "< 10" },
   ];
-  const x = (v) => L + (v / max) * (W - L - 70);
+  const x = (v) => (v / max) * (W - 50);
+  const H = 16 + rows.length * 58;
   return (
     <div className="viz">
       <div className="viz-title">Transaction fees: before → after</div>
-      <div className="viz-sub">Relative fee cost per settlement, indexed to traditional rails = 100</div>
-      <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
+      <div className="viz-sub">Fee cost per settlement, indexed to traditional rails = 100</div>
+      <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ maxWidth: 420, display: "block" }} role="img"
         aria-label="Bar chart: Bitcoinized settlement fees are more than 90 percent lower than traditional payment rails, indexed 100 versus under 10.">
-        {[0, 25, 50, 75, 100].map((t) => (
-          <g key={t}>
-            <line x1={x(t)} y1={28} x2={x(t)} y2={H - 34} stroke={GRID} strokeWidth="1" />
-            <text x={x(t)} y={H - 18} fontSize="10" fill={INK3} textAnchor="middle">{t}</text>
-          </g>
-        ))}
         {rows.map((r, i) => {
-          const y = 40 + i * (bw + 26);
+          const y = 14 + i * 58;
           return (
             <g key={r.label}>
               <title>{`${r.label}: ${r.vl}`}</title>
-              <text x={L - 10} y={y + bw / 2 + 4} fontSize="11.5" fill={INK} textAnchor="end">{r.label}</text>
-              <rect x={L} y={y} width={Math.max(x(r.v) - L, 3)} height={bw} rx="4" fill={r.c} />
-              <text x={x(r.v) + 8} y={y + bw / 2 + 4} fontSize="12" fontWeight="700" fill={INK}>{r.vl}</text>
+              <text x={0} y={y} fontSize="11.5" fill={INK}>{r.label}</text>
+              <rect x={0} y={y + 8} width={Math.max(x(r.v), 5)} height={bw} rx="4" fill={r.c} />
+              <text x={x(r.v) + 8} y={y + 8 + bw / 2 + 4} fontSize="12" fontWeight="700" fill={INK}>{r.vl}</text>
             </g>
           );
         })}
       </svg>
-      <div className="viz-note">Fees cut by more than 90% for small-business settlement. Indexed values; shipped on BTCPayServer.</div>
+      <div className="viz-note">Fees cut by more than 90% for small-business settlement. Shipped on BTCPayServer.</div>
     </div>
   );
 }
@@ -125,32 +120,51 @@ export function TimeChart() {
 
 /* ---------- 2c. CityU: $2.8M program coordination surface ---------- */
 export function ProgramChart() {
-  const W = 480, H = 190, L = 140, max = 10, bw = 24;
+  const W = 420, H = 168, L = 128, max = 10, bw = 24;
   const rows = [
     { label: "Vendors", v: 3 },
     { label: "Teams", v: 5 },
     { label: "Network products", v: 10 },
   ];
-  const x = (v) => L + (v / max) * (W - L - 60);
+  const x = (v) => L + (v / max) * (W - L - 50);
   return (
     <div className="viz">
       <div className="viz-title">The $2.8M program — coordination surface</div>
-      <div className="viz-sub">One-year modernization program scoped from his own infrastructure diagramming</div>
-      <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
-        aria-label="Bar chart: the 2.8 million dollar program coordinated 3 vendors, 5 teams, and 10 network products.">
-        {rows.map((r, i) => {
-          const y = 26 + i * (bw + 22);
-          return (
-            <g key={r.label}>
-              <title>{`${r.label}: ${r.v}`}</title>
-              <text x={L - 10} y={y + bw / 2 + 4} fontSize="11.5" fill={INK} textAnchor="end">{r.label}</text>
-              <rect x={L} y={y} width={Math.max(x(r.v) - L, 3)} height={bw} rx="4" fill={BLUE} />
-              <text x={x(r.v) + 8} y={y + bw / 2 + 4} fontSize="12" fontWeight="700" fill={INK}>{r.v}</text>
-            </g>
-          );
-        })}
-      </svg>
-      <div className="viz-note">Sequential single-hue: these are magnitudes of one program, not competing series.</div>
+      <div className="viz-sub">A two-year network infrastructure upgrade, diagrammed, diagnosed, and led end to end</div>
+      <div className="program-cols">
+        <div className="program-story">
+          <p>
+            <b>Sabey · Cisco · Juniper.</b> What began as his own infrastructure
+            diagramming became the $2.8M core of a two-year network
+            infrastructure upgrade — the largest project he had led to that
+            point, coordinating three vendors, five teams, and ten network
+            products in one motion.
+          </p>
+          <p>
+            Hardware was procured straight through the first U.S.–China tariff
+            war: shipment delays and cost escalations absorbed and managed
+            across vendors, teams, legal, and executive stakeholders — a
+            multimillion-dollar overhead process communicated up and delivered
+            on.
+          </p>
+        </div>
+        <div className="program-data">
+          <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
+            aria-label="Bar chart: the 2.8 million dollar program coordinated 3 vendors — Sabey, Cisco, and Juniper — 5 teams, and 10 network products.">
+            {rows.map((r, i) => {
+              const y = 20 + i * (bw + 24);
+              return (
+                <g key={r.label}>
+                  <title>{`${r.label}: ${r.v}`}</title>
+                  <text x={L - 10} y={y + bw / 2 + 4} fontSize="11.5" fill={INK} textAnchor="end">{r.label}</text>
+                  <rect x={L} y={y} width={Math.max(x(r.v) - L, 3)} height={bw} rx="4" fill={BLUE} />
+                  <text x={x(r.v) + 8} y={y + bw / 2 + 4} fontSize="12" fontWeight="700" fill={INK}>{r.v}</text>
+                </g>
+              );
+            })}
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }

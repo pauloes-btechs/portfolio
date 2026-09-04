@@ -1,4 +1,4 @@
-import ChainCanvas from "../../components/ChainCanvas";
+import StoryChainCanvas from "../../components/StoryChainCanvas";
 import StoryJourney from "../../components/StoryJourney";
 
 export const metadata = {
@@ -10,7 +10,7 @@ export const metadata = {
 export default function StoryPage() {
   return (
     <>
-      <ChainCanvas variant="story" />
+      <StoryChainCanvas />
       <div className="wrap">
         <header className="story-hero">
           <div className="kicker">// the journey · 2014 → now</div>

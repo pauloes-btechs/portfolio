@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Badge from "./Badge";
+import CompanyMark from "./CompanyMark";
 import { story, roles } from "../lib/data";
 
 /**
@@ -77,7 +77,7 @@ export default function StoryJourney() {
             <div className="chapter-inner">
               <div className="chapter-year">{c.year}</div>
               <div className="chapter-head">
-                {role?.badge && <Badge mark={role.badge.mark} hue={role.badge.hue} size={64} />}
+                {role && <CompanyMark role={role} size={60} />}
                 <div>
                   <h2>{c.heading}</h2>
                   {role && (

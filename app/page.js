@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Reveal from "../components/Reveal";
-import Badge from "../components/Badge";
+import CompanyMark from "../components/CompanyMark";
 import ChainCanvas from "../components/ChainCanvas";
 import { TimelineChart } from "../components/Charts";
 import { site, stats, roles, timeline, credentials, extraWork } from "../lib/data";
@@ -9,7 +9,7 @@ function RoleCard({ r, showCompanyFirst = false }) {
   return (
     <Link href={`/roles/${r.slug}`} className={`card ${r.kind}`}>
       <div className="card-head">
-        {r.badge && <Badge mark={r.badge.mark} hue={r.badge.hue} size={46} />}
+        <CompanyMark role={r} size={42} compact />
         <div>
           <div className="role">
             {showCompanyFirst ? r.company : (
@@ -134,6 +134,26 @@ export default function Home() {
             </Reveal>
           </section>
         )}
+
+        {/* portfolio explorer teaser */}
+        <section className="section" id="portfolio">
+          <h2>Portfolio</h2>
+          <p className="section-sub">
+            Sixteen properties across four arenas — every site built or owned,
+            with the features released on each.
+          </p>
+          <Reveal className="story-band">
+            <div>
+              <div className="t">View the portfolio.</div>
+              <div className="s">
+                Real screenshots, roles, and the features released on every site —
+                from btechs.io to the Bloomberg estates.
+              </div>
+            </div>
+            <div className="spacer" />
+            <Link className="btn primary" href="/portfolio">View portfolio →</Link>
+          </Reveal>
+        </section>
 
         {/* timeline */}
         <section className="section" id="timeline">
