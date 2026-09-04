@@ -16,6 +16,21 @@ export const metadata = {
     description:
       "11+ years shipping platform products. Founder chapter backed by #startsmall and MIT DCI. New York, NY.",
     type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Pauloes Berhe — Technical Product Manager & Founder — pauloes.com",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pauloes Berhe — Technical Product Manager & Founder",
+    description:
+      "11+ years shipping platform products. Founder chapter backed by #startsmall and MIT DCI. New York, NY.",
+    images: ["/og.png"],
   },
 };
 
