@@ -77,9 +77,19 @@ export default function StoryJourney() {
             <div className="chapter-inner">
               <div className="chapter-year">{c.year}</div>
               <div className="chapter-head">
-                {role && <CompanyMark role={role} size={60} />}
+                {role && (
+                  <Link
+                    href={`/roles/${c.slug}`}
+                    className="chapter-mark"
+                    aria-label={`${role.company} — role details`}
+                  >
+                    <CompanyMark role={role} size={60} />
+                  </Link>
+                )}
                 <div>
-                  <h2>{c.heading}</h2>
+                  <Link href={`/roles/${c.slug}`} className="chapter-title-link">
+                    <h2>{c.heading}</h2>
+                  </Link>
                   {role && (
                     <div className="chapter-meta">
                       {role.title} · {role.company}
