@@ -520,3 +520,17 @@ main { position: relative; z-index: 1; }
   .role-hero .hero-head:has(.co-mark.wide) { flex-direction: column; align-items: flex-start; gap: 14px; }
   .chapter-head:has(.co-mark.wide) { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
+
+
+/* ---- story page readability: dim the canvas, put chapters on solid cards ---- */
+.chain-bg.story-dim { opacity: 0.45; }
+
+.chapter-inner {
+  background: #FFFFFF;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(23, 32, 41, 0.04);
+  padding: 34px 38px 36px;
+}
+@media (max-width: 640px) { .chapter-inner { padding: 24px 20px 26px; } }
+.chapter-year { margin-left: -4px; }

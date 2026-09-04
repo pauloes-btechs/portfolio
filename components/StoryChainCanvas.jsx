@@ -280,5 +280,5 @@ export default function StoryChainCanvas() {
     };
   }, []);
 
-  return <canvas ref={ref} className="chain-bg" aria-hidden="true" />;
+  return <canvas ref={ref} className="chain-bg story-dim" aria-hidden="true" />;
 }
