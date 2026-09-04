@@ -83,8 +83,8 @@ export default function Home() {
         </section>
 
         {/* now building */}
-        <section className="section" id="now">
-          <h2>Now Building</h2>
+        <section className="section" id="building">
+          <h2>Building</h2>
           <p className="section-sub">
             The founder chapter — two mission-driven ventures where the entire product
             lifecycle is owned in one seat.
@@ -95,8 +95,8 @@ export default function Home() {
         </section>
 
         {/* enterprise track record */}
-        <section className="section" id="track-record">
-          <h2>Enterprise Track Record</h2>
+        <section className="section" id="enterprise">
+          <h2>Enterprise</h2>
           <p className="section-sub">
             The decade of platform depth the founder chapter is built on.
           </p>
@@ -106,8 +106,8 @@ export default function Home() {
         </section>
 
         {/* fellowships */}
-        <section className="section" id="fellowships">
-          <h2>Fellowships</h2>
+        <section className="section" id="fellowship">
+          <h2>Fellowship</h2>
           <p className="section-sub">
             Selective programs, entered deliberately — cloud depth from Google,
             product craft from the UW Product Management Center.
