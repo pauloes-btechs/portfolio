@@ -153,7 +153,7 @@ export default function RolePage({ params }) {
         <div className="wrap">
           <section className="role-hero">
             <div className="crumb">
-              <Link href="/">home</Link> / <Link href="/story">story</Link> / {role.slug}
+              <Link href="/">home</Link> / <span>roles</span> / {role.slug}
             </div>
             <div className="hero-head">
               <CompanyMark role={role} size={72} />
