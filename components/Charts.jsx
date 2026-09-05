@@ -56,7 +56,12 @@ export function SpendChart() {
   return (
     <div className="viz">
       <div className="viz-title">Annual infrastructure spend — halved</div>
-      <div className="viz-sub">Annual datacenter and maintenance spend: $250K → $125K</div>
+      <div className="viz-sub">
+        Consolidated physical servers onto VMware vSphere/ESXi VMs with Nimble NAS/SAN storage —
+        seven full racks down to two — and moved colocation from a downtown datacenter to Sabey&apos;s
+        facility 15 miles out for cheaper monthly hosting. Annual datacenter and maintenance spend
+        fell from $250K to $125K.
+      </div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
         aria-label="Bar chart: annual infrastructure spend cut from 250 thousand dollars to 125 thousand dollars per year.">
         {[0, 125, 250].map((t) => (
@@ -77,7 +82,6 @@ export function SpendChart() {
           );
         })}
       </svg>
-      <div className="viz-note">Consolidated physical servers onto VMware vSphere/ESXi VMs with Nimble NAS/SAN storage — seven full racks down to two — and moved colocation from a downtown datacenter to Sabey's facility 15 miles out for cheaper monthly hosting.</div>
     </div>
   );
 }
@@ -94,7 +98,10 @@ export function TimeChart() {
   return (
     <div className="viz">
       <div className="viz-title">Infrastructure project time — cut 80%</div>
-      <div className="viz-sub">Time to deploy per infrastructure project: 16 hrs → 3.2 hrs with Azure DevOps automation</div>
+      <div className="viz-sub">
+        Repeatability, automation, and scale — Terraform and PowerShell pipelines on Azure DevOps
+        cut the time to deploy per infrastructure project from 16 hrs to 3.2 hrs.
+      </div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
         aria-label="Bar chart: time to deploy per infrastructure project cut from 16 hours to about 3 hours after Azure DevOps automation.">
         {[0, 8, 16].map((t) => (
@@ -115,56 +122,47 @@ export function TimeChart() {
           );
         })}
       </svg>
-      <div className="viz-note">Repeatability, automation, and scale — Terraform and PowerShell pipelines on Azure DevOps.</div>
     </div>
   );
 }
 
 /* ---------- 2c. CityU: $2.8M program coordination surface ---------- */
 export function ProgramChart() {
-  const W = 420, H = 168, L = 128, max = 10, bw = 24;
-  const rows = [
-    { label: "Vendors", v: 3 },
-    { label: "Teams", v: 5 },
-    { label: "Network products", v: 10 },
+  const stats = [
+    { n: "3", label: "Vendors coordinated", sub: "Sabey \u00b7 Cisco \u00b7 Juniper" },
+    { n: "5", label: "Teams aligned", sub: "One delivery motion across the university" },
+    { n: "10", label: "Network products delivered", sub: "The core of the network upgrade" },
   ];
-  const x = (v) => L + (v / max) * (W - L - 50);
   return (
     <div className="viz">
-      <div className="viz-title">The $2.8M program — coordination surface</div>
+      <div className="viz-title">The $2.8M program: coordination surface</div>
       <div className="viz-sub">A two-year network infrastructure upgrade, diagrammed, diagnosed, and led end to end</div>
       <div className="program-cols">
         <div className="program-story">
           <p>
-            <b>Sabey · Cisco · Juniper.</b> What began as his own infrastructure
-            diagramming became the $2.8M core of a two-year network
-            infrastructure upgrade — the largest project he had led to that
-            point, coordinating three vendors, five teams, and ten network
-            products in one motion.
+            What began as his own infrastructure diagramming became the $2.8M
+            core of a two-year network infrastructure upgrade, the largest
+            project he had led to that point, coordinating three vendors, five
+            teams, and ten network products in one motion.
           </p>
           <p>
             Hardware was procured straight through the first U.S.–China tariff
             war: shipment delays and cost escalations absorbed and managed
-            across vendors, teams, legal, and executive stakeholders — a
+            across vendors, teams, legal, and executive stakeholders, a
             multimillion-dollar overhead process communicated up and delivered
             on.
           </p>
         </div>
-        <div className="program-data">
-          <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
-            aria-label="Bar chart: the 2.8 million dollar program coordinated 3 vendors — Sabey, Cisco, and Juniper — 5 teams, and 10 network products.">
-            {rows.map((r, i) => {
-              const y = 20 + i * (bw + 24);
-              return (
-                <g key={r.label}>
-                  <title>{`${r.label}: ${r.v}`}</title>
-                  <text x={L - 10} y={y + bw / 2 + 4} fontSize="11.5" fill={INK} textAnchor="end">{r.label}</text>
-                  <rect x={L} y={y} width={Math.max(x(r.v) - L, 3)} height={bw} rx="4" fill={BLUE} />
-                  <text x={x(r.v) + 8} y={y + bw / 2 + 4} fontSize="12" fontWeight="700" fill={INK}>{r.v}</text>
-                </g>
-              );
-            })}
-          </svg>
+        <div className="program-data stat-stack" role="list" aria-label="The 2.8 million dollar program coordinated 3 vendors, 5 teams, and 10 network products.">
+          {stats.map((s) => (
+            <div className="stat-tile" role="listitem" key={s.label}>
+              <div className="stat-n">{s.n}</div>
+              <div className="stat-meta">
+                <div className="stat-label">{s.label}</div>
+                <div className="stat-sub">{s.sub}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
