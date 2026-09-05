@@ -171,14 +171,30 @@ export default function RolePage({ params }) {
 
           <section className="section">
             <div className="two-col">
-              <Reveal className="panel">
-                <h3>Role &amp; Responsibilities</h3>
-                <ul>
-                  {role.responsibilities.map((r) => (
-                    <li key={r}>{r}</li>
-                  ))}
-                </ul>
-              </Reveal>
+              <div>
+                <Reveal className="panel">
+                  <h3>Role &amp; Responsibilities</h3>
+                  <ul>
+                    {role.responsibilities.map((r) => (
+                      <li key={r}>{r}</li>
+                    ))}
+                  </ul>
+                </Reveal>
+                {(role.extraPanels || []).map((p) => (
+                  <div key={p.heading}>
+                    <div style={{ height: 16 }} />
+                    <Reveal className="panel">
+                      <h3>{p.heading}</h3>
+                      {p.sub && <p className="panel-sub">{p.sub}</p>}
+                      <ul>
+                        {p.bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    </Reveal>
+                  </div>
+                ))}
+              </div>
               <div>
                 <Reveal className="panel">
                   <h3>Skills built &amp; sharpened</h3>
