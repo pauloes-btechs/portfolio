@@ -46,22 +46,23 @@ export function FeesChart() {
 
 /* ---------- 2a. CityU: annual infrastructure spend ---------- */
 export function SpendChart() {
-  const W = 480, H = 170, L = 120, max = 100, bw = 28;
+  const W = 480, H = 170, L = 120, max = 250, bw = 28;
   const rows = [
-    { label: "Before", v: 100, c: DEGRAY, vl: "100 (indexed)" },
-    { label: "After", v: 50, c: BLUE, vl: "50 — $125K/yr saved" },
+    { label: "Before", v: 250, c: DEGRAY, vl: "$250K/yr" },
+    { label: "After", v: 125, c: BLUE, vl: "$125K/yr — $125K saved" },
   ];
-  const x = (v) => L + (v / max) * (W - L - 120);
+  const x = (v) => L + (v / max) * (W - L - 150);
+  const tick = (t) => (t === 0 ? "$0" : `$${t}K`);
   return (
     <div className="viz">
       <div className="viz-title">Annual infrastructure spend — halved</div>
-      <div className="viz-sub">Department infrastructure spend, indexed. $125K cut per year.</div>
+      <div className="viz-sub">Annual datacenter and maintenance spend: $250K → $125K</div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
-        aria-label="Bar chart: annual infrastructure spend cut in half, a 125 thousand dollar annual reduction.">
-        {[0, 50, 100].map((t) => (
+        aria-label="Bar chart: annual infrastructure spend cut from 250 thousand dollars to 125 thousand dollars per year.">
+        {[0, 125, 250].map((t) => (
           <g key={t}>
             <line x1={x(t)} y1={24} x2={x(t)} y2={H - 32} stroke={GRID} strokeWidth="1" />
-            <text x={x(t)} y={H - 16} fontSize="10" fill={INK3} textAnchor="middle">{t}</text>
+            <text x={x(t)} y={H - 16} fontSize="10" fill={INK3} textAnchor="middle">{tick(t)}</text>
           </g>
         ))}
         {rows.map((r, i) => {
@@ -76,29 +77,30 @@ export function SpendChart() {
           );
         })}
       </svg>
-      <div className="viz-note">Consolidation, resource management, and licensing optimization.</div>
+      <div className="viz-note">Consolidated physical servers onto VMware vSphere/ESXi VMs with Nimble NAS/SAN storage — seven full racks down to two — and moved colocation from a downtown datacenter to Sabey's facility 15 miles out for cheaper monthly hosting.</div>
     </div>
   );
 }
 
 /* ---------- 2b. CityU: project time reduction ---------- */
 export function TimeChart() {
-  const W = 480, H = 170, L = 120, max = 100, bw = 28;
+  const W = 480, H = 170, L = 120, max = 16, bw = 28;
   const rows = [
-    { label: "Before", v: 100, c: DEGRAY, vl: "100 (indexed)" },
-    { label: "After", v: 20, c: AQUA, vl: "20 — 80% faster" },
+    { label: "Before", v: 16, c: DEGRAY, vl: "16 hrs" },
+    { label: "After", v: 3.2, c: AQUA, vl: "3.2 hrs — 80% faster" },
   ];
-  const x = (v) => L + (v / max) * (W - L - 110);
+  const x = (v) => L + (v / max) * (W - L - 140);
+  const tick = (t) => `${t}h`;
   return (
     <div className="viz">
       <div className="viz-title">Infrastructure project time — cut 80%</div>
-      <div className="viz-sub">Time per infrastructure project after Azure DevOps automation, indexed.</div>
+      <div className="viz-sub">Time to deploy per infrastructure project: 16 hrs → 3.2 hrs with Azure DevOps automation</div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img"
-        aria-label="Bar chart: infrastructure project time reduced by 80 percent after Azure DevOps automation.">
-        {[0, 50, 100].map((t) => (
+        aria-label="Bar chart: time to deploy per infrastructure project cut from 16 hours to about 3 hours after Azure DevOps automation.">
+        {[0, 8, 16].map((t) => (
           <g key={t}>
             <line x1={x(t)} y1={24} x2={x(t)} y2={H - 32} stroke={GRID} strokeWidth="1" />
-            <text x={x(t)} y={H - 16} fontSize="10" fill={INK3} textAnchor="middle">{t}</text>
+            <text x={x(t)} y={H - 16} fontSize="10" fill={INK3} textAnchor="middle">{tick(t)}</text>
           </g>
         ))}
         {rows.map((r, i) => {
@@ -113,7 +115,7 @@ export function TimeChart() {
           );
         })}
       </svg>
-      <div className="viz-note">Repeatability, automation, and scale — PowerShell-scripted on Azure DevOps.</div>
+      <div className="viz-note">Repeatability, automation, and scale — Terraform and PowerShell pipelines on Azure DevOps.</div>
     </div>
   );
 }
