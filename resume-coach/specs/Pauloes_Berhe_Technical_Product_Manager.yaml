@@ -1,0 +1,71 @@
+# Technical Product Manager (cloud infrastructure) variant. Technical Stack OFF (doctrine 15.1 default); no AWS on file — never add it.
+# Pool: resume-coach/anchor-registry.md (generated from lib/data.js). Rebuilt 2026-09-10 after the cloud workspace reset; content = the 2026-09-04 delivered version.
+kind: resume
+filename: Pauloes_Berhe_Technical_Product_Manager
+contact:
+  name: Pauloes Berhe
+  location: New York, NY
+  phone: 206-306-3615
+  email: pauloes@btechs.io
+  linkedin: linkedin.com/in/pauloes
+summary: 'Technical product manager with 11+ years experience shipping platform products at an enterprise scale. For the past two years, founded mission-driven Bitcoin startups backed by Jack Dorsey''s #startsmall initiative and MIT''s Digital Currency Initiative. Oversaw the entire product lifecycle, from customer discovery with universities, merchants, and policymakers to roadmap development, product building, launching, and adoption. Successfully launched a settlement product that reduced transaction fees by over 90% and developed a research platform for the global Bitcoin research community. Founder scope sharpened the product judgment behind an already deep technical track record that includes managing over 20 Bloomberg digital properties with more than 1 million monthly users. Comfortable managing both the product roadmap and the supporting infrastructure.'
+skills:
+- Technical Product Management
+- Product Strategy & Roadmap Ownership
+- Zero-to-One Product Development
+- Product Discovery & Customer Research
+- Cloud Infrastructure & Platform Products (Azure, Google Cloud)
+- CI/CD & Developer Experience (GitHub, Terraform, Vercel, React/TypeScript)
+- Cross-Functional & Executive Stakeholder Management
+- Security, Privacy & Compliance (GDPR/CCPA, SOC 2)
+- Agile/Scrum Delivery
+experience:
+- title: Founder & Technical Lead
+  company: BTechs
+  location: New York, NY
+  dates: Dec 2025 – Present
+  context: New York charitable nonprofit building resilient, self-sovereign digital and financial infrastructure and delivering security- and privacy-focused, equitable AI/ML education.^[1](https://btechs.io)
+  bullets:
+  - 'Technical Lead and Product Owner for the [DCI Global Research Map](https://dci-global-research-map.vercel.app/) (MIT DCI): lead its Global Mapping committee of PhD researchers and professors spanning computer science, mathematics, environmental science, law, government banking, philosophy, and electrical engineering, running customer interviews that define product features, attestation processes, and requirements; the database spans 29 institutions and 25 researchers, growing 200% quarter over quarter.'
+  - 'Architect and operate the full production stack: React and TypeScript on Supabase/PostgreSQL, Vercel deployments, and [GitHub-based CI/CD](https://github.com/Btechs-org/DCI-Global-Research-Map).'
+  - 'Design and teach applied AI/ML workshops on Google Cloud across the production ML lifecycle: data preparation, ML APIs, BigQuery ML model building and evaluation including classification and forecasting, and Dialogflow agents.'
+- title: Co Founder & CEO
+  company: Bitcoin Innovation Hub
+  location: Kampala, Uganda · Remote (New York, NY)
+  dates: Mar 2024 – Jul 2026
+  context: 'Bitcoin technology and financial-inclusion firm backed by a three-year, $300K grant from Jack Dorsey''s #startsmall.^[2](https://btchubafrica.com/about-us/)^[3](https://docs.google.com/spreadsheets/d/1-ycOLoA496Qj37IHJvrXO3Vg2ETvMphtRGjyv2FNn8c/edit?gid=0#gid=0&range=C104)'
+  bullets:
+  - Designed and launched a 0-to-1 Bitcoinized inventory and settlement product on BTCPayServer that cut transaction fees by more than 90%, improving liquidity and bringing modern asset management within reach of small businesses.
+  - Took the Hub's hands-on financial-literacy and Bitcoin education program from 0 to 1 and scaled it, graduating more than 1,000 refugees with diplomas covering practical financial skills and peer-to-peer Bitcoin transactions.
+  - 'Drove developer go-to-market and ecosystem growth through two-day workshops for 125+ Makerere University computer science students, granting 100+ Blockstream Jade hardware wallets and two Bitcoin miners; student teams went on to lead four flagship builds: Bitcoin-powered savings and micro-investment apps, remittance platforms, point-of-sale solutions, and real-world-asset tokenization.'
+  - 'Raised the Hub''s three-year, $300K #startsmall grant from Jack Dorsey and represented it as a public speaker, including the recorded talk Empowering Through Education: Bitcoin''s Role in Awareness and Adoption.'
+- title: Senior Technical Product Manager
+  company: Bloomberg LP
+  location: New York, NY
+  dates: Jun 2022 – Feb 2024
+  bullets:
+  - Owned over 20 company websites and 1,000+ pages serving 1M+ monthly users, defining product requirements, prioritizing feature delivery, and executing against strategic roadmaps.
+  - Orchestrated Agile delivery of over 200 features across distributed engineering teams in multiple time zones, communicating priorities, requirements, and milestones to technical and executive stakeholders.
+  - Sustained a 100% pass rate across six privacy and security audits (GDPR, CCPA, ISO 27001, ISO 27701, SOC 2, NIST CSF), partnering with legal and compliance on data governance, consent frameworks, and privacy-by-design.
+  - Drove the Salesforce Marketing Cloud and SalesWings integration across the Law, Tax, and Government verticals, aligning sales and marketing on lead scoring by urgency and interest and reviving cold leads, lifting sales conversion rates 17% YoY and email CTR 25%.
+  - Led integration and onboarding of Salesforce Marketing Cloud, SalesWings, Webflow, and Asana through legal, procurement, and security review; Webflow campaign landing pages with twice-weekly social posting had Bloomberg Law generating leads 2.5x faster year over year.
+- title: Technical Product Manager & Senior Systems Engineer
+  company: City University of Seattle
+  location: Seattle, WA
+  dates: Mar 2014 – Jul 2023
+  bullets:
+  - Diagrammed and uncovered infrastructure inefficiencies, leading to a one-year $2.8M project coordinating three vendors, five teams, and ten network products, managing tariff-war hardware delays and cost escalations across vendors, legal, and executive stakeholders.
+  - Owned annual McKinsey-assessed security audits of the Active Directory estate against ISO 27001, NIST CSF, and SOC 2, passing every audit with year-round standards readiness.
+  - Directed the organization's migration to Microsoft Azure, delivering secure hybrid connectivity through a site-to-site VPN gateway and a redundant tertiary failover environment.
+  - Cut an estimated $125K in annual datacenter and maintenance costs through consolidation, improved resource management, and optimized licensing, halving the department's annual infrastructure spend.
+  - Deployed a collaboration platform on Azure DevOps to improve repeatability, automation, and scalability, reducing time spent on infrastructure projects by 80.0%.
+education:
+- degree: Bachelor of Arts
+  institution: University of Washington
+  location: Seattle, WA
+  year: 2012
+additional_sections:
+- heading: Certifications
+  items:
+  - 'Google: Machine Learning Engineer track, Vertex AI, Machine Learning APIs (expected 2026); Cloud Career Jump Start fellowship (2022) · Microsoft: Azure Fundamentals, Azure DevOps, Office 365 Fundamentals (2022)'
+  - 'Scrum Alliance: Advanced Certified Scrum Product Owner, CSPO, CSM (2023) · University of Washington: Certificate in Data Modeling and Warehousing'
