@@ -502,6 +502,15 @@ main { position: relative; z-index: 1; }
 .program-story p:last-child { margin-bottom: 0; }
 .program-story b { color: var(--ink); }
 
+/* certification cards */
+.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 860px) { .cert-grid { grid-template-columns: 1fr; } }
+.cert-card { height: 100%; }
+.cert-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.cert-link { font-size: 12px; color: var(--blue-soft); text-decoration: none; white-space: nowrap; }
+.cert-link:hover { text-decoration: underline; }
+.cert-desc { font-size: 13px; color: var(--ink-2); line-height: 1.65; margin: 0; }
+
 /* program headline counts: same visual language as the charts */
 .stat-stack { display: flex; flex-direction: column; align-self: start; margin-top: 2px; }
 .stat-tile {

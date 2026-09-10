@@ -246,6 +246,26 @@ export default function RolePage({ params }) {
             <RoleCharts slug={role.slug} />
           </section>
 
+          {role.certifications && (
+            <section className="section">
+              <h2>Certifications</h2>
+              <div className="cert-grid">
+                {role.certifications.map((c) => (
+                  <Reveal key={c.name}>
+                    <div className="viz cert-card">
+                      <div className="cert-head">
+                        <div className="viz-title">{c.name}</div>
+                        <a className="cert-link" href={c.url} target="_blank" rel="noreferrer">verified credential &#8599;</a>
+                      </div>
+                      <div className="viz-sub">Bloomberg for Education &middot; Completed {c.issued}</div>
+                      <p className="cert-desc">{c.desc}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </section>
+          )}
+
           {role.vendors && role.vendorsPlacement !== "sidebar" && (
             <section className="section">
               <h2>{role.vendorsHeading || "Vendors & Partners"}</h2>
