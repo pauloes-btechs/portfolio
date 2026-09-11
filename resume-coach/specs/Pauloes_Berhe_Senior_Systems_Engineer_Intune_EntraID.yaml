@@ -1,0 +1,81 @@
+# Senior Systems Engineer / Intune / Entra ID / Autopilot — Midtown NYC investment firm (Motion Recruitment JD,
+# $210–250K, 4 days onsite). Rebuilt 2026-09-10 from the site pool (the 2026-08-25 build was lost with the workspace).
+# Systems variant: Technical Stack ON (doctrine 15.1), infra-oriented summary, CityU carries S1–S16 + C-series.
+# Bloomberg compressed to regulated-environment proof; BIH/BTechs compressed to two bullets each.
+# HONEST GAPS (not on file, not claimed): SWG/ZTNA products; Windows 365 / Cloud PCs; Defender for Endpoint and
+# Defender for Cloud Apps by name (Defender for Office 365 and the Defender portal ARE on file); VoIP/Teams Voice;
+# AWS operations; SOX; MS-102/SC-300/AZ-104/MD-102 (has Azure Fundamentals, Office 365 Fundamentals).
+# PAGE BUDGET: summary tightened; BTechs/BIH to one bullet each; B7 cut; skills to 10; stack to one item; verb repeats fixed.
+kind: resume
+filename: Pauloes_Berhe_Senior_Systems_Engineer_Intune_EntraID
+contact:
+  name: Pauloes Berhe
+  location: New York, NY
+  phone: 206-306-3615
+  email: pauloes@btechs.io
+  linkedin: linkedin.com/in/pauloes
+summary: 'Senior systems engineer with nine years owning an enterprise Microsoft estate end to end: M365 tenant administration with 65,000 mailboxes migrated to the cloud; Entra ID with SSO, conditional access, and MFA including FIDO2; Intune MDM/MAM and Autopilot across Windows, macOS, and mobile; Active Directory, DNS, DHCP, switches, firewalls, and wireless across 100+ servers with redundant failover; and a directed Azure migration with hybrid connectivity and tertiary failover. Passed every annual McKinsey-assessed audit against ISO 27001, NIST CSF, and SOC 2, oversaw the managed service provider, and stayed on the escalation path for executives and end users. Still runs a production stack and scripts weekly. Based in New York.'
+skills:
+- Microsoft 365 Tenant Administration (Exchange, Teams, SharePoint)
+- Entra ID / Azure AD (SSO, Conditional Access, MFA/FIDO2)
+- Intune MDM/MAM & Autopilot (Windows, macOS, iOS, Android)
+- Active Directory, DNS, DHCP & Hybrid Identity
+- Network Infrastructure (Switches, Firewalls, Wireless)
+- Threat Detection & Response (Defender, Sentinel, Entra ID Protection)
+- Azure Cloud Operations & Migration
+- PowerShell, Python & Bash · Terraform · GitHub CI/CD
+- MSP & Vendor Oversight
+- Executive & End-User Support
+experience:
+- title: Founder & Technical Lead
+  company: BTechs
+  location: New York, NY
+  dates: Dec 2025 – Present
+  context: New York charitable nonprofit building resilient, self-sovereign digital and financial infrastructure and delivering security- and privacy-focused, equitable AI/ML education.^[1](https://btechs.io)
+  bullets:
+  - 'Technical Lead and Product Owner for the [DCI Global Research Map](https://dci-global-research-map.vercel.app/) (MIT DCI): architect and operate the full production stack, React and TypeScript on Supabase/PostgreSQL, Vercel deployments, and [GitHub-based CI/CD](https://github.com/Btechs-org/DCI-Global-Research-Map), from local development through production.'
+- title: Co Founder & CEO
+  company: Bitcoin Innovation Hub
+  location: Kampala, Uganda · Remote (New York, NY)
+  dates: Mar 2024 – Jul 2026
+  context: 'Bitcoin technology and financial-inclusion firm backed by a three-year, $300K grant from Jack Dorsey''s #startsmall.^[2](https://btchubafrica.com/about-us/)^[3](https://docs.google.com/spreadsheets/d/1-ycOLoA496Qj37IHJvrXO3Vg2ETvMphtRGjyv2FNn8c/edit?gid=0#gid=0&range=C104)'
+  bullets:
+  - Designed and launched a Bitcoinized inventory and settlement product on BTCPayServer that cut transaction fees by more than 90% for small businesses.
+- title: Senior Technical Product Manager
+  company: Bloomberg LP
+  location: New York, NY
+  dates: Jun 2022 – Feb 2024
+  bullets:
+  - Owned over 20 company websites and 1,000+ pages serving 1M+ monthly users, shipping over 200 features through Agile delivery with engineering teams across time zones and communicating priorities and milestones to technical and executive stakeholders.
+  - Partnered with legal and compliance in a regulated environment to sustain a 100% pass rate across six privacy and security audits (GDPR, CCPA, ISO 27001, ISO 27701, SOC 2, NIST CSF).
+- title: Technical Product Manager & Senior Systems Engineer
+  company: City University of Seattle
+  location: Seattle, WA
+  dates: Mar 2014 – Jul 2023
+  bullets:
+  - Administered the Microsoft 365 estate end to end, tenant administration across Exchange, Teams, and SharePoint, migrating 65,000 email accounts to the cloud and owning Office 365 adoption.
+  - 'Implemented and administered Azure AD (Entra ID): SSO, conditional access, dynamic groups, and MFA including FIDO2 and YubiKey policies, automating identity provisioning and enforcing security standards.'
+  - Managed the endpoint fleet through Intune (MDM/MAM) and Autopilot provisioning across Windows, macOS, and mobile devices, enforcing device security and compliance policies.
+  - Ran core network and infrastructure services, Active Directory, DNS, DHCP, switches, firewalls, and wireless, across a hybrid environment of over 100 servers with redundant failover.
+  - Synchronized hybrid identity across Entra ID, Office 365, and on-premises Active Directory, keeping directories synchronized across every domain controller through Microsoft Entra Connect.
+  - Stood up SAML single sign-on for third-party applications such as Zoom, Blackboard, and Brightspace, exchanging federation metadata and signing certificates, mapping identity claims, and auto-provisioning users through SCIM.
+  - Built anomaly detection and automated remediation in Microsoft Sentinel and Entra ID Protection, auto-blocking risky sign-ins, and ran compromised-account response from the Defender portal with forced resets, revoked sessions, quarantine, and automated response playbooks.
+  - Operated email threat protection through Exchange Online Protection and Defender for Office 365, tuning spam and phishing policies, managing quarantine, and using zero-hour auto purge; wrote Purview DLP policies auto-encrypting outbound mail containing SSNs, card numbers, and other PII.
+  - Directed the migration to Microsoft Azure, delivering secure hybrid connectivity through a site-to-site VPN gateway and a redundant tertiary failover environment, and migrated Windows Server and SQL Server workloads through Azure Migrate and System Center.
+  - Deployed a collaboration platform on Azure DevOps with Terraform and PowerShell automation, cutting time to deploy per infrastructure project by 80%, from 16 hours to just over 3.
+  - Cut annual datacenter and maintenance spend in half, $250K to $125K, consolidating physical servers onto VMware vSphere/ESXi with Nimble NAS/SAN storage and shrinking seven racks to two.
+  - Passed every annual McKinsey-assessed security audit of the Active Directory estate against ISO 27001, NIST CSF, and SOC 2; served on the security committee for change management and the identity lifecycle.
+  - Oversaw managed service providers and vendors, scoping, escalation, and delivery oversight across sixteen-plus relationships, while providing direct support to executives and end users.
+  - Diagrammed and uncovered infrastructure inefficiencies, leading to a one-year $2.8M project coordinating three vendors, five teams, and ten network products.
+education:
+- degree: Bachelor of Arts
+  institution: University of Washington
+  location: Seattle, WA
+  year: 2012
+additional_sections:
+- heading: Technical Stack
+  items:
+  - 'Microsoft: M365 (Exchange, Teams, SharePoint, Purview DLP), Entra ID (SSO, Conditional Access, PIM, Entra Connect, ID Protection), Intune/Autopilot, Defender, Sentinel, Windows Server 2012–2022, SQL Server, Azure (Migrate, DevOps, Firewalls) · PowerShell, Python, Bash, Terraform, GitHub CI/CD · VMware vSphere/ESXi, Nimble NAS/SAN · Google Cloud, Vercel, Supabase/PostgreSQL'
+- heading: Certifications
+  items:
+  - 'Microsoft: Azure Fundamentals, Azure DevOps, Office 365 Fundamentals (2022) · Google: Cloud Career Jump Start fellowship (2022); Machine Learning Engineer track (expected 2026) · Scrum Alliance: Advanced Certified Scrum Product Owner, CSPO, CSM (2023)'

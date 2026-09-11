@@ -1,0 +1,76 @@
+# Okta — Senior Product Manager, Cloud Infrastructure. Built 2026-09-10.
+# THESIS: built the business case and the infrastructure it paid for. Resiliency (tertiary failover,
+# 100+ servers), cost ($250K→$125K, 7 racks→2), automation (80%, 16h→3h), vendor/CSP posture (16+),
+# trust (McKinsey audits); Bloomberg ROI-gating, CORE 50%, OKR/QBR. Google Cloud fellowship earns a
+# role block (R=3 on a cloud JD). Both-track anchors only; no Microsoft 365 security panel.
+# HONEST GAPS (not on file, not claimed): AWS hands-on; pricing strategy/models; cloud SaaS business
+# models as a product; consulting/VC/MBA. Clouds on file are Azure and Google Cloud only.
+# PAGE BUDGET: summary tightened; H8 and C4 cut; Google fellowship compressed to the certifications line (fellowship detail kept there); one skill dropped.
+kind: resume
+filename: Pauloes_Berhe_Okta_Senior_PM_Cloud_Infrastructure
+contact:
+  name: Pauloes Berhe
+  location: New York, NY
+  phone: 206-306-3615
+  email: pauloes@btechs.io
+  linkedin: linkedin.com/in/pauloes
+summary: 'Product manager with 11+ years across cloud infrastructure and enterprise platform products. Nine years owning a university''s infrastructure end to end: a $2.8M modernization program that started as my own diagrams, a directed Azure migration with hybrid connectivity and a redundant tertiary failover environment, a datacenter consolidation that halved annual spend from $250K to $125K, and automation that cut deployment time per project by 80%, inside an estate that passed every annual McKinsey-assessed audit against ISO 27001, NIST CSF, and SOC 2. Then two years at Bloomberg owning a 20+ property, 1M+ monthly user platform, gating the backlog on ROI and reporting through quarterly business reviews with executives. Most recently a founder who took two 0-to-1 products to market. Comfortable building the business case and the infrastructure it pays for.'
+skills:
+- Cloud Infrastructure & Platform Products (Azure, Google Cloud)
+- Resiliency, Disaster Recovery & Failover Design
+- Cost Optimization & Infrastructure Business Cases
+- Product Strategy & Roadmap Ownership
+- Data-Driven Prioritization (OKRs, ROI, usage metrics)
+- Vendor & Cloud Service Provider Management
+- Infrastructure Automation (Azure DevOps, Terraform, CI/CD)
+- Trust & Compliance (ISO 27001, NIST CSF, SOC 2, GDPR/CCPA)
+- Cross-Functional Launch (engineering, sales, marketing)
+experience:
+- title: Founder & Technical Lead
+  company: BTechs
+  location: New York, NY
+  dates: Dec 2025 – Present
+  context: New York charitable nonprofit building resilient, self-sovereign digital and financial infrastructure and delivering security- and privacy-focused, equitable AI/ML education.^[1](https://btechs.io)
+  bullets:
+  - 'Technical Lead and Product Owner for the [DCI Global Research Map](https://dci-global-research-map.vercel.app/) (MIT DCI): lead its Global Mapping committee of PhD researchers and professors, running customer interviews that define product features, attestation processes, and requirements; the database spans 29 institutions and 25 researchers, growing 200% quarter over quarter.'
+  - Architect and operate the full production stack, React and TypeScript on Supabase/PostgreSQL, Vercel deployments, and [GitHub-based CI/CD](https://github.com/Btechs-org/DCI-Global-Research-Map), and teach applied AI/ML on Google Cloud, including BigQuery ML classification and forecasting models.
+- title: Co Founder & CEO
+  company: Bitcoin Innovation Hub
+  location: Kampala, Uganda · Remote (New York, NY)
+  dates: Mar 2024 – Jul 2026
+  context: 'Bitcoin technology and financial-inclusion firm backed by a three-year, $300K grant from Jack Dorsey''s #startsmall.^[2](https://btchubafrica.com/about-us/)^[3](https://docs.google.com/spreadsheets/d/1-ycOLoA496Qj37IHJvrXO3Vg2ETvMphtRGjyv2FNn8c/edit?gid=0#gid=0&range=C104)'
+  bullets:
+  - Designed and launched a 0-to-1 Bitcoinized inventory and settlement product on BTCPayServer that cut transaction fees by more than 90%, improving liquidity and bringing modern asset management within reach of small businesses.
+  - Took the Hub's hands-on financial-literacy and Bitcoin education program from 0 to 1 and scaled it, graduating more than 1,000 refugees with diplomas covering practical financial skills and peer-to-peer Bitcoin transactions.
+  - Drove developer go-to-market and ecosystem growth through two-day workshops for 125+ Makerere University computer science students, granting 100+ Blockstream Jade hardware wallets and two Bitcoin miners; student teams went on to lead four flagship builds.
+- title: Senior Technical Product Manager
+  company: Bloomberg LP
+  location: New York, NY
+  dates: Jun 2022 – Feb 2024
+  bullets:
+  - Owned over 20 company websites and 1,000+ pages serving 1M+ monthly users, defining product requirements, prioritizing feature delivery, and executing against strategic roadmaps.
+  - Gated what entered the backlog on ROI, sizing engineering and design cost against expected return before work was committed and weighing tech-debt reduction alongside the customer needs carrying the highest return.
+  - Led Bloomberg CORE, a shared parent theme that became the component library for every future web build, cutting production and deployment time and the engineering cost of new builds by 50%, with patches applied once and inherited by every site on the theme.
+  - Prioritized the backlog and sprints against OKRs and reported through monthly and quarterly business reviews with executives and stakeholders, covering what shipped, what was in flight, and what came next.
+  - Orchestrated Agile delivery of over 200 features, coordinating engineering teams across time zones and communicating priorities, requirements, and milestones to technical and executive stakeholders.
+  - Partnered with legal and compliance to sustain a 100% pass rate across six privacy and security audits (GDPR, CCPA, ISO 27001, ISO 27701, SOC 2, NIST CSF) without slowing delivery.
+- title: Technical Product Manager & Senior Systems Engineer
+  company: City University of Seattle
+  location: Seattle, WA
+  dates: Mar 2014 – Jul 2023
+  bullets:
+  - Diagrammed and uncovered infrastructure inefficiencies, building the business case for a one-year $2.8M modernization program and leading it across three vendors, five teams, and ten network products, with tariff-war hardware delays and cost escalations managed across vendors, legal, and executive stakeholders.
+  - Directed the migration to Microsoft Azure, delivering secure hybrid connectivity through a site-to-site VPN gateway and a redundant tertiary failover environment, and ran core services across a hybrid estate of 100+ servers with redundant failover.
+  - Cut annual datacenter and maintenance spend in half, $250K to $125K, by consolidating physical servers onto VMware vSphere/ESXi with Nimble NAS/SAN storage, shrinking the footprint from seven racks to two, and relocating colocation to Sabey's facility for cheaper monthly hosting.
+  - Deployed a collaboration platform on Azure DevOps with Terraform and PowerShell automation, cutting time to deploy per infrastructure project by 80%, from 16 hours to just over 3.
+  - Managed sixteen-plus vendor and partner relationships across procurement, managed services, consulting, and audit engagements, including Microsoft, VMware, Cisco, Juniper Networks, Sabey, Cloudflare, and McKinsey & Company.
+  - Passed every annual McKinsey-assessed security audit of the Active Directory estate against ISO 27001, NIST CSF, and SOC 2, owning year-round standards readiness.
+education:
+- degree: Bachelor of Arts
+  institution: University of Washington
+  location: Seattle, WA
+  year: 2012
+additional_sections:
+- heading: Certifications
+  items:
+  - 'Google: Cloud Career Jump Start fellowship, 12 weeks hands-on GCP aligned to the Associate Cloud Engineer curriculum (2022); Machine Learning Engineer track, Vertex AI, Machine Learning APIs (expected 2026) · Microsoft: Azure Fundamentals, Azure DevOps, Office 365 Fundamentals (2022) · Scrum Alliance: Advanced Certified Scrum Product Owner, CSPO, CSM (2023)'

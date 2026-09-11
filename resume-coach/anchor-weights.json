@@ -4,377 +4,615 @@
   "I": 4,
   "track": "product",
   "note": "Product Owner + Technical Lead seat; concept→launch. Pair with the discovery bullet (committee, 29 inst / 25 researchers, 200% QoQ) when it lands on the site.",
-  "preview": "Product Owner and Technical Lead for the DCI Global Research"
+  "preview": "Product Owner and Technical Lead for the DCI Global Research",
+  "lp": [
+   "OW",
+   "CO",
+   "DR"
+  ]
  },
  "btechs:architect and operate the full": {
   "id": "T1b",
   "I": 3,
   "track": "product",
   "note": "Stack bullet; add React/TypeScript on the site (attested 2026-09-04).",
-  "preview": "Architect and operate the full production stack: PostgreSQL/"
+  "preview": "Architect and operate the full production stack: PostgreSQL/",
+  "lp": [
+   "OW",
+   "FR",
+   "DD"
+  ]
  },
  "btechs:lead product and technical consulting": {
   "id": "T4",
   "I": 2,
   "track": "product",
   "note": "Consulting engagements; first to cut on a tight page.",
-  "preview": "Lead product and technical consulting engagements for indivi"
+  "preview": "Lead product and technical consulting engagements for indivi",
+  "lp": [
+   "CO",
+   "DR"
+  ]
  },
  "btechs:design and teach applied ai": {
   "id": "T2",
   "I": 3,
   "track": "product",
   "note": "Spikes R=3 on AI/ML, GCP, data-platform, education JDs.",
-  "preview": "Design and teach applied AI/ML workshops on Google Cloud: In"
+  "preview": "Design and teach applied AI/ML workshops on Google Cloud: In",
+  "lp": [
+   "LC",
+   "HD",
+   "TB"
+  ]
  },
  "btechs:co lead btechs global bitcoin": {
   "id": "T5",
   "I": 2,
   "track": "product",
   "note": "Always 'co-lead' (colleague Ryan leads). Redundant when BIH R3 (1,000+ graduates) ships — cut it then.",
-  "preview": "Co-lead BTechs' global Bitcoin education program — workshops"
+  "preview": "Co-lead BTechs' global Bitcoin education program — workshops",
+  "lp": [
+   "HD",
+   "SR"
+  ]
  },
  "btechs:represent btechs at industry events": {
   "id": "T6",
   "I": 2,
   "track": "product",
   "note": "Redundant when the BIH fundraising/speaking bullet ships — cut it then.",
-  "preview": "Represent BTechs at industry events and speaking engagements"
+  "preview": "Represent BTechs at industry events and speaking engagements",
+  "lp": [
+   "ET",
+   "TB"
+  ]
  },
  "bitcoin-innovation-hub:designed and shipped a bitcoinized": {
   "id": "H1",
   "I": 5,
   "track": "product",
   "note": "MUST-HAVE. PM phrasing on resumes: 'Designed and launched a 0-to-1 … product on BTCPayServer'.",
-  "preview": "Designed and shipped a Bitcoinized inventory and settlement "
+  "preview": "Designed and shipped a Bitcoinized inventory and settlement ",
+  "lp": [
+   "IS",
+   "CO",
+   "DR"
+  ]
  },
  "bitcoin-innovation-hub:worked with vendors to implement": {
   "id": "H2",
   "I": 4,
   "track": "product",
   "note": "Payments/GTM variants; R=0 on pure infra.",
-  "preview": "Worked with vendors to implement point-of-sale systems and b"
+  "preview": "Worked with vendors to implement point-of-sale systems and b",
+  "lp": [
+   "CO",
+   "DR"
+  ]
  },
  "bitcoin-innovation-hub:built and delivered the hub": {
   "id": "H6",
   "I": 5,
   "track": "product",
   "note": "MUST-HAVE per Pauloes 2026-09-04. PM phrasing: 'Took … from 0 to 1 and scaled it'.",
-  "preview": "Built and delivered the Hub's financial-literacy and Bitcoin"
+  "preview": "Built and delivered the Hub's financial-literacy and Bitcoin",
+  "lp": [
+   "TB",
+   "SR",
+   "DR"
+  ]
  },
  "bitcoin-innovation-hub:ran intensive two day developer": {
   "id": "H7",
   "I": 4,
   "track": "product",
   "note": "MUST-HAVE. PM phrasing: 'Drove developer go-to-market and ecosystem growth …' Makerere University is the university.",
-  "preview": "Ran intensive two-day developer workshops for 125+ third- an"
+  "preview": "Ran intensive two-day developer workshops for 125+ third- an",
+  "lp": [
+   "HD",
+   "TB",
+   "SR"
+  ]
  },
  "bitcoin-innovation-hub:validated product direction and prioritized": {
   "id": "H5",
   "I": 3,
   "track": "product",
   "note": "Superseded on the page by the BTechs discovery bullet when both would appear.",
-  "preview": "Validated product direction and prioritized roadmap investme"
+  "preview": "Validated product direction and prioritized roadmap investme",
+  "lp": [
+   "CO",
+   "RL"
+  ]
  },
  "bitcoin-innovation-hub:authored product documentation implementation guides": {
   "id": "H4",
   "I": 3,
   "track": "product",
   "note": "Enablement/docs; GTM and developer-platform JDs.",
-  "preview": "Authored product documentation, implementation guides, and d"
+  "preview": "Authored product documentation, implementation guides, and d",
+  "lp": [
+   "IS",
+   "HS"
+  ]
  },
  "bitcoin-innovation-hub:joined the mit dci global": {
   "id": "H3",
   "I": 4,
   "track": "product",
   "note": "Same committee seat as the BTechs discovery bullet: H3 = origin/growth story, BTechs = requirements work. On a tight page cut H3.",
-  "preview": "Joined the MIT DCI Global Research Network as an Africa lead"
+  "preview": "Joined the MIT DCI Global Research Network as an Africa lead",
+  "lp": [
+   "OW",
+   "TB",
+   "ET"
+  ]
  },
  "bloomberg:built and managed over 20": {
   "id": "B1",
   "I": 5,
   "track": "product",
   "note": "MUST-HAVE. The ONLY place the 1M+ figure belongs.",
-  "preview": "Built and managed over 20 company websites and 1,000+ pages "
+  "preview": "Built and managed over 20 company websites and 1,000+ pages ",
+  "lp": [
+   "OW",
+   "DR"
+  ]
  },
  "bloomberg:shipped the salesforce marketing cloud": {
   "id": "B2",
   "I": 4,
   "track": "product",
   "note": "CAUTION: the trailing clause 'while moving 1M+ monthly visitors into lead-to-opportunity pipelines' was ruled NOT ACCURATE by Pauloes 2026-09-04 and is stripped from every resume — fix it on the site too. Keep 17% YoY / 25% CTR.",
-  "preview": "Shipped the Salesforce Marketing Cloud and SalesWings integr"
+  "preview": "Shipped the Salesforce Marketing Cloud and SalesWings integr",
+  "lp": [
+   "CO",
+   "DR",
+   "DD"
+  ]
  },
  "bloomberg:led integration and onboarding of": {
   "id": "B7",
   "I": 4,
   "track": "product",
   "note": "Legal/procurement/security review + Webflow 2.5x faster YEAR over year (corrected from MoM 2026-09-04).",
-  "preview": "Led integration and onboarding of Salesforce Marketing Cloud"
+  "preview": "Led integration and onboarding of Salesforce Marketing Cloud",
+  "lp": [
+   "OW",
+   "ET",
+   "DR"
+  ]
  },
  "bloomberg:owned architecture ux optimization accessibility": {
   "id": "B4",
   "I": 4,
   "track": "product",
   "note": "Six audits = GDPR, CCPA, ISO/IEC 27001, ISO/IEC 27701, SOC 2, NIST CSF; ship the list on compliance-leaning JDs.",
-  "preview": "Owned architecture, UX optimization, accessibility complianc"
+  "preview": "Owned architecture, UX optimization, accessibility complianc",
+  "lp": [
+   "HS",
+   "ET",
+   "OW"
+  ]
  },
  "bloomberg:orchestrated agile delivery of over": {
   "id": "B3",
   "I": 4,
   "track": "product",
   "note": "200+ features; exec stakeholders.",
-  "preview": "Orchestrated Agile delivery of over 200 features, coordinati"
+  "preview": "Orchestrated Agile delivery of over 200 features, coordinati",
+  "lp": [
+   "DR",
+   "BA"
+  ]
  },
  "bloomberg:led scrum ceremonies end to": {
   "id": "B9",
   "I": 2,
   "track": "product",
   "note": "Scrum ceremonies + Confluence. Ships on Agile/Scrum-heavy JDs.",
-  "preview": "Led Scrum ceremonies end to end, sprint planning, estimation"
+  "preview": "Led Scrum ceremonies end to end, sprint planning, estimation",
+  "lp": [
+   "HS",
+   "DR"
+  ]
  },
  "bloomberg:prioritized the backlog and sprints": {
   "id": "B10",
   "I": 3,
   "track": "product",
   "note": "OKR-driven prioritization + MBR/QBR exec reporting. Spikes on Doerr/OKR/KP companies.",
-  "preview": "Prioritized the backlog and sprints against OKRs, and report"
+  "preview": "Prioritized the backlog and sprints against OKRs, and report",
+  "lp": [
+   "DD",
+   "ET",
+   "DR"
+  ]
  },
  "bloomberg:gated what entered the backlog": {
   "id": "B11",
   "I": 3,
   "track": "product",
   "note": "ROI-gated backlog; tech-debt vs customer return.",
-  "preview": "Gated what entered the backlog and what got built based on R"
+  "preview": "Gated what entered the backlog and what got built based on R",
+  "lp": [
+   "FR",
+   "RL",
+   "DD"
+  ]
  },
  "bloomberg:led bloomberg core a shared": {
   "id": "B6",
   "I": 4,
   "track": "product",
   "note": "Bloomberg CORE. NOTE: the 50% figure was published by Pauloes on the site (2026-09-05+); it was NOT on file before — treat as his attestation [reported], never sharpen.",
-  "preview": "Led Bloomberg CORE, a shared parent theme that grew out of t"
+  "preview": "Led Bloomberg CORE, a shared parent theme that grew out of t",
+  "lp": [
+   "IS",
+   "FR",
+   "HS"
+  ]
  },
  "bloomberg:ran planning and architecture sessions": {
   "id": "B12",
   "I": 2,
   "track": "product",
   "note": "Miro/Jira delivery mechanics.",
-  "preview": "Ran planning and architecture sessions on whiteboards and Mi"
+  "preview": "Ran planning and architecture sessions on whiteboards and Mi",
+  "lp": [
+   "DD",
+   "IS"
+  ]
  },
  "bloomberg:built raci matrices during project": {
   "id": "B13",
   "I": 2,
   "track": "product",
   "note": "RACI matrices; pairs with the launch-checklist story.",
-  "preview": "Built RACI matrices during project planning to assign roles "
+  "preview": "Built RACI matrices during project planning to assign roles ",
+  "lp": [
+   "OW",
+   "ET"
+  ]
  },
  "bloomberg:interviewed customers customer support and": {
   "id": "B5",
   "I": 3,
   "track": "product",
   "note": "Customer/CS/Sales interviews → roadmap.",
-  "preview": "Interviewed customers, Customer Support, and Sales across Bl"
+  "preview": "Interviewed customers, Customer Support, and Sales across Bl",
+  "lp": [
+   "CO",
+   "DD"
+  ]
  },
  "city-university:diagrammed and uncovered infrastructure inefficiencies": {
   "id": "C1",
   "I": 5,
   "track": "both",
   "note": "MUST-HAVE. Resume form adds 'managing tariff-war hardware delays and cost escalations across vendors, legal, and executive stakeholders'.",
-  "preview": "Diagrammed and uncovered infrastructure inefficiencies, lead"
+  "preview": "Diagrammed and uncovered infrastructure inefficiencies, lead",
+  "lp": [
+   "DD",
+   "TB",
+   "OW"
+  ]
  },
  "city-university:directed the migration to microsoft": {
   "id": "C5",
   "I": 3,
   "track": "both",
   "note": "Azure migration; on-thesis for cloud/infra.",
-  "preview": "Directed the migration to Microsoft Azure Cloud, delivering "
+  "preview": "Directed the migration to Microsoft Azure Cloud, delivering ",
+  "lp": [
+   "OW",
+   "HS",
+   "BA"
+  ]
  },
  "city-university:ran core network and infrastructure": {
   "id": "S4",
   "I": 3,
   "track": "systems",
   "note": "100+ servers.",
-  "preview": "Ran core network and infrastructure services — Active Direct"
+  "preview": "Ran core network and infrastructure services — Active Direct",
+  "lp": [
+   "OW",
+   "HS"
+  ]
  },
  "city-university:deployed a collaboration platform on": {
   "id": "C3",
   "I": 4,
   "track": "both",
   "note": "80% = 16h → ~3h per project (site-attested); Terraform + PowerShell.",
-  "preview": "Deployed a collaboration platform on Azure DevOps with Terra"
+  "preview": "Deployed a collaboration platform on Azure DevOps with Terra",
+  "lp": [
+   "IS",
+   "FR",
+   "DR"
+  ]
  },
  "city-university:cut annual datacenter and maintenance": {
   "id": "C2",
   "I": 4,
   "track": "both",
   "note": "$250K → $125K; VMware vSphere/ESXi + Nimble; 7 racks → 2; Sabey relocation (site-attested).",
-  "preview": "Cut annual datacenter and maintenance spend in half — $250K "
+  "preview": "Cut annual datacenter and maintenance spend in half — $250K ",
+  "lp": [
+   "FR",
+   "RL",
+   "DR"
+  ]
  },
  "city-university:implemented and administered azure active": {
   "id": "S2",
   "I": 3,
   "track": "both",
   "note": "Entra ID / SSO / conditional access / MFA FIDO2.",
-  "preview": "Implemented and administered Azure Active Directory (Entra I"
+  "preview": "Implemented and administered Azure Active Directory (Entra I",
+  "lp": [
+   "HS",
+   "OW"
+  ]
  },
  "city-university:served on the university s": {
   "id": "C6",
   "I": 3,
   "track": "both",
   "note": "Security committee: change management + identity lifecycle. Replaces the old 'IT lead for cross-departmental initiatives' wording.",
-  "preview": "Served on the university's security committee responsible fo"
+  "preview": "Served on the university's security committee responsible fo",
+  "lp": [
+   "OW",
+   "ET",
+   "HS"
+  ]
  },
  "city-university:ran hybrid identity across entra": {
   "id": "S12",
   "I": 2,
   "track": "systems",
   "note": "Hybrid identity via Entra Connect.",
-  "preview": "Ran hybrid identity across Entra ID, Office 365, and on-prem"
+  "preview": "Ran hybrid identity across Entra ID, Office 365, and on-prem",
+  "lp": [
+   "DD",
+   "HS"
+  ]
  },
  "city-university:led vendor communications to stand": {
   "id": "S13",
   "I": 3,
   "track": "systems",
   "note": "SAML SSO + SCIM provisioning for Zoom/Blackboard/Brightspace — now ON FILE (was an honest gap in the 2026-09-01 Anchorage letter).",
-  "preview": "Led vendor communications to stand up SAML single sign-on in"
+  "preview": "Led vendor communications to stand up SAML single sign-on in",
+  "lp": [
+   "OW",
+   "ET",
+   "DD"
+  ]
  },
  "city-university:managed the windows server and": {
   "id": "S14",
   "I": 2,
   "track": "systems",
   "note": "Windows Server / SQL Server estate; Azure Migrate, System Center.",
-  "preview": "Managed the Windows Server and SQL Server estates from Serve"
+  "preview": "Managed the Windows Server and SQL Server estates from Serve",
+  "lp": [
+   "OW",
+   "DD"
+  ]
  },
  "city-university:ran sql server maintenance across": {
   "id": "S15",
   "I": 2,
   "track": "systems",
   "note": "SQL Server backups, least privilege, gMSA.",
-  "preview": "Ran SQL Server maintenance across full, differential, and tr"
+  "preview": "Ran SQL Server maintenance across full, differential, and tr",
+  "lp": [
+   "HS",
+   "DD"
+  ]
  },
  "city-university:owned annual third party security": {
   "id": "C7",
   "I": 4,
   "track": "both",
   "note": "McKinsey-assessed ISO 27001 / NIST CSF / SOC 2 — ships wherever legal, risk, compliance, or security appear in a JD.",
-  "preview": "Owned annual third-party security audits of the Active Direc"
+  "preview": "Owned annual third-party security audits of the Active Direc",
+  "lp": [
+   "HS",
+   "ET",
+   "DD"
+  ]
  },
  "city-university:administered the microsoft 365 estate": {
   "id": "S1",
   "I": 3,
   "track": "systems",
   "note": "65K mailboxes.",
-  "preview": "Administered the Microsoft 365 estate end to end — tenant ad"
+  "preview": "Administered the Microsoft 365 estate end to end — tenant ad",
+  "lp": [
+   "OW",
+   "DR"
+  ]
  },
  "city-university:managed the endpoint fleet through": {
   "id": "S3",
   "I": 3,
   "track": "systems",
   "note": "Intune/Autopilot.",
-  "preview": "Managed the endpoint fleet through Intune (MDM/MAM) and Auto"
+  "preview": "Managed the endpoint fleet through Intune (MDM/MAM) and Auto",
+  "lp": [
+   "HS",
+   "OW"
+  ]
  },
  "city-university:ran a two year enterprise": {
   "id": "C4",
   "I": 3,
   "track": "both",
   "note": "ERP sunset/migration as solutions architect.",
-  "preview": "Ran a two-year enterprise application sunset and migration a"
+  "preview": "Ran a two-year enterprise application sunset and migration a",
+  "lp": [
+   "OW",
+   "TB",
+   "DR"
+  ]
  },
  "city-university:oversaw managed service providers and": {
   "id": "S5",
   "I": 2,
   "track": "systems",
   "note": "MSP/vendor oversight + exec support.",
-  "preview": "Oversaw managed service providers and vendors — scoping, esc"
+  "preview": "Oversaw managed service providers and vendors — scoping, esc",
+  "lp": [
+   "ET",
+   "CO"
+  ]
  },
  "city-university:ran email threat protection across": {
   "id": "S7",
   "I": 3,
   "track": "systems",
   "note": "Defender for Office 365 / EOP; spikes R=3 on detection, screening, fraud, sanctions/AML, trust-and-safety JDs.",
-  "preview": "Ran email threat protection across the tenant through Exchan"
+  "preview": "Ran email threat protection across the tenant through Exchan",
+  "lp": [
+   "HS",
+   "DD"
+  ]
  },
  "city-university:maintained tenant allow and block": {
   "id": "S8",
   "I": 2,
   "track": "systems",
   "note": "Allow/block lists + Conditional Access geo-blocking.",
-  "preview": "Maintained tenant allow and block lists for sender domains a"
+  "preview": "Maintained tenant allow and block lists for sender domains a",
+  "lp": [
+   "HS",
+   "BA"
+  ]
  },
  "city-university:wrote microsoft purview dlp policies": {
   "id": "S9",
   "I": 3,
   "track": "systems",
   "note": "Purview DLP with PII types (site-expanded 2026-09-05+).",
-  "preview": "Wrote Microsoft Purview DLP policies (then Office 365 DLP) o"
+  "preview": "Wrote Microsoft Purview DLP policies (then Office 365 DLP) o",
+  "lp": [
+   "HS",
+   "OW"
+  ]
  },
  "city-university:built anomaly detection and automated": {
   "id": "S10",
   "I": 3,
   "track": "systems",
   "note": "Sentinel + Entra ID Protection anomaly detection / auto-remediation.",
-  "preview": "Built anomaly detection and automated remediation in Microso"
+  "preview": "Built anomaly detection and automated remediation in Microso",
+  "lp": [
+   "DD",
+   "BA",
+   "IS"
+  ]
  },
  "city-university:ran compromised account investigation and": {
   "id": "S16",
   "I": 3,
   "track": "systems",
   "note": "Compromised-account IR from the Defender portal: AIR playbooks, litigation holds, session revocation (site-attested).",
-  "preview": "Ran compromised-account investigation and response from the "
+  "preview": "Ran compromised-account investigation and response from the ",
+  "lp": [
+   "DD",
+   "BA",
+   "OW"
+  ]
  },
  "city-university:rolled out two step verification": {
   "id": "S11",
   "I": 2,
   "track": "systems",
   "note": "MFA rollout + security baseline; folds into S2 when S2 ships.",
-  "preview": "Rolled out two-step verification (MFA) tenant-wide, alongsid"
+  "preview": "Rolled out two-step verification (MFA) tenant-wide, alongsid",
+  "lp": [
+   "HS",
+   "OW"
+  ]
  },
  "google-cloud-fellow:selected for google cloud s": {
   "id": "G1",
   "I": 2,
   "track": "both",
   "note": "Fellowship, never an employment role. R=3 on GCP/cloud JDs earns a role block; else compress to the certifications line.",
-  "preview": "Selected for Google Cloud's 12-week Cloud Career Jump Start "
+  "preview": "Selected for Google Cloud's 12-week Cloud Career Jump Start ",
+  "lp": [
+   "LC"
+  ]
  },
  "google-cloud-fellow:practiced deploying and managing gcp": {
   "id": "G1b",
   "I": 1,
   "track": "both",
   "note": "Detail of G1.",
-  "preview": "Practiced deploying and managing GCP compute, storage, netwo"
+  "preview": "Practiced deploying and managing GCP compute, storage, netwo",
+  "lp": [
+   "LC"
+  ]
  },
  "google-cloud-fellow:applied cloud architecture security monitoring": {
   "id": "G1c",
   "I": 1,
   "track": "both",
   "note": "Detail of G1.",
-  "preview": "Applied cloud architecture, security, monitoring, operations"
+  "preview": "Applied cloud architecture, security, monitoring, operations",
+  "lp": [
+   "LC"
+  ]
  },
  "uw-pm-fellow:selected as one of fifty": {
   "id": "F1",
   "I": 2,
   "track": "product",
   "note": "One of fifty nationally. R=3 on coaching/mentoring/SME JDs; else compress to the certifications line.",
-  "preview": "Selected as one of fifty fellows nationally for the UW Produ"
+  "preview": "Selected as one of fifty fellows nationally for the UW Produ",
+  "lp": [
+   "LC",
+   "HD"
+  ]
  },
  "uw-pm-fellow:coached participants on business and": {
   "id": "F1b",
   "I": 2,
   "track": "product",
   "note": "Coaching seat detail.",
-  "preview": "Coached participants on business and product frameworks, roa"
+  "preview": "Coached participants on business and product frameworks, roa",
+  "lp": [
+   "HD",
+   "ET"
+  ]
  },
  "btechs:lead the map s global": {
   "id": "T1a",
   "I": 4,
   "track": "product",
   "note": "Discovery/requirements seat. 29 institutions / 25 researchers / 200% QoQ attested 2026-09-04 — a MOVING figure; re-confirm with Pauloes before reuse after 2026-12. Same committee as BIH H3 (origin story); cut H3 first on a tight page.",
-  "preview": "Lead the map's Global Mapping committee"
+  "preview": "Lead the map's Global Mapping committee",
+  "lp": [
+   "CO",
+   "DD",
+   "RL"
+  ]
  },
  "bitcoin-innovation-hub:raised the hub s founding": {
   "id": "H8",
   "I": 3,
   "track": "product",
   "note": "MUST-HAVE per Pauloes 2026-09-04 (fundraising + public speaking). The #startsmall grant is the ONLY raise on file. The talk title autolinks to the YouTube recording in render_docs.py.",
-  "preview": "Raised the Hub's founding capital"
+  "preview": "Raised the Hub's founding capital",
+  "lp": [
+   "ET",
+   "TB",
+   "BA"
+  ]
  }
 }
