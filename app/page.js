@@ -12,15 +12,9 @@ function RoleCard({ r, showCompanyFirst = false }) {
         <CompanyMark role={r} size={42} compact />
         <div>
           <div className="role">
-            {showCompanyFirst ? r.company : (
-              <>
-                {r.title} <span className="co">· {r.company}</span>
-              </>
-            )}
+            {r.title} <span className="co">· {r.company}</span>
           </div>
-          <div className="meta">
-            {showCompanyFirst ? `${r.title} · ${r.dates}` : `${r.location} · ${r.dates}`}
-          </div>
+          <div className="meta">{`${r.location} · ${r.dates}`}</div>
         </div>
       </div>
       <p>{r.card}</p>
