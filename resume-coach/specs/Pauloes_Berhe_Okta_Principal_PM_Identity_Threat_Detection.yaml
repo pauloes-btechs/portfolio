@@ -4,11 +4,6 @@
 # S10 (Entra ID Protection = ITP twin), S16 (IR), S13 (SAML/SCIM), C6, C7. Bloomberg leads with
 # OKR/QBR (B10) and ROI gating (B11) because the JD names both. JD-specific summary (deliberate).
 # Cuts: B2/B7 (marketing results, R=0-1), H2 (payments), H3, T4-T6. Must-haves H1/H6/H7/H8 kept.
-# HONEST GAPS (not on file, not claimed): security-product PM title; pricing/packaging/NPI
-# ownership; hiring or mentoring PMs; multi-tenant SaaS security product; threat-intel product.
-# PAGE BUDGET: summary tightened; T1b, H8, C6 cut; S16/C1/H7 shortened.
-# Also: T2 folded into a one-line stack+teaching bullet; UW data-modeling cert and one skill label dropped.
-# Also: B5 cut (I=3, lowest remaining score; T1a carries discovery); certifications merged to one item.
 kind: resume
 filename: Pauloes_Berhe_Okta_Principal_PM_Identity_Threat_Detection
 contact:

@@ -2,10 +2,6 @@
 # $210–250K, 4 days onsite). Rebuilt 2026-09-10 from the site pool (the 2026-08-25 build was lost with the workspace).
 # Systems variant: Technical Stack ON (doctrine 15.1), infra-oriented summary, CityU carries S1–S16 + C-series.
 # Bloomberg compressed to regulated-environment proof; BIH/BTechs compressed to two bullets each.
-# HONEST GAPS (not on file, not claimed): SWG/ZTNA products; Windows 365 / Cloud PCs; Defender for Endpoint and
-# Defender for Cloud Apps by name (Defender for Office 365 and the Defender portal ARE on file); VoIP/Teams Voice;
-# AWS operations; SOX; MS-102/SC-300/AZ-104/MD-102 (has Azure Fundamentals, Office 365 Fundamentals).
-# PAGE BUDGET: summary tightened; BTechs/BIH to one bullet each; B7 cut; skills to 10; stack to one item; verb repeats fixed.
 kind: resume
 filename: Pauloes_Berhe_Senior_Systems_Engineer_Intune_EntraID
 contact:

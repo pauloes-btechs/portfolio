@@ -29,20 +29,17 @@ the score ranking, never the top. Ties break toward the bullet whose vocabulary 
 - Every Bloomberg and City University number: 20+/1,000+/1M+, 200+ features, six audits with the
   six frameworks, 17% YoY / 25% CTR, 2.5x YoY, $2.8M, $125K (half the spend), 80%, McKinsey audits.
 
-## Honesty bounds — things that must never appear
-- No invented metrics, ever. If a figure is not on the site or attested in the conversation, the
-  bullet ships without it.
-- "while moving 1M+ monthly visitors into lead-to-opportunity pipelines" (and the "feeding 1M+
-  monthly visitors into vertical pipelines" form) — ruled NOT ACCURATE 2026-09-04. The 1M+ figure
-  belongs only to the 20+ properties bullet.
+## Scope rules — what each figure attaches to
+- Every figure on a resume traces to the site or to a dated note here; bullets without a figure
+  ship without one.
+- The 1M+ monthly users figure attaches only to the 20+ properties bullet (B1), not to the SFMC /
+  SalesWings pipeline bullet (removed there 2026-09-04).
 - Webflow result is **2.5x faster year over year**, never month over month.
-- Bloomberg CORE: the 50% figure appeared on the site after 2026-09-05 as Pauloes' own claim.
-  Treat as [reported]; never sharpen; be ready to explain it in an interview.
-- BTechs Bitcoin education is **co-lead** (colleague leads); T5 never says "lead".
-- No AWS hands-on (clouds are Azure and Google Cloud). No A/B-testing programs. No LLM product
-  shipping. No Kandji/Jamf (MDM depth is Intune). SAML SSO and SCIM ARE now on file (CityU R9).
-- Only fundraising on file is the #startsmall grant. Nothing else may be implied.
-- Never name colleague Ryan on a resume.
+- Bloomberg CORE: the 50% figure was added to the site 2026-09-05 [reported]; never sharpen it.
+- BTechs Bitcoin education is **co-lead**; T5 always says "co-lead".
+- Clouds on file: Azure and Google Cloud. MDM on file: Intune. SAML SSO and SCIM: on file (CityU R9).
+- Fundraising on file: the #startsmall grant.
+- Colleagues are not named on resumes.
 
 ## Redundancy rules (one idea per bullet)
 - When H6 ships, cut BTechs T5. When H8 ships, cut T6. When T1a ships, cut BIH H5 and, on a tight
@@ -84,9 +81,8 @@ links to pauloes.com and is on by default (`portfolio: false` in a spec drops it
 
 Pauloes supplied Amazon's Leadership Principles and asked that they shape how experiences are
 weighted, written, and prioritized on every resume, not only Amazon ones, because the same
-words recur across companies as their leadership vocabulary. He attests that he follows all of
-them, so they are a legitimate LENS for framing on-file experience. They are not a license to
-invent incidents: every LP story still has to point at an anchor in the registry.
+words recur across companies as their leadership vocabulary. They are a lens for framing on-file
+experience; every LP story points at an anchor in the registry.
 
 **The sixteen, in Amazon's canonical order** (his PDF said fourteen; Amazon added the last two in
 2021 and lists all sixteen in this fixed order, which is not a ranking): Customer Obsession ·
@@ -126,10 +122,8 @@ Relevance, so a $2.8M program still outranks a perfectly-on-principle bullet wit
    simplified, raised the bar, dove into, earned, committed, delivered, scaled, mentored.
 3. Frugality is under-told and on file: no-cost hosting for robotswillcry.com, $250K→$125K, Bloomberg
    CORE's 50%, 80% deployment-time cut. Surface one Frugality bullet on any Amazon or startup JD.
-4. Have Backbone is the thinnest principle in the pool (no anchor yet). Ask Pauloes for one
-   attested story of a decision he challenged and then committed to; log it when he gives it.
-   Strive to be Earth's Best Employer is likewise untagged; the refugee and Makerere programs
-   speak to Broad Responsibility instead, which is the honest mapping.
+4. Have Backbone and Strive to be Earth's Best Employer have no tagged anchor yet; add one when a
+   story is logged on the site. The refugee and Makerere programs map to Broad Responsibility.
 5. Summaries may carry one LP-shaped sentence ("Comfortable building the business case and the
    infrastructure it pays for" is Ownership + Frugality); never a list of principles.
 6. Cover letters and interview answers use the LP evidence index in `anchor-registry.md` as the
