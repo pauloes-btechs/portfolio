@@ -50,7 +50,7 @@
   "id": "T5",
   "I": 2,
   "track": "product",
-  "note": "Always 'co-lead' (colleague Ryan leads). Redundant when BIH R3 (1,000+ graduates) ships — cut it then.",
+  "note": "Always 'co-lead'. Redundant when BIH R3 (1,000+ graduates) ships — cut it then.",
   "preview": "Co-lead BTechs' global Bitcoin education program — workshops",
   "lp": [
    "HD",
@@ -141,7 +141,7 @@
   "id": "H3",
   "I": 4,
   "track": "product",
-  "note": "Same committee seat as the BTechs discovery bullet: H3 = origin/growth story, BTechs = requirements work. On a tight page cut H3.",
+  "note": "Same committee seat as the BTechs discovery bullet: H3 = origin/growth story, BTechs = requirements work; on a tight page keep one.",
   "preview": "Joined the MIT DCI Global Research Network as an Africa lead",
   "lp": [
    "OW",
@@ -164,7 +164,7 @@
   "id": "B2",
   "I": 4,
   "track": "product",
-  "note": "CAUTION: the trailing clause 'while moving 1M+ monthly visitors into lead-to-opportunity pipelines' was ruled NOT ACCURATE by Pauloes 2026-09-04 and is stripped from every resume — fix it on the site too. Keep 17% YoY / 25% CTR.",
+  "note": "Resume form ends at the 17% YoY / 25% CTR result; the 1M+ figure belongs to B1 (scope rule, 2026-09-04).",
   "preview": "Shipped the Salesforce Marketing Cloud and SalesWings integr",
   "lp": [
    "CO",
@@ -246,7 +246,7 @@
   "id": "B6",
   "I": 4,
   "track": "product",
-  "note": "Bloomberg CORE. NOTE: the 50% figure was published by Pauloes on the site (2026-09-05+); it was NOT on file before — treat as his attestation [reported], never sharpen.",
+  "note": "Bloomberg CORE. 50% figure added to the site 2026-09-05 [reported]; never sharpen.",
   "preview": "Led Bloomberg CORE, a shared parent theme that grew out of t",
   "lp": [
    "IS",
@@ -384,7 +384,7 @@
   "id": "S13",
   "I": 3,
   "track": "systems",
-  "note": "SAML SSO + SCIM provisioning for Zoom/Blackboard/Brightspace — now ON FILE (was an honest gap in the 2026-09-01 Anchorage letter).",
+  "note": "SAML SSO + SCIM provisioning for Zoom/Blackboard/Brightspace (added to the site 2026-09-05+).",
   "preview": "Led vendor communications to stand up SAML single sign-on in",
   "lp": [
    "OW",
@@ -612,6 +612,41 @@
   "lp": [
    "ET",
    "TB",
+   "BA"
+  ]
+ },
+ "city-university:owned identity and access management": {
+  "id": "S17",
+  "I": 3,
+  "track": "systems",
+  "note": "Azure RBAC least privilege on resources and resource groups (site, 2026-09-10). Spikes on IAM, cloud-security, and Zero Trust JDs.",
+  "preview": "Owned identity and access management for Azure resources",
+  "lp": [
+   "HS",
+   "OW"
+  ]
+ },
+ "city-university:built and ran the azure": {
+  "id": "S18",
+  "I": 3,
+  "track": "systems",
+  "note": "Azure network layer: VNets, VPN gateways, peerings, NSG rules, subnets, DNS zones with tertiary redundancy (site, 2026-09-10). Pairs with C5 on cloud-infra JDs; never ship both at full length.",
+  "preview": "Built and ran the Azure network layer",
+  "lp": [
+   "OW",
+   "HS",
+   "DD"
+  ]
+ },
+ "city-university:deployed azure virtual desktop formerly": {
+  "id": "S19",
+  "I": 3,
+  "track": "systems",
+  "note": "Azure Virtual Desktop workspaces + Just-in-Time access (site, 2026-09-10). Spikes R=3 on Windows 365 / Cloud PC / VDI asks.",
+  "preview": "Deployed Azure Virtual Desktop",
+  "lp": [
+   "IS",
+   "HS",
    "BA"
   ]
  }
