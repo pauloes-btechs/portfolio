@@ -79,3 +79,84 @@ Two pages for resumes. DOCX is the deliverable; PDF only when a form demands it.
 ## Header
 `New York, NY · 206-306-3615 · pauloes@btechs.io · LinkedIn · GitHub · Portfolio` — Portfolio
 links to pauloes.com and is on by default (`portfolio: false` in a spec drops it).
+
+## Leadership Principles layer (added 2026-09-11, Pauloes' instruction)
+
+Pauloes supplied Amazon's Leadership Principles and asked that they shape how experiences are
+weighted, written, and prioritized on every resume, not only Amazon ones, because the same
+words recur across companies as their leadership vocabulary. He attests that he follows all of
+them, so they are a legitimate LENS for framing on-file experience. They are not a license to
+invent incidents: every LP story still has to point at an anchor in the registry.
+
+**The sixteen, in Amazon's canonical order** (his PDF said fourteen; Amazon added the last two in
+2021 and lists all sixteen in this fixed order, which is not a ranking): Customer Obsession ·
+Ownership · Invent and Simplify · Are Right, A Lot · Learn and Be Curious · Hire and Develop the
+Best · Insist on the Highest Standards · Think Big · Bias for Action · Frugality · Earn Trust ·
+Dive Deep · Have Backbone; Disagree and Commit · Deliver Results · Strive to be Earth's Best
+Employer · Success and Scale Bring Broad Responsibility.
+
+**How it changes the math.** Every anchor in `anchor-weights.json` carries 1–3 LP tags. When a JD
+or a company's stated values name a principle or one of its synonyms below, each anchor tagged
+with it gets **+1 Relevance (cap 3)**. Impact weights do not change; the LP layer only moves
+Relevance, so a $2.8M program still outranks a perfectly-on-principle bullet with no number.
+
+**Synonym map** (what other companies call the same thing; match any of these in a JD):
+- Customer Obsession — customer-centric, user-first, customer empathy, voice of customer, working backwards, customer success
+- Ownership — end-to-end ownership, accountability, extreme ownership, owner's mindset, "acts like an owner," cross-team
+- Invent and Simplify — innovation, simplification, first principles, automation, removing toil, platform leverage, reuse
+- Are Right, A Lot — judgment, data-informed decisions, seeks disconfirming evidence, diverse perspectives
+- Learn and Be Curious — growth mindset, continuous learning, thirst for learning, "go broad and deep," certifications in progress
+- Hire and Develop the Best — mentoring, coaching, developing talent, raising the bar on hiring, player-coach, enablement
+- Insist on the Highest Standards — quality, operational excellence, zero-defect, compliance, audits passed, standards readiness
+- Think Big — vision, bold direction, strategy, 0-to-1, mission-driven, global scale
+- Bias for Action — speed, urgency, decisiveness, calculated risk, reversible decisions, shipping cadence
+- Frugality — resourcefulness, cost optimization, do more with less, no added headcount, no-cost hosting
+- Earn Trust — candor, transparency, integrity, executive presence, stakeholder trust, vocally self-critical
+- Dive Deep — data-driven, detail-oriented, hands-on, audits frequently, metrics vs. anecdote, root cause
+- Have Backbone; Disagree and Commit — influence without authority, respectful challenge, conviction, commits after decision
+- Deliver Results — execution, outcomes, on time and on budget, key inputs, never settles
+- Strive to be Earth's Best Employer — empathy, psychological safety, people growth, inclusive practice
+- Success and Scale Bring Broad Responsibility — community impact, second-order effects, leaves things better, mission
+
+**Writing rules.**
+1. Every bullet evidences at least one principle through its verb and its outcome; the principle
+   is never named on the resume. "Worked backwards from small businesses priced out of card
+   rails" says Customer Obsession; the words "customer obsession" say nothing.
+2. Prefer LP-signaling verbs where the fact supports them: worked backwards, owned end to end,
+   simplified, raised the bar, dove into, earned, committed, delivered, scaled, mentored.
+3. Frugality is under-told and on file: no-cost hosting for robotswillcry.com, $250K→$125K, Bloomberg
+   CORE's 50%, 80% deployment-time cut. Surface one Frugality bullet on any Amazon or startup JD.
+4. Have Backbone is the thinnest principle in the pool (no anchor yet). Ask Pauloes for one
+   attested story of a decision he challenged and then committed to; log it when he gives it.
+   Strive to be Earth's Best Employer is likewise untagged; the refugee and Makerere programs
+   speak to Broad Responsibility instead, which is the honest mapping.
+5. Summaries may carry one LP-shaped sentence ("Comfortable building the business case and the
+   infrastructure it pays for" is Ownership + Frugality); never a list of principles.
+6. Cover letters and interview answers use the LP evidence index in `anchor-registry.md` as the
+   story bank: pick the anchor, tell it as Situation → Action → Result with the on-file number.
+
+**LP-framed phrasings for the top anchors** (wording flexes; facts do not):
+- H1 (Customer Obsession + Invent and Simplify): "Worked backwards from small businesses priced
+  out of card rails to design and launch a 0-to-1 Bitcoinized inventory and settlement product on
+  BTCPayServer, cutting transaction fees by more than 90%."
+- C1 (Dive Deep + Think Big + Ownership): "Diagrammed the infrastructure until the inefficiencies
+  had nowhere to hide, then built the business case for a $2.8M modernization program and led it
+  across three vendors, five teams, and ten network products."
+- C2 (Frugality + Are Right): "Halved annual datacenter spend, $250K to $125K, by consolidating
+  onto VMware with Nimble storage, seven racks to two, and moving colocation to a cheaper facility."
+- B11 (Frugality + Are Right + Dive Deep): "Gated what entered the backlog on ROI, sizing engineering
+  and design cost against expected return before committing work, and weighing tech-debt
+  reduction alongside the customer needs carrying the highest return."
+- B4 (Highest Standards + Earn Trust): "Treated compliance as a product requirement, not a review at
+  the end: partnered with legal and compliance to a 100% pass rate across six audits."
+- B10 (Earn Trust + Dive Deep + Deliver Results): "Prioritized against OKRs and reported through
+  monthly and quarterly business reviews with executives: what shipped, what was in flight, what
+  came next."
+- H6 (Think Big + Broad Responsibility + Deliver Results): "Took a financial-literacy and Bitcoin
+  education program from 0 to 1 and scaled it to 1,000+ refugee graduates."
+- H7 (Hire and Develop + Think Big): "Developed the next builders: two-day workshops for 125+
+  Makerere CS students, 100+ hardware wallets granted, four student-led flagship builds."
+- T1a (Customer Obsession + Dive Deep + Are Right): "Ran customer interviews with a committee of PhD
+  researchers and professors to define features, attestation processes, and requirements."
+- T7 (Frugality + Invent and Simplify): "Shipped a Bitcoin-settled music and merch platform hosted at
+  no cost, on a stack chosen so the artist pays no platform fee."
