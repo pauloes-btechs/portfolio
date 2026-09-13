@@ -649,5 +649,76 @@
    "HS",
    "BA"
   ]
+ },
+ "bitcoin-innovation-hub:worked backwards from small businesses": {
+  "id": "H1",
+  "I": 5,
+  "track": "product",
+  "note": "MUST-HAVE. PM phrasing on resumes: 'Designed and launched a 0-to-1 … product on BTCPayServer'.",
+  "preview": "Worked backwards from small businesses priced out",
+  "lp": [
+   "IS",
+   "CO",
+   "DR"
+  ]
+ },
+ "bloomberg:treated compliance as a product": {
+  "id": "B4",
+  "I": 4,
+  "track": "product",
+  "note": "Six audits = GDPR, CCPA, ISO/IEC 27001, ISO/IEC 27701, SOC 2, NIST CSF; ship the list on compliance-leaning JDs.",
+  "preview": "Treated compliance as a product requirement, not",
+  "lp": [
+   "HS",
+   "ET",
+   "OW"
+  ]
+ },
+ "city-university:diagrammed the infrastructure until the": {
+  "id": "C1",
+  "I": 5,
+  "track": "both",
+  "note": "MUST-HAVE. Resume form adds 'managing tariff-war hardware delays and cost escalations across vendors, legal, and executive stakeholders'.",
+  "preview": "Diagrammed the infrastructure until the inefficiencies had",
+  "lp": [
+   "DD",
+   "TB",
+   "OW"
+  ]
+ },
+ "btechs:built a strategic developer partnership": {
+  "id": "T8",
+  "I": 3,
+  "track": "product",
+  "note": "Btrust (500 BTC trust) developer partnership, Abuja, Nigeria; trainings in Bitcoin and AI/ML (site, 2026-09-11). Spikes R=3 on Africa, partnerships, developer-ecosystem, and BD JDs.",
+  "preview": "Built a strategic developer partnership with Btrust",
+  "lp": [
+   "TB",
+   "HD",
+   "ET"
+  ]
+ },
+ "bitcoin-innovation-hub:built a web platform for": {
+  "id": "H9",
+  "I": 3,
+  "track": "product",
+  "note": "AIS vessel-tracking platform (AISHub, MarineTraffic APIs) over the Red Sea / Bab el-Mandeb / Gulf of Aden / Suez; groundwork for RWA tokenization (site, 2026-09-11). Spikes R=3 on maritime, logistics, geospatial, and RWA JDs.",
+  "preview": "Built a web platform for vessel tracking",
+  "lp": [
+   "IS",
+   "LC",
+   "TB"
+  ]
+ },
+ "city-university:retained through the transition to": {
+  "id": "S20",
+  "I": 2,
+  "track": "infra",
+  "note": "Part-time consultancy Jun 2022 - Jul 2023, retained through the Bloomberg transition; handoff/continuity story, not a scope claim. Ships only when a JD values transition management or estate handoff.",
+  "preview": "Retained through the transition to Bloomberg to hand off the",
+  "lp": [
+   "OW",
+   "ET"
+  ]
  }
 }

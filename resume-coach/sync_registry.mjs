@@ -79,6 +79,10 @@ for (const r of roles) {
     P(`| ${id} | ${label}${idx} | ${text.replace(/\|/g, "\\|")} | **${I}** | ${track} | ${lp.join(" ")} | ${note} |`);
   };
   r.responsibilities.forEach((t, i) => emit(t, i + 1, "R"));
+  if (r.secondPosition) {
+    P(`| | | **${r.secondPosition.title}** — ${r.secondPosition.dates} | | | |`);
+    emit(r.secondPosition.desc, 1, "SP");
+  }
   for (const panel of r.extraPanels || []) {
     P(`| | | **${panel.heading}** — ${panel.sub || ""} | | | |`);
     panel.bullets.forEach((t, i) => emit(t, i + 1, "P"));
