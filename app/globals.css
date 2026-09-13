@@ -502,6 +502,13 @@ main { position: relative; z-index: 1; }
 .program-story p:last-child { margin-bottom: 0; }
 .program-story b { color: var(--ink); }
 
+/* second position strip (e.g. CityU part-time consultancy) */
+.second-position { display: flex; gap: 14px; align-items: flex-start; margin: 16px 0 2px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; background: #FFFFFF; max-width: 760px; }
+.sp-badge { flex-shrink: 0; font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #35618E; padding: 3px 9px; border: 1px solid #C9D6E4; border-radius: 999px; margin-top: 2px; white-space: nowrap; }
+.sp-title { font-size: 13px; font-weight: 700; color: var(--ink); }
+.sp-desc { font-size: 12.5px; color: var(--ink-3); line-height: 1.55; margin: 3px 0 0; }
+@media (max-width: 640px) { .second-position { flex-direction: column; gap: 8px; } }
+
 /* sidebar certification images */
 .cert-side { margin-bottom: 16px; }
 .cert-side:last-child { margin-bottom: 0; }

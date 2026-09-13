@@ -166,6 +166,17 @@ export default function RolePage({ params }) {
                 </div>
               </div>
             </div>
+            {role.secondPosition && (
+              <div className="second-position">
+                <span className="sp-badge">Continued part-time</span>
+                <div>
+                  <div className="sp-title">
+                    {role.secondPosition.title} &middot; {role.secondPosition.dates}
+                  </div>
+                  <p className="sp-desc">{role.secondPosition.desc}</p>
+                </div>
+              </div>
+            )}
             <p className="lede">{role.lede}</p>
           </section>
 
