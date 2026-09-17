@@ -31,8 +31,9 @@ export function generateStaticParams() {
   return allRoles.map((r) => ({ slug: r.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const role = allRoles.find((r) => r.slug === params.slug);
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const role = allRoles.find((r) => r.slug === slug);
   if (!role) return {};
   return {
     title: `${role.title} · ${role.company}`,
@@ -136,8 +137,9 @@ function RoleCharts({ slug }) {
   return null;
 }
 
-export default function RolePage({ params }) {
-  const role = allRoles.find((r) => r.slug === params.slug);
+export default async function RolePage({ params }) {
+  const { slug } = await params;
+  const role = allRoles.find((r) => r.slug === slug);
   if (!role) notFound();
 
   const variant =
