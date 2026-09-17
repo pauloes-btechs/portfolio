@@ -1,6 +1,24 @@
 import { Resend } from "resend";
+import { checkRateLimit } from "../../../lib/rate-limit";
+
+function clientIp(req) {
+  // Vercel sets x-forwarded-for at the edge; clients cannot spoof it there.
+  const forwarded = req.headers.get("x-forwarded-for") || "";
+  return forwarded.split(",")[0].trim() || "unknown";
+}
 
 export async function POST(req) {
+  const { allowed, retryAfterSeconds } = checkRateLimit(clientIp(req));
+  if (!allowed) {
+    const minutes = Math.max(1, Math.ceil(retryAfterSeconds / 60));
+    return Response.json(
+      {
+        error: `Too many messages from your network — try again in about ${minutes} minute${minutes === 1 ? "" : "s"}, or email me directly instead.`,
+      },
+      { status: 429, headers: { "Retry-After": String(retryAfterSeconds) } }
+    );
+  }
+
   let payload;
   try {
     payload = await req.json();
