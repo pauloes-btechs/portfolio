@@ -18,9 +18,10 @@ screenshots and released-feature lists.
 
 ## Pages
 
-- `/` — hero, stats, role cards with company logos, timeline, credentials
-- `/story` — twelve years scrolled as a blockchain: each chapter fills and seals a block
-- `/portfolio` — sixteen properties across four arenas, framed screenshots + features released
+- `/` — hero, stats, role cards with company logos, Selected Builds, timeline, credentials
+- `/story` — twelve years scrolled as a blockchain: each chapter fills and seals a block; Btechs projects branch off the founder block
+- `/portfolio` — Btechs engineering projects by category, then every property shipped (framed screenshots + features released)
+- `/portfolio/[slug]` — project detail: problem, contribution, architecture, capabilities, validation, sources
 - `/roles/[slug]` — role deep-dives with outcome charts and grayscale partner/vendor strips
 - `/contact` — Resend-powered contact form
 
@@ -30,6 +31,7 @@ screenshots and released-feature lists.
 npm install
 cp .env.example .env.local   # add your RESEND_API_KEY
 npm run dev                  # http://localhost:3000 (or -- -p 3005 if 3000 is busy)
+npm test                     # registry data-integrity checks
 ```
 
 ## Structure
@@ -38,7 +40,8 @@ npm run dev                  # http://localhost:3000 (or -- -p 3005 if 3000 is b
 app/
   page.js               # home
   story/page.js         # scroll journey (StoryChainCanvas + StoryJourney)
-  portfolio/page.js     # sites shipped (SiteCard grid)
+  portfolio/page.js     # Btechs explorer (ProjectCard) + sites shipped (SiteCard)
+  portfolio/[slug]/     # project detail pages, generated from lib/projects.js
   roles/[slug]/page.js  # role deep-dives, charts, vendor/partner strips
   api/contact/route.js  # serverless email send
 components/
@@ -47,8 +50,13 @@ components/
   Interactive.jsx       # magnetic buttons, card tilt, cursor spotlight
   CompanyMark.jsx       # real company logos (Badge.jsx monogram fallback)
   SiteCard.jsx          # portfolio site cards
+  ProjectCard.jsx       # engineering project cards (homepage + explorer)
+  ProjectBranch.jsx     # nested Btechs milestones on /story
   Charts.jsx            # dependency-free SVG outcome charts
-lib/data.js             # ALL site content — roles, story, portfolio, vendors — edit here
+lib/data.js             # professional history — roles, story, portfolio sites, vendors
+lib/projects.js         # Btechs project registry + selectors — every project claim lives here
+test/                   # npm test — registry data-integrity checks (node:test)
+public/projects/        # project screenshots, diagrams, and labelled concept renders
 public/logos/           # company, vendor, university & partner logos
 public/portfolio/       # site screenshots
 ```

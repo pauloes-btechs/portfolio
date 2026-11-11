@@ -3,7 +3,9 @@ import Reveal from "../components/Reveal";
 import CompanyMark from "../components/CompanyMark";
 import ChainCanvas from "../components/ChainCanvas";
 import { TimelineChart } from "../components/Charts";
-import { site, stats, roles, timeline, credentials, extraWork } from "../lib/data";
+import ProjectCard from "../components/ProjectCard";
+import { site, stats, roles, timeline, credentials, extraWork, portfolio } from "../lib/data";
+import { featuredProjects, publishedProjects, countWord } from "../lib/projects";
 
 function RoleCard({ r, showCompanyFirst = false }) {
   return (
@@ -29,6 +31,9 @@ export default function Home() {
   const fellowships = roles.filter((r) => r.kind === "fellowship");
   const nonprofit = extraWork.filter((r) => r.kind === "nonprofit");
   const freelance = extraWork.filter((r) => r.kind === "freelance");
+  const builds = featuredProjects();
+  const engineeringCount = publishedProjects().length;
+  const siteCount = portfolio.groups.reduce((a, g) => a + g.sites.length, 0);
 
   return (
     <>
@@ -129,19 +134,37 @@ export default function Home() {
           </section>
         )}
 
+        {/* selected builds — Btechs engineering projects (lib/projects.js) */}
+        <section className="section" id="builds">
+          <h2>Selected Builds</h2>
+          <p className="section-sub">
+            Products, AI systems, and infrastructure I&rsquo;m building through Btechs —
+            from problem to architecture to tested, shipped code.
+          </p>
+          <Reveal className="project-grid">
+            {builds.map((p) => <ProjectCard p={p} variant="feature" key={p.slug} />)}
+          </Reveal>
+          <div className="builds-foot">
+            <Link href="/portfolio#btechs">
+              Explore all {countWord(engineeringCount)} engineering projects →
+            </Link>
+          </div>
+        </section>
+
         {/* portfolio explorer teaser */}
         <section className="section" id="portfolio">
           <h2>Portfolio</h2>
           <p className="section-sub">
-            Sixteen properties across four arenas — every site built or owned,
-            with the features released on each.
+            {countWord(engineeringCount, { capitalize: true })} Btechs engineering projects and{" "}
+            {countWord(siteCount)} properties across {countWord(portfolio.groups.length)} arenas —
+            every product and site built or owned, with what shipped on each.
           </p>
           <Reveal className="story-band">
             <div>
               <div className="t">View the portfolio.</div>
               <div className="s">
-                Real screenshots, roles, and the features released on every site —
-                from btechs.io to the Bloomberg estates.
+                Engineering projects with architecture and validation, plus real screenshots
+                and released features on every site — from btechs.io to the Bloomberg estates.
               </div>
             </div>
             <div className="spacer" />

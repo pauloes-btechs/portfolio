@@ -22,6 +22,11 @@ DNS on Cloudflare.
   `RESEND_API_KEY` in `.env.local` (copy `.env.example`).
 - **Layout:** pages in `app/` (home, `story/`, `portfolio/`, `roles/[slug]/`,
   `api/contact`), shared components in `components/`, helpers in `lib/`.
+- **Project registry:** Btechs engineering projects live in `lib/projects.js` — the
+  homepage Selected Builds, `/portfolio` explorer, `/portfolio/[slug]` detail pages,
+  Story milestones, and `/roles/btechs` all read from it through its selectors. Never
+  duplicate project copy elsewhere. Only `publish: "approved"` records render; private
+  repositories keep `repoUrl: null`. Every claim needs a `sources` entry.
 - **Style:** no external UI framework or icon pack; keep the existing design
   language. Match the surrounding code style.
 
@@ -32,14 +37,16 @@ Run from the repo root after every change:
 ```bash
 npm run build   # next build — must succeed
 npm run lint    # eslint app components lib — must pass
+npm test        # node:test data-integrity suite for lib/projects.js — must pass
 ```
 
-There is no test suite or typecheck script; these two commands are the full gate.
+There is no typecheck script; these three commands are the full gate.
 
 ## Done criteria — a build returns ONLY when all are true
 
 - [ ] `npm run build` succeeds
 - [ ] `npm run lint` passes
+- [ ] `npm test` passes
 - [ ] CI green on the PR (where CI runs)
 - [ ] Only files within the task's stated scope changed
 

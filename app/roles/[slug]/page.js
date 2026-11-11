@@ -7,6 +7,7 @@ import {
   FeesChart, SpendChart, TimeChart, ProgramChart, AuditsRow, KpiRow,
 } from "../../../components/Charts";
 import { roles, extraWork } from "../../../lib/data";
+import { publishedProjects, maturityLabel } from "../../../lib/projects";
 
 const allRoles = [...roles, ...extraWork];
 
@@ -270,6 +271,27 @@ export default async function RolePage({ params }) {
               </div>
             </div>
           </section>
+
+          {role.slug === "btechs" && (
+            <section className="section" id="products">
+              <h2>Products &amp; engineering</h2>
+              <p className="section-sub">
+                What I&rsquo;m building through Btechs today — each project page covers the
+                problem, architecture, and the evidence behind it.
+              </p>
+              <Reveal className="product-list">
+                {publishedProjects().map((p) => (
+                  <Link className="product-row" href={`/portfolio/${p.slug}`} key={p.slug}>
+                    <span className="pr-top">
+                      <span className="pr-name">{p.name}</span>
+                      <span className={`maturity m-${p.maturity}`}>{maturityLabel(p.maturity)}</span>
+                    </span>
+                    <p>{p.tagline}</p>
+                  </Link>
+                ))}
+              </Reveal>
+            </section>
+          )}
 
           <section className="section">
             <h2>Outcomes, plotted</h2>

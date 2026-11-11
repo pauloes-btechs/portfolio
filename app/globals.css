@@ -578,3 +578,203 @@ main { position: relative; z-index: 1; }
 }
 @media (max-width: 640px) { .chapter-inner { padding: 24px 20px 26px; } }
 .chapter-year { margin-left: -4px; }
+
+
+/* ============================================================
+   Btechs engineering projects — Selected Builds, explorer,
+   project detail pages, and nested Story milestones.
+   ============================================================ */
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.project-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 980px) { .project-grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .project-grid, .project-grid.three { grid-template-columns: 1fr; } }
+
+.project-card {
+  position: relative; display: flex; flex-direction: column; min-width: 0;
+  background: var(--panel); border: 1px solid var(--line-soft); border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(23, 32, 41, 0.04); overflow: hidden;
+  transition: border-color .25s, transform .2s ease, box-shadow .25s;
+}
+.project-card:hover, .project-card:focus-within {
+  border-color: #C7CED6; transform: translateY(-2px);
+  box-shadow: 0 12px 34px rgba(23, 32, 41, 0.10), 0 0 0 1px var(--glow-blue);
+}
+.project-media {
+  display: block; position: relative; aspect-ratio: 16 / 9; overflow: hidden;
+  background: #EEF1F4; border-bottom: 1px solid var(--line-soft);
+}
+.project-media img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;
+  transition: transform 3.2s cubic-bezier(.16,.84,.44,1);
+}
+.project-card:hover .project-media img { transform: scale(1.04); }
+.media-tag {
+  position: absolute; left: 10px; bottom: 10px; font-family: var(--mono); font-size: 10.5px;
+  letter-spacing: .6px; text-transform: uppercase; color: var(--ink-2);
+  background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px;
+}
+.project-body { display: flex; flex-direction: column; flex: 1; padding: 18px 22px 20px; }
+.project-kicker { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.project-org {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--green-soft);
+}
+.maturity {
+  font-family: var(--mono); font-size: 10.5px; white-space: nowrap; color: var(--ink-2);
+  border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; background: var(--panel-2);
+}
+.maturity::before { content: "● "; font-size: 9px; color: var(--ink-4); }
+.maturity.m-production::before, .maturity.m-public-demo::before { color: var(--green); }
+.maturity.m-tested-mvp::before { color: var(--blue); }
+.maturity.m-prototype::before, .maturity.m-concept::before { color: var(--orange); }
+.project-name { font-size: 19px; font-weight: 700; margin-top: 8px; line-height: 1.25; }
+.project-name a { color: var(--ink); }
+.project-name a:hover { text-decoration: none; }
+/* stretched link: the whole card is one click target, without nested links */
+.project-name a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.project-name a:focus-visible { outline: none; }
+.project-card:has(.project-name a:focus-visible) { outline: 2px solid var(--blue); outline-offset: 3px; }
+.project-problem { font-size: 14px; color: var(--ink-2); line-height: 1.62; margin-top: 8px; }
+.project-highlights { list-style: none; margin-top: 12px; }
+.project-highlights li {
+  font-size: 13px; color: var(--ink-2); line-height: 1.5; padding: 3px 0 3px 16px; position: relative;
+}
+.project-highlights li::before { content: "▸"; position: absolute; left: 0; color: var(--blue-soft); }
+.project-tech { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.project-tech .chip { font-size: 11px; padding: 3px 9px; }
+.project-links {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: auto; padding-top: 16px;
+  font-size: 13px; font-weight: 600;
+}
+.project-links a { position: relative; z-index: 2; }
+.project-more { color: var(--green-soft); }
+.project-more::after { content: " →"; }
+
+.builds-foot { margin-top: 22px; display: flex; justify-content: flex-end; }
+.builds-foot a { font-weight: 600; font-size: 14px; color: var(--green-soft); }
+
+/* /portfolio — Btechs explorer */
+.explorer-part {
+  margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line);
+}
+.explorer-part .part-kicker {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--blue-soft);
+}
+.explorer-part h2.part-title { font-size: clamp(22px, 3vw, 28px); letter-spacing: -.2px; margin-top: 6px; }
+.explorer-part .part-sub { color: var(--ink-3); font-size: 14.5px; margin-top: 6px; max-width: 720px; }
+.category { margin-top: 30px; }
+.category > h3 {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green-soft);
+}
+.category > h3::before { content: "▮ "; color: var(--blue); }
+.category .category-sub { color: var(--ink-3); font-size: 13.5px; margin: 4px 0 16px; }
+.category-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.category-nav a {
+  font-family: var(--mono); font-size: 11.5px; color: var(--ink-2); border: 1px solid var(--line);
+  border-radius: 999px; padding: 4px 11px; background: #fff;
+}
+.category-nav a:hover { text-decoration: none; border-color: var(--blue); color: var(--ink); }
+
+/* /portfolio/[slug] — project detail */
+.project-hero { padding: 72px 0 6px; }
+.project-hero .crumb { font-family: var(--mono); font-size: 12.5px; color: var(--ink-3); margin-bottom: 18px; }
+.project-hero h1 { font-size: clamp(30px, 4.6vw, 44px); line-height: 1.1; letter-spacing: -.4px; }
+.project-hero .tagline { margin-top: 10px; font-size: 18px; color: var(--ink-2); max-width: 760px; }
+.project-hero .facts {
+  display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; font-family: var(--mono); font-size: 12px; color: var(--ink-3);
+}
+.project-hero .facts > span { border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; background: #fff; }
+.project-hero .facts b { color: var(--ink); font-weight: 600; }
+.project-hero .cta-row { margin-top: 20px; }
+.project-figure { margin-top: 30px; }
+.project-figure img {
+  width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: var(--radius);
+  background: #EEF1F4;
+}
+.project-figure figcaption { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); margin-top: 8px; }
+.project-figure.narrow img { max-width: 380px; margin: 0 auto; }
+.project-figure.narrow figcaption { text-align: center; }
+.detail-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: start; }
+@media (max-width: 860px) { .detail-grid { grid-template-columns: 1fr; } }
+.detail-stack > * + * { margin-top: 16px; }
+.prose-block p { font-size: 15.5px; line-height: 1.75; color: var(--ink-2); }
+.prose-block p + p { margin-top: 12px; }
+.problem-callout {
+  border-left: 3px solid var(--blue); padding: 4px 0 4px 16px; margin-top: 14px;
+  font-size: 16px; line-height: 1.7; color: var(--ink);
+}
+.gallery { display: grid; grid-template-columns: 1fr; gap: 22px; }
+.sources li { font-size: 13px; }
+.sources code { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+.project-pager { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* /roles/btechs — products list */
+.product-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .product-list { grid-template-columns: 1fr; } }
+.product-row {
+  display: block; border: 1px solid var(--line-soft); border-radius: 10px; padding: 14px 16px; background: #fff;
+  color: inherit; transition: border-color .2s, transform .2s;
+}
+.product-row:hover { text-decoration: none; border-color: #C7CED6; transform: translateY(-2px); }
+.product-row .pr-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.product-row .pr-name { font-weight: 700; color: var(--ink); }
+.product-row p { font-size: 13.5px; color: var(--ink-2); margin-top: 4px; line-height: 1.55; }
+
+/* /story — nested Btechs milestones branching off the founder block */
+.branch {
+  margin-top: 34px; position: relative; padding-left: 26px;
+}
+.branch::before {            /* the branch rail, grown from the chapter */
+  content: ""; position: absolute; left: 6px; top: 8px; bottom: 14px; width: 2px;
+  background: linear-gradient(180deg, var(--green), rgba(47,125,69,.25));
+  border-radius: 2px;
+}
+.branch-title {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--green-soft);
+  position: relative;
+}
+.branch-title::before {      /* junction node where the branch leaves the block */
+  content: ""; position: absolute; left: -26px; top: 2px; width: 14px; height: 14px;
+  border: 2px solid var(--green); border-radius: 4px; background: #fff;
+}
+.branch-sub { font-size: 13.5px; color: var(--ink-3); margin-top: 4px; }
+.branch-list { list-style: none; margin-top: 14px; display: grid; gap: 10px; }
+.branch-item { position: relative; }
+.branch-item::before {       /* twig from rail to node */
+  content: ""; position: absolute; left: -20px; top: 22px; width: 14px; height: 2px; background: rgba(47,125,69,.45);
+}
+.branch-node {
+  display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 14px; align-items: center;
+  border: 1px solid var(--line-soft); border-radius: 10px; background: rgba(255,255,255,.92);
+  padding: 10px 14px 10px 10px; color: inherit;
+  opacity: 0; transform: translateX(-10px);
+  transition: opacity .6s ease, transform .6s ease, border-color .2s, box-shadow .2s;
+}
+.chapter.in .branch-node { opacity: 1; transform: none; }
+.chapter.in .branch-item:nth-child(2) .branch-node { transition-delay: .08s; }
+.chapter.in .branch-item:nth-child(3) .branch-node { transition-delay: .16s; }
+.chapter.in .branch-item:nth-child(4) .branch-node { transition-delay: .24s; }
+.chapter.in .branch-item:nth-child(5) .branch-node { transition-delay: .32s; }
+.chapter.in .branch-item:nth-child(n+6) .branch-node { transition-delay: .4s; }
+.branch-node:hover, .branch-node:focus-visible {
+  text-decoration: none; border-color: #C7CED6; box-shadow: 0 8px 22px rgba(23,32,41,.08);
+}
+.branch-node:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.branch-thumb { width: 92px; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; background: #EEF1F4; }
+.branch-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.branch-date { display: block; font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: .4px; }
+.branch-name { display: block; font-weight: 700; font-size: 14.5px; color: var(--ink); line-height: 1.3; }
+.branch-detail { display: block; font-size: 13px; color: var(--ink-2); line-height: 1.5; margin-top: 2px; }
+.branch-go { font-size: 12.5px; font-weight: 600; color: var(--green-soft); white-space: nowrap; }
+@media (max-width: 640px) {
+  .branch-node { grid-template-columns: 64px minmax(0, 1fr); }
+  .branch-thumb { width: 64px; }
+  .branch-go { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .branch-node { opacity: 1; transform: none; }
+  .project-media img, .project-card:hover .project-media img { transform: none; }
+}
+.detail-label {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--blue-soft); margin-top: 24px;
+}
