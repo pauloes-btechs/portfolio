@@ -1,0 +1,98 @@
+name: Portfolio watch
+
+# Weekly: scan GitHub for meaningful changes to Btechs projects, then open
+# (or update) ONE draft PR with an evidence-backed report and mechanical
+# registry patches. Never merges, never deploys, never publishes a new
+# project on its own. See docs/PORTFOLIO_AUTOMATION.md.
+
+on:
+  schedule:
+    - cron: "0 13 * * 1"   # Mondays 13:00 UTC (09:00 New York, EDT)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Report only — write nothing, open no PR"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write        # push the automation branch
+  pull-requests: write   # open / update the draft PR
+
+concurrency:
+  group: portfolio-watch
+  cancel-in-progress: false
+
+env:
+  BRANCH: automation/portfolio-watch
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Scan repositories
+        id: scan
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional, read-only fine-grained token to see private repo metadata.
+          PORTFOLIO_READ_TOKEN: ${{ secrets.PORTFOLIO_READ_TOKEN }}
+          # Optional AI drafting — both must be set, otherwise deterministic only.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PORTFOLIO_AI_MODEL: ${{ vars.PORTFOLIO_AI_MODEL }}
+          DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          if [ "$DRY" = "true" ]; then
+            node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/portfolio-watch/run.mjs --dry-run >> "$GITHUB_STEP_SUMMARY"
+          else
+            node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/portfolio-watch/run.mjs > /dev/null
+          fi
+
+      - name: Validate the proposed site
+        if: steps.scan.outputs.significant == 'true'
+        run: |
+          npm run lint
+          npm test
+          npm run build
+
+      - name: Open or update the draft PR
+        if: steps.scan.outputs.significant == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT: ${{ steps.scan.outputs.report }}
+          BASELINE: ${{ steps.scan.outputs.baseline }}
+        run: |
+          git config user.name "portfolio-watch[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add lib/projects.js data/portfolio-watch reports/portfolio-watch
+          if git diff --cached --quiet; then echo "No changes to propose."; exit 0; fi
+          git commit -m "chore(portfolio-watch): weekly project update proposal" -m "Report: $REPORT"
+          git push --force origin "$BRANCH"
+
+          TITLE="Portfolio watch: proposed project updates"
+          [ "$BASELINE" = "true" ] && TITLE="Portfolio watch: initial baseline"
+          { echo "Automated, evidence-backed proposal. **Review before merging — merging to main deploys.**"; echo;
+            [ -n "$REPORT" ] && cat "$REPORT"; } > /tmp/body.md
+
+          EXISTING=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh pr edit "$EXISTING" --title "$TITLE" --body-file /tmp/body.md
+            echo "Updated PR #$EXISTING" >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh pr create --draft --base main --head "$BRANCH" --title "$TITLE" --body-file /tmp/body.md --label portfolio-watch \
+              || gh pr create --draft --base main --head "$BRANCH" --title "$TITLE" --body-file /tmp/body.md
+            echo "Opened a draft PR" >> "$GITHUB_STEP_SUMMARY"
+          fi

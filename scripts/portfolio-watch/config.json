@@ -1,0 +1,25 @@
+{
+  "owner": "pauloes-btechs",
+  "orgs": ["Btechs-org"],
+  "includePrivate": true,
+  "threshold": 3,
+  "aliases": {
+    "Btechs-org/DCI-Global-Research-Map": "dci-global-research-map"
+  },
+  "exclude": [
+    "pauloes-btechs/pauloes-btechs",
+    "pauloes-btechs/portfolio"
+  ],
+  "reviewed": {
+    "pauloes-btechs/btechs": "Placeholder org repo — no application code (2026-11-11).",
+    "pauloes-btechs/nba-predictions": "Private — awaiting publication approval.",
+    "pauloes-btechs/foundry": "Private — autonomous delivery system; awaiting publication approval.",
+    "pauloes-btechs/ciso": "Private — awaiting publication approval.",
+    "pauloes-btechs/robotswillcry": "Private — already shown as a site under Digital Platforms.",
+    "pauloes-btechs/re-eritrea": "Private — not reviewed for publication.",
+    "pauloes-btechs/re-newsroom": "Private — not reviewed for publication.",
+    "pauloes-btechs/dame-nature": "Private — not reviewed for publication.",
+    "pauloes-btechs/pilates-tulum": "Private — not reviewed for publication.",
+    "pauloes-btechs/btchubafrica": "Private — not reviewed for publication."
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "collectedAt": "2026-11-11T00:00:00Z",
+  "repos": {
+    "pauloes-btechs/KYAgent": {
+      "name": "KYAgent",
+      "full": "pauloes-btechs/KYAgent",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pagesUrl": null,
+      "pushedAt": "2026-10-30T20:40:14+00:00",
+      "releases": [],
+      "readme": "b4563307fd\nf06b0d3c2c\n93f6401719\nb4563307fd\nb3ec84bcc7\nb62e36a755\n2e9971a617\n018859ff4e\nb961743659\n0f0cd2c501\n93f6401719\nb4563307fd\ndcc9253d0f\n6aa910999a\n015ae0993b\nd93849f135\n9b38277a79\nb2e31af66b\n1055ea8962\n93f6401719\nd8fd89bd2c\n58b63e273b\n3cb7c91865\n44673503c7\ne12a6fb325\n68219bf94d\ne314c9ca32\na845c29757\n6ae32b492c\na44eb889b2\n3de7937e42\n72721733d9\n1de0207408\ncdf4bf8f51\n96074ce976\n8272d43233\nf6c18d04d5\n41de2f01fe\n1adb264f3c\n55876725d1\n616f9fac63\n58b63e273b\n61e9ec755d\n0f06156b22\n19607cd000\n91d220c646\n4d996d4e79\n0e2bb94fde\n4ba216bfe8\nc56e082ef7\n614ec289bd\n89a3567a99\n58b63e273b\n605d5976ed\n0a079257f9\nd6f699d19e\n76ff68a3ba\n2b3c767a2a\n8a5ee79201\n58eaef43b1\n02fea76cbc\na524157f5f\n21d9e367a5\n898e6ba9c9\n15533ead33\n05f46c1350\n67ceba5616\n58b63e273b\n458937df33\n551d06678d\nb97a17934a\n7e53564ec2\n2a0ac5a546\ne22de5424f\n91d220c646\n85c14fd39e\n11a7079a84\nf5c7a28059\n5667026568\nf9fea9e3be\n1b4f6e8394\n83d5d418ff\n5af5dce320\nbc529c3e69\na2f733bac6\nf6be9f1364\n01c5f8679c\n63f819cb06\n25df98198a\nce8d4ca199\n58b63e273b\n206e6f0680\n5de525ec61\n816e81576d\n91d220c646\n9d7b67c3ef\nd4ad8ba519\nf298fef94f\nd054befedf\n7e53564ec2\nad30ed6a48\n01298c0163\ncadc4377df\n3c3349b1a9\n7580e44da4\nd7c3151a09\n32ba29ec30\n55a4b90855\n1a0905eff1\n9eaf90ac48\nab461db78e\n5a23ea3683\n23421a350e\nf54f827886\n5383d99431\nbe69a9bd18\n055bbf7f79\n6eb6c91535\nd587437170\nbbc0aff806\nce8d4ca199\n7e53564ec2\n3262f81d69\n01298c0163\n668c0b3826\n3c3349b1a9\nb3965b44d5\na2f4d431df\nedf38cdfb1\n42f3b7f708\n4135392ee1\n602d975b33\ne8f08ae066\n9fdc0d341b\nbe69a9bd18\ndb1dd8d752\nd587437170\nbbc0aff806\na716fd3ee8\nce8d4ca199\n7e53564ec2\n215330914c\n01298c0163\n535c423dd6\n3c3349b1a9\nc05805ca8a\n63d5e72054\n3f8bf7cf55\nfb8631ca8b\n61e7834990\naebc11bb20\n7d1a4cc397\nc2b7df6201\nbbc0aff806\ndb7e2d2ce6\nce8d4ca199\ndc6f1f215a\n58b63e273b\nf2c9c4f6cd\n30ddf40cdf\n6286229636\na6ba762a4d\nf041e97335\n8272d43233\nce4999a08a\nb4ac1d8f1b\n7ebd872738\n62a22c2251\ndaf340e12b\nadfbb9e6fa\n96523a0d3a\n906755eb44\nb6e1c51b9d\n2dc10fada2\n3629419251\na60accf24a\n1769c60cec\n58b63e273b\n8130742b8f\nbf52df64f7\n91d220c646\n151a122a68\n83ad6af707\n7d177a20c4\n04bc3d1d89\n4312cfa092\neef750bcf8\n586a544dde\n9c514f28d9\ne1ead0c993\nde3f6796ed\n699b205d0d\n0a26f43f5b\ne24be91bda\n58b63e273b\nae33c6d71c\n319aa98537\n3785048688\n9bdfb72882\n8272d43233\n26d8be420f\n0595f9a15f\nb96e21583a\nb139d1126f\nffaf20214c\n8dc414a245\n954a628fd8\n494b8cb7fb\nfa4548a45a\nbbc0aff806\na531ed8727\n81573d1934\n8dc414a245\n8714dc8937\n8355ab0977\n5671ad7a1d\n9cbb80f76c\n93f35ade81\nbbc0aff806\n1e0acea58a\n0cc43343d3\n38e2c4cc7c\n1123e4d1c9\nfb191de601\n52db379c74\n99f512314a\n5a8dbeb361\n2194431f69\n58b63e273b\n2a6fa17a00\n6a927d5494\n8272d43233\n640e8ec6e9\n8faa007b8c\n3984f01248\nedd72e22c6\n8cb9d982e9\ncc600dee70\n74c3390c96\n7bf39033fd\n3eb9f20a3e\ncf0135f3aa\n58b63e273b\n4a561d6346\nbbc0aff806\n984e76fdaf\nfae8bffb1f\nae669000dd\n8ebe037f56\n0a03f7ab9e\n33a68ae529\n8790e948ba\na1bd167c3b\nef8144bf06\n37166fc1da\n5a273ed712\n131c46116a\nf1629caf52\n8f38ed33e2\nbbc0aff806\n58b63e273b\n16f5ee3a26\nc372b41d60\n8272d43233\ncdba3efbe3\nef1bccfe22\ndbdcf64a3f\nd5a820d89e\n58b63e273b\nf9c850a8d7\n9fb7596cb1\n8272d43233\nb514abb067\nc3fc6ef845\n2c137c7d25\ncfcac9d601\n3a39a09a97\n58b63e273b\n50d86dec00\nc549b9ce97\n58b63e273b\nbf62129760\nadf8516a79\n8272d43233\n7b20e9f700\ndb7eac3dd6\n84f15fce44\n0205bab2e3\neb3af75be0\n5196ab3e16\nd778b3c2c9\n58b63e273b\n74efa9263d",
+      "testFiles": 37,
+      "workflows": [
+        "ci.yml"
+      ],
+      "docs": [
+        "AGENTS.md",
+        "ARCHITECTURE.md",
+        "DELIVERY_PLAN.md",
+        "DESIGN_SPEC.md",
+        "MONGODB_HACKATHON_GAP_ANALYSIS.md",
+        "README.md",
+        "UI_STATES.md",
+        "USER_FLOWS.md",
+        "docs/DEMO.md",
+        "docs/SECURITY_REVIEW_HARNESS.md"
+      ],
+      "lastCommitDate": null
+    },
+    "pauloes-btechs/sovereign-wallet": {
+      "name": "sovereign-wallet",
+      "full": "pauloes-btechs/sovereign-wallet",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pagesUrl": null,
+      "pushedAt": "2026-11-08T22:22:56-05:00",
+      "releases": [],
+      "readme": "ae8c62e15e\n8d77fbdeeb\n36d5974400\n4f2311fda5\nbc467db8fa\n2b2e8501a1\n1a17ced08a\nac1af81e5e\n66c2d31f3a\n4b9fd356c5\nd5064b2a66\n14d9d97d0e\nd1f6a9f509\n92efa8b153\nbbc0aff806\n0974d17894\na64b1f76e0\n2870e231c0\n2036bfb895\n4699e85a7d\n5f420db3df\na377c8b9ec\n2278792a67\n761d68a996\nde0f52db18\nab3d04f812\n1c57ffb183\nbbc0aff806\n1c2ec40f61\nc58a9f29b6\n4ab13ad1eb\n1c23bf77cd\n3e55bc1537\nde0466eef3\nc150e4e389\nbbc0aff806\n89b8851d0c\n673f210516\nc06b9eea0b\n44ef8b0985\nc58a9f29b6\na86248a7cb\n9caaca6ccf\n096edf711e\nbbc0aff806\n53396d7a31\n35f59685cd\n6e66a204d7\na671883559\n2ecf9d085f\nc58a9f29b6\nde94b726f4\n0bd75e2b9c\nbbc0aff806\n4ad5c7c850\n7e748e91e4\n6e57616857\nbf62129760\n9898b04048\n57b4d3c796\n08e3fc14a2\ncafc6a604d\na839b95376\n2f92c7e631\n4b2679e05b\n863044e660\naddd7965b4\n7500dded10\n527e007219\n6cb68bd972\n1bdd94ba44\ndf1fa74d7e\nd5f03518fc\n996fd12d0b\n28d90ebc2e\ncebb97c7e4\n2fe2c2391f",
+      "testFiles": 123,
+      "workflows": [
+        "ci.yml",
+        "loop-regtest.yml",
+        "loop-wallet-path.yml",
+        "upstream-watch.yml"
+      ],
+      "docs": [
+        "README.md",
+        "docs/ARCHITECTURE.md",
+        "docs/HOSTING.md",
+        "docs/LOCAL_DEV_MAC.md",
+        "docs/MOBILE_PARITY_MATRIX.md",
+        "docs/PRIVACY.md",
+        "docs/PRODUCT_CAPABILITY_MATRIX.md",
+        "docs/QUANTUM_READINESS.md",
+        "docs/RELEASE.md",
+        "docs/SECURITY.md",
+        "docs/SECURITY_REVIEW.md",
+        "docs/TEST_RESULTS.md",
+        "docs/UPSTREAM_INTEGRATIONS.md",
+        "docs/UPSTREAM_WATCH.md",
+        "docs/WALLET_RECOVERY.md"
+      ],
+      "lastCommitDate": "2026-11-08"
+    },
+    "pauloes-btechs/TheRepoReport": {
+      "name": "TheRepoReport",
+      "full": "pauloes-btechs/TheRepoReport",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pagesUrl": null,
+      "pushedAt": "2026-11-10T20:09:20-05:00",
+      "releases": [],
+      "readme": "17dd6bf50c\n91fc577126\n9b96d7234a\n3060fa914a\n8b791c0cde\na38ea8139f\n5344735b79\n71c93e569c\nbbc0aff806\n1a4f1f4289\n1a62ab74f7\n772d7c6188\n79b637b23a\n4c99a46aae\n460dfe2bbf\nca16bb6003\nd3d6fa11e1\nbbc0aff806\nfab000952d\n91d220c646\n7641bbe8c0\n20d1068171\nad59b27c6d\n7bb70c6586\n67ca8e9249\n05b207a4a2\n3790848588\n2598aa8e33\n86352df164\n53bbedc715\n91ab88e740\n3558262b91\n3e396ba271\n8dc414a245\n36e2c238db\n48bc56bf0f\nbbc0aff806\nc9d677f734\n40d59233e0\n8dc414a245\ndf6f57d727\nb41f251ebf\neb53b3a9f2\na28ff4e496\n7e8fee4e4f\nbbc0aff806\n92cd784d77\n8dc414a245\n65e05fe0f2\nbbc0aff806\ne0f46b670b\nb25d647dea\n72d5901952\n8bd2438212\n2edab24077\nd872125b37\n8272d43233\n893770e666\n7379f571d1\nab2dcc9baa\n007def1314\n4b63c593bb\nedf1d9ea33\nc3225f3e2c",
+      "testFiles": 30,
+      "workflows": [
+        "ci.yml",
+        "config-update.yml",
+        "edition.yml",
+        "keepalive.yml"
+      ],
+      "docs": [
+        "README.md",
+        "docs/BENCHMARKS.md",
+        "docs/BUILD_PROMPT.md",
+        "docs/COSTS.md",
+        "docs/OPERATIONS.md",
+        "docs/VOICES.md"
+      ],
+      "lastCommitDate": "2026-11-10"
+    },
+    "pauloes-btechs/renter-app": {
+      "name": "renter-app",
+      "full": "pauloes-btechs/renter-app",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pagesUrl": null,
+      "pushedAt": "2026-11-03T09:11:06-05:00",
+      "releases": [],
+      "readme": "6fcf08f691\n08b3c8cec9\nfb7f0ab520\ncd14f7e181\n8dc414a245\n494b8cb7fb\na48344f7b5\nea17ed7fd1\nbbc0aff806\n20d54045ad\n8dc414a245\ncc90702e72\n100ccf5605\nbe589a283e\nbbc0aff806\nc43fe97e09\nc025d6d08f\n91d220c646\n82ca59e625\ncb27eb182a\n7e41ab605b\n6c5522b83e\n4ace3e6acc\n8293d1ff25\n7b794912ab\nfc939b5b36\n69db2dbdcd\n931fbc86df\n3aa49797c6\n4f2e97c6d5\n00ec33f17a\n33632d7d98\n76789687cb\n8dc414a245\na6aa979aa0\n2ff8c362e6\nb41f251ebf\nbbc0aff806\n15efb8b2f6\n75ede39f8f\nfefee3bb0d\n127ff3fcf4\n3d15510504\nf6e1933f49\n4ab01b1e17\nfba99b5630\nda843cbbcd\n0f0d345f19\n458937df33\nbbc0aff806\naecbb827fc\n5f4c0a2022\n17d301aa76\n56709ae5ab\n1b0aa019b8\n91ce46dd94\n6be30c420d\nfb58728b8c\n4b48ab63ba\ne7272c3f87\n638d4f7bda\n705e3c6d32\n6379d1d5fd\n7aabdecfb7\n4e411ac994\nbbc0aff806\ne5b0870298\n77e728bf6a\n9bf16345fd\nbbc0aff806\n0d9db18457\n8f4e510fbe\na64117b5d2\n62c14db0b2\nf794dcf5dc\nbbc0aff806\ncfd5aea08e\n0892c4e474\n37cee0e7c3\n9f1ebc64a8\na1c49cc9e5\n5f3ba99f37\n32b1f88552\n8954e5a595\n733d162ea0\nff436e68a2\ne3260cdf6b\n2c54a99e61\n7d1512589f\n01ff111ad4\naa3e2b52f5\n1b18405283\n1f01e8c40d\n5417cdbf6e\n863a4b9a4a\ncc7ee1d22c\n9e701b59af\n4564e93a1e\nb0f5ac3897\n1c23126150\nf1661df090\n6e8bb0eb19\n48c30640a3\n2b7bc2351e\n0691d2441f\n934409ec0f\nd2a465222e\nd1e3d687f1\n1efa0dc4d2\n92325a5722\n4ef6384e70\n124632f1ac\n342bf54a39\n02fc0f6f84\n420b79c85a\n8e7b04a4d3\n51ea886709\n8f39b149b9\n6a8473a8a3\nf14693bfd9\nc134896976\n6a1cc4adf4\n517f1dd7f4\n427e79f970\n2d4a97114f\n4ff54d6554\nb5cc1ddee0\na797ff182d\nbea4747690\nf0ebc19e18\n0cf91e651d\nfa6fe11398\n6de5afc916\n46399175c3\n3edc883b3b\n9fadc1df0c\n20e118a2b2\n407b1aa4ac\ndb2fa77a08\n506c7956a8\n86e86512cf\n8cf62dd6e4\na1ef0c774f\n61a309fe60\nef0792af9c\n8d4278c595\n9de00d9e5d\n53a5b5f0b9\n51cc0e5441\nc9b1e00964\ne06a3c02d1\n6ee849b821\n2b61411157\nac9ccfb15b\n44cf76f6b1\ne7053dfba2\nc138d01fc6\n51596d824b\n47ea8bfa00\n773e59c8b4\n2d3200394d\n7bc311f18b\n01ab0d8b72\n326797ce22",
+      "testFiles": 11,
+      "workflows": [],
+      "docs": [
+        "README.md"
+      ],
+      "lastCommitDate": "2026-11-03"
+    },
+    "pauloes-btechs/lanekeeper": {
+      "name": "lanekeeper",
+      "full": "pauloes-btechs/lanekeeper",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pagesUrl": null,
+      "pushedAt": "2026-10-30T20:39:21+00:00",
+      "releases": [
+        {
+          "tag": "v0.1.0",
+          "date": "2026-10-12",
+          "url": "https://github.com/pauloes-btechs/lanekeeper/releases/tag/v0.1.0"
+        }
+      ],
+      "readme": "dbfc76c888\n9ef5c32069\nce29bdefbb\nf061978b56\n95516a8324\n4d68a24d67\n72018dd303\nfea3b4befb\nfe8e93eb4c\na0ca3cac9f\n6cf6d6ddd9\n0557983984\n6b0f7dd5d4\n2afb3b13e5\n25344152bd\n728ee75024\n841a2ca821\nd872125b37\n72018dd303\n210d1f31b7\ne5fd4d8763\nb4937deb54\nad2cc54027\n519c276b2e\nc58a9f29b6\n06687146e6\n484b1760f8\n66e5c384ee\nad3438de02\n9030462e5f\nbbc0aff806\n0f6bdc8309\n15a9b772f7\n695b8a2af7\n36da6b732d\nb2a4b35899\n6227290063\n69adca731f\nc58a9f29b6\n86525e6369\nbbc0aff806\n4614c1c307",
+      "testFiles": 1,
+      "workflows": [
+        "ci.yml"
+      ],
+      "docs": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "lastCommitDate": null
+    },
+    "pauloes-btechs/btechs": {
+      "name": "btechs",
+      "full": "pauloes-btechs/btechs",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pagesUrl": null,
+      "pushedAt": "2026-10-30T19:11:43+00:00",
+      "releases": [],
+      "readme": "ac1ed80c10",
+      "testFiles": 0,
+      "workflows": [],
+      "docs": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "lastCommitDate": null
+    }
+  },
+  "note": "Initial baseline built from public-repository clones on the registry verification date (scripts/portfolio-watch/snapshot-from-git.mjs). The first scheduled run replaces it with API data."
+}
