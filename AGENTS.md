@@ -26,7 +26,8 @@ DNS on Cloudflare.
   homepage Selected Builds, `/portfolio` explorer, `/portfolio/[slug]` detail pages,
   Story milestones, and `/roles/btechs` all read from it through its selectors. Never
   duplicate project copy elsewhere. Only `publish: "approved"` records render; private
-  repositories keep `repoUrl: null`. Every claim needs a `sources` entry.
+  repositories keep `repoUrl: null`. Every claim needs a `sources` entry. The weekly
+  portfolio-watch workflow proposes updates as a draft PR — see `docs/PORTFOLIO_AUTOMATION.md`.
 - **Style:** no external UI framework or icon pack; keep the existing design
   language. Match the surrounding code style.
 
