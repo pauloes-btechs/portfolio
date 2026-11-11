@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import CompanyMark from "./CompanyMark";
+import ProjectBranch from "./ProjectBranch";
 import { story, roles } from "../lib/data";
 
 /**
@@ -98,6 +99,7 @@ export default function StoryJourney() {
                 </div>
               </div>
               <p className="chapter-text">{c.text}</p>
+              {c.slug === "btechs" && <ProjectBranch />}
               <div className="chapter-foot">
                 <div className="chapter-stat">
                   <span className="n">{c.stat.n}</span>
