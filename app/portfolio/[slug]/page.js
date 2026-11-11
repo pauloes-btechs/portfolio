@@ -157,7 +157,7 @@ export default async function ProjectPage({ params }) {
               <div className="gallery">
                 {p.gallery.map((g) => (
                   <Reveal key={g.src}>
-                    <figure className="project-figure" style={{ marginTop: 0 }}>
+                    <figure className={`project-figure${g.narrow ? " narrow" : ""}`} style={{ marginTop: 0 }}>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={g.src} alt={g.alt} loading="lazy" />
                       {g.caption && <figcaption>{g.caption}</figcaption>}
