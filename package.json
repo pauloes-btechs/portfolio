@@ -11,7 +11,7 @@
     "portfolio:watch": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/portfolio-watch/run.mjs"
   },
   "dependencies": {
-    "next": "^16.3.5",
+    "next": "^16.4.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "resend": "^4.0.0"
