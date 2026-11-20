@@ -4,7 +4,7 @@ import Reveal from "../../components/Reveal";
 import SiteCard from "../../components/SiteCard";
 import ProjectCard from "../../components/ProjectCard";
 import { portfolio } from "../../lib/data";
-import { publishedProjects, projectsByCategory, countWord } from "../../lib/projects";
+import { publishedProjects, countWord } from "../../lib/projects";
 
 const totalSites = portfolio.groups.reduce((a, g) => a + g.sites.length, 0);
 const totalProjects = publishedProjects().length;
@@ -16,7 +16,7 @@ export const metadata = {
 };
 
 export default function PortfolioPage() {
-  const categories = projectsByCategory();
+  const ranked = publishedProjects();
   return (
     <>
       <ChainCanvas variant="portfolio" />
@@ -44,23 +44,12 @@ export default function PortfolioPage() {
           <h2 className="part-title" id="btechs-title">Products &amp; Engineering</h2>
           <p className="part-sub">
             Projects I&rsquo;m building through{" "}
-            <Link href="/roles/btechs">Btechs</Link>. Maturity labels reflect what the code
-            and tests prove today — not what a README hopes.
+            <Link href="/roles/btechs">Btechs</Link>, ranked by impact. Maturity labels reflect
+            what the code and tests prove today — not what a README hopes.
           </p>
-          <nav className="category-nav" aria-label="Project categories">
-            {categories.map((c) => (
-              <a href={`#${c.id}`} key={c.id}>{c.label} · {c.projects.length}</a>
-            ))}
-          </nav>
-          {categories.map((c) => (
-            <section className="category" id={c.id} key={c.id} aria-labelledby={`${c.id}-h`}>
-              <h3 id={`${c.id}-h`}>{c.label}</h3>
-              <p className="category-sub">{c.blurb}</p>
-              <Reveal className="project-grid">
-                {c.projects.map((p) => <ProjectCard p={p} key={p.slug} />)}
-              </Reveal>
-            </section>
-          ))}
+          <Reveal className="project-grid ranked">
+            {ranked.map((p, i) => <ProjectCard p={p} rank={i + 1} key={p.slug} />)}
+          </Reveal>
         </section>
 
         {/* Part 2 — Digital Platforms & Professional Work (unchanged groups) */}

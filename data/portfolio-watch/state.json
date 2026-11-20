@@ -1,14 +1,36 @@
 {
-  "collectedAt": "2026-11-11T00:00:00Z",
+  "collectedAt": "2026-11-16T22:48:01.614Z",
   "repos": {
+    "pauloes-btechs/btechs": {
+      "name": "btechs",
+      "full": "pauloes-btechs/btechs",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pushedAt": "2026-10-30T19:11:58Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": null,
+      "releases": [],
+      "readme": "ac1ed80c10",
+      "testFiles": 0,
+      "workflows": [],
+      "docs": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "lastCommitDate": null
+    },
     "pauloes-btechs/KYAgent": {
       "name": "KYAgent",
       "full": "pauloes-btechs/KYAgent",
       "private": false,
-      "description": "",
-      "homepage": null,
-      "pagesUrl": null,
-      "pushedAt": "2026-10-30T20:40:14+00:00",
+      "description": "Know-Your-Agent: identity, authorization and continuous OFAC screening for AI agents that move money. Built on MongoDB Atlas.",
+      "homepage": "https://pauloes-btechs.github.io/KYAgent/live/",
+      "pushedAt": "2026-11-12T19:00:06Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": "https://pauloes-btechs.github.io/KYAgent/",
       "releases": [],
       "readme": "b4563307fd\nf06b0d3c2c\n93f6401719\nb4563307fd\nb3ec84bcc7\nb62e36a755\n2e9971a617\n018859ff4e\nb961743659\n0f0cd2c501\n93f6401719\nb4563307fd\ndcc9253d0f\n6aa910999a\n015ae0993b\nd93849f135\n9b38277a79\nb2e31af66b\n1055ea8962\n93f6401719\nd8fd89bd2c\n58b63e273b\n3cb7c91865\n44673503c7\ne12a6fb325\n68219bf94d\ne314c9ca32\na845c29757\n6ae32b492c\na44eb889b2\n3de7937e42\n72721733d9\n1de0207408\ncdf4bf8f51\n96074ce976\n8272d43233\nf6c18d04d5\n41de2f01fe\n1adb264f3c\n55876725d1\n616f9fac63\n58b63e273b\n61e9ec755d\n0f06156b22\n19607cd000\n91d220c646\n4d996d4e79\n0e2bb94fde\n4ba216bfe8\nc56e082ef7\n614ec289bd\n89a3567a99\n58b63e273b\n605d5976ed\n0a079257f9\nd6f699d19e\n76ff68a3ba\n2b3c767a2a\n8a5ee79201\n58eaef43b1\n02fea76cbc\na524157f5f\n21d9e367a5\n898e6ba9c9\n15533ead33\n05f46c1350\n67ceba5616\n58b63e273b\n458937df33\n551d06678d\nb97a17934a\n7e53564ec2\n2a0ac5a546\ne22de5424f\n91d220c646\n85c14fd39e\n11a7079a84\nf5c7a28059\n5667026568\nf9fea9e3be\n1b4f6e8394\n83d5d418ff\n5af5dce320\nbc529c3e69\na2f733bac6\nf6be9f1364\n01c5f8679c\n63f819cb06\n25df98198a\nce8d4ca199\n58b63e273b\n206e6f0680\n5de525ec61\n816e81576d\n91d220c646\n9d7b67c3ef\nd4ad8ba519\nf298fef94f\nd054befedf\n7e53564ec2\nad30ed6a48\n01298c0163\ncadc4377df\n3c3349b1a9\n7580e44da4\nd7c3151a09\n32ba29ec30\n55a4b90855\n1a0905eff1\n9eaf90ac48\nab461db78e\n5a23ea3683\n23421a350e\nf54f827886\n5383d99431\nbe69a9bd18\n055bbf7f79\n6eb6c91535\nd587437170\nbbc0aff806\nce8d4ca199\n7e53564ec2\n3262f81d69\n01298c0163\n668c0b3826\n3c3349b1a9\nb3965b44d5\na2f4d431df\nedf38cdfb1\n42f3b7f708\n4135392ee1\n602d975b33\ne8f08ae066\n9fdc0d341b\nbe69a9bd18\ndb1dd8d752\nd587437170\nbbc0aff806\na716fd3ee8\nce8d4ca199\n7e53564ec2\n215330914c\n01298c0163\n535c423dd6\n3c3349b1a9\nc05805ca8a\n63d5e72054\n3f8bf7cf55\nfb8631ca8b\n61e7834990\naebc11bb20\n7d1a4cc397\nc2b7df6201\nbbc0aff806\ndb7e2d2ce6\nce8d4ca199\ndc6f1f215a\n58b63e273b\nf2c9c4f6cd\n30ddf40cdf\n6286229636\na6ba762a4d\nf041e97335\n8272d43233\nce4999a08a\nb4ac1d8f1b\n7ebd872738\n62a22c2251\ndaf340e12b\nadfbb9e6fa\n96523a0d3a\n906755eb44\nb6e1c51b9d\n2dc10fada2\n3629419251\na60accf24a\n1769c60cec\n58b63e273b\n8130742b8f\nbf52df64f7\n91d220c646\n151a122a68\n83ad6af707\n7d177a20c4\n04bc3d1d89\n4312cfa092\neef750bcf8\n586a544dde\n9c514f28d9\ne1ead0c993\nde3f6796ed\n699b205d0d\n0a26f43f5b\ne24be91bda\n58b63e273b\nae33c6d71c\n319aa98537\n3785048688\n9bdfb72882\n8272d43233\n26d8be420f\n0595f9a15f\nb96e21583a\nb139d1126f\nffaf20214c\n8dc414a245\n954a628fd8\n494b8cb7fb\nfa4548a45a\nbbc0aff806\na531ed8727\n81573d1934\n8dc414a245\n8714dc8937\n8355ab0977\n5671ad7a1d\n9cbb80f76c\n93f35ade81\nbbc0aff806\n1e0acea58a\n0cc43343d3\n38e2c4cc7c\n1123e4d1c9\nfb191de601\n52db379c74\n99f512314a\n5a8dbeb361\n2194431f69\n58b63e273b\n2a6fa17a00\n6a927d5494\n8272d43233\n640e8ec6e9\n8faa007b8c\n3984f01248\nedd72e22c6\n8cb9d982e9\ncc600dee70\n74c3390c96\n7bf39033fd\n3eb9f20a3e\ncf0135f3aa\n58b63e273b\n4a561d6346\nbbc0aff806\n984e76fdaf\nfae8bffb1f\nae669000dd\n8ebe037f56\n0a03f7ab9e\n33a68ae529\n8790e948ba\na1bd167c3b\nef8144bf06\n37166fc1da\n5a273ed712\n131c46116a\nf1629caf52\n8f38ed33e2\nbbc0aff806\n58b63e273b\n16f5ee3a26\nc372b41d60\n8272d43233\ncdba3efbe3\nef1bccfe22\ndbdcf64a3f\nd5a820d89e\n58b63e273b\nf9c850a8d7\n9fb7596cb1\n8272d43233\nb514abb067\nc3fc6ef845\n2c137c7d25\ncfcac9d601\n3a39a09a97\n58b63e273b\n50d86dec00\nc549b9ce97\n58b63e273b\nbf62129760\nadf8516a79\n8272d43233\n7b20e9f700\ndb7eac3dd6\n84f15fce44\n0205bab2e3\neb3af75be0\n5196ab3e16\nd778b3c2c9\n58b63e273b\n74efa9263d",
       "testFiles": 37,
@@ -27,19 +49,211 @@
         "docs/DEMO.md",
         "docs/SECURITY_REVIEW_HARNESS.md"
       ],
+      "lastCommitDate": "2026-11-12"
+    },
+    "pauloes-btechs/lanekeeper": {
+      "name": "lanekeeper",
+      "full": "pauloes-btechs/lanekeeper",
+      "private": false,
+      "description": "Lane-sized robot that sweeps broken glass from bike lanes at night. Gemini Robotics-ER vision, Supabase backend, 3D site with city lane maps.",
+      "homepage": "https://pauloes-btechs.github.io/lanekeeper/",
+      "pushedAt": "2026-11-13T04:35:21Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": "https://pauloes-btechs.github.io/lanekeeper/",
+      "releases": [
+        {
+          "tag": "v0.2.0",
+          "date": "",
+          "url": "https://github.com/pauloes-btechs/lanekeeper/releases/tag/v0.2.0"
+        },
+        {
+          "tag": "v0.1.0",
+          "date": "",
+          "url": "https://github.com/pauloes-btechs/lanekeeper/releases/tag/v0.1.0"
+        }
+      ],
+      "readme": "dbfc76c888\n9ef5c32069\nce29bdefbb\nf061978b56\n95516a8324\n4d68a24d67\n72018dd303\ncfb5dd49b1\nf6ecab0810\nae7c069686\na0ca3cac9f\n6cf6d6ddd9\n0557983984\n6b0f7dd5d4\n0d52ee4b0f\n2afb3b13e5\n25344152bd\n728ee75024\n739b0c3d33\n31353d6386\n4e4a209154\nc58a9f29b6\n785199edd7\n494b8cb7fb\n942cc01f36\n3fa4854aa5\n201f468943\n19f5189705\n4369fe45e5\n114892a200\nbbc0aff806\n756c3d507b\nff3b8c26e4\nec19f51572\n841a2ca821\nd872125b37\n72018dd303\n210d1f31b7\ne5fd4d8763\nb4937deb54\nad2cc54027\n519c276b2e\nc58a9f29b6\n06687146e6\n484b1760f8\n66e5c384ee\nad3438de02\n5b3672de1c\n9030462e5f\nbbc0aff806\n0f6bdc8309\n15a9b772f7\n695b8a2af7\n36da6b732d\nb2a4b35899\n6227290063\n69adca731f\nc58a9f29b6\n86525e6369\nbbc0aff806\n4614c1c307",
+      "testFiles": 6,
+      "workflows": [
+        "ci.yml",
+        "city-data.yml",
+        "pages.yml",
+        "site.yml"
+      ],
+      "docs": [
+        "AGENTS.md",
+        "README.md"
+      ],
+      "lastCommitDate": "2026-11-12"
+    },
+    "pauloes-btechs/lightning-kb": {
+      "name": "lightning-kb",
+      "full": "pauloes-btechs/lightning-kb",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pushedAt": "2026-11-16T18:47:25Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": null,
+      "releases": [],
+      "readme": "49d86120f2\nf3e426bb46\n0f0213d690\n10e35a727f\nb008bb36dc\n624cd92ba4\n8a041132dc\n88d98fd3b5\n64599ff107\n0b0a36b76f\nb327868d48\nc8719fb7c9\n75dd342b04\n2e5fe5cc8c\n07b138969f\n37dceab7db\nff967ab8c9\nfabf369dc9\nbbb7275363\n1658480428\n3a8f3926a3\n41fac06dd8\ndf1edf8578\nc0deef5604\n91d220c646\n6fb3e3effe\n4f536ef581\n427c9ee41c\n984e094376\n788856cb48\nf6cf9aecc0\n6101a30393\n6b6de9d546\n9cd36b5dae\n05db806a0a\nbc6c3ea865\n9ade2ddda7\nff9ec51e0b\n3f7118c97d\n4938711dd8\nfa71ce78d5\nbcdb7e9bf6\n2634072d61\n506b3583a3\n8b2a8c9d26\nf789c1d229\n1e92c02902\n216aeb2237\n46f9c98b3a\n309a0772ac\n7767f574ac\nbcd5ce0f61\nde80d6ce9c\n4000de0231\n47776a7f09\n9a5aa9940b\n1dae811ecc\n2a268efe4c\nd88115fb2c\nf026a2063a\n44d2cb7bb5\n4a7fefbbb8",
+      "testFiles": 0,
+      "workflows": [
+        "checks.yml",
+        "pages.yml"
+      ],
+      "docs": [
+        "CLAUDE.md",
+        "README.md"
+      ],
+      "lastCommitDate": "2026-11-16"
+    },
+    "pauloes-btechs/NEARAuth": {
+      "name": "NEARAuth",
+      "full": "pauloes-btechs/NEARAuth",
+      "private": false,
+      "description": "",
+      "homepage": null,
+      "pushedAt": "2026-11-14T03:05:13Z",
+      "stars": 1,
+      "forks": 1,
+      "pagesUrl": "https://pauloes-btechs.github.io/NEARAuth/",
+      "releases": [],
+      "readme": "a55bbeaedf\naeab998631\n5cfed610e2\nd872125b37\n8272d43233\n831e7c9805\n02d6677d9d\na3b2b81848\n9d36f647be\nade341f595\nb2af71a3dc\n7d3229b6e5\n9e5e2fd971\nbd631adc61\nebf80a232f\nc64d619dfc\n21e434a43e\nf6c2b3a7ac\n93593f7401\n8272d43233\n97aa03a890\n73754195d3\n6eba012fec\n26bb698e28\n2088306fb8\n32331f9dde\n498b84d596\n7144516c5d\nf0a0dc1ab3\n300972d871\n6bcf79537c\nfaa63a4b95\nd6f3cd6854\n9e5ea2749f\nf266e29d09\n8dc414a245\nbcd9e9bf0a\n27d73d94bc\na1eccb9709\n18788d534a\n91fd300ee2\nd0c434756b\n3006417467\n69f8183bd1\n956189013b\nbbc0aff806\n499853f7fa\ncebb97c7e4\n2fe2c2391f\n932704e300\nfad2b4ba42",
+      "testFiles": 13,
+      "workflows": [
+        "ci.yml",
+        "near-deploy.yml",
+        "pages.yml",
+        "test.yml"
+      ],
+      "docs": [
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        "README.md",
+        "SECURITY.md",
+        "docs/ARCHITECTURE.md",
+        "docs/MAINTAINERS.md",
+        "docs/MOBILE.md",
+        "docs/ROADMAP.md"
+      ],
+      "lastCommitDate": "2026-11-14"
+    },
+    "pauloes-btechs/pauloes-btechs": {
+      "name": "pauloes-btechs",
+      "full": "pauloes-btechs/pauloes-btechs",
+      "private": false,
+      "description": "Profile README",
+      "homepage": null,
+      "pushedAt": "2026-11-16T22:03:32Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": null,
+      "releases": [],
+      "readme": "d8ee00948e\n748b47de49\n02e6816f8a\n59e0876be1\n98803a63ed\nf58d61bb45\n0070c10f8f\n12584f34ef\n7c87180da7\n194bf69c16\nedf466838c\n051d6ae6a9\n67750eb148\n3f665b0f8c\n9827d9a3c6\nca38ec18e7\n125a168e24\n7c87180da7\n0381384474\ndbef004956\ne314c9ca32\na845c29757\nfdbc6f2cd4\n1259e42193\n5dacde8750\n6ff2f48c15\ne8d74d45c0\nc755a569e0\ne030533e89\nacb62021bc\n1a1d1d29e4\nc4aa6c3629\ndf76dcc2a8\na74ff1f6aa\n7bd75fff68\n5f6a718f8a\n4770a97697\nbbc0aff806\n6ff2f48c15\n1de0207408\ncdf4bf8f51\n2e9e78971a\n85d2f67773\ne314c9ca32\na845c29757\nba74c91366\nf0aa6ecaaa\n1de0207408\na845c29757\nbd5fca85e3\n4fd3a33f47\n1de0207408\na845c29757\nf5375518b9\n0a57195a28\n1de0207408\ncdf4bf8f51\n11b1bde74b\nfebbf8d567\nf549cb7e01\n7e53564ec2\n94b02295a2\n7c87180da7\n3c6e53ce30\n91d220c646\n75c9885944\n97de26ef87\n66d9a591d6\n61666f9e1b\n3780221c69\nce8d4ca199\n7e06ab1c09\n0d08c0e60c\n0070c10f8f\nc28554e8ba\n18efa5e912\nce8455ece3\n8ff7b1a469\nd5cff9e07a\n694c72cc83\n6889e27b38\nfd48b30bff\nfdd26c9802\n416a30720a\n4c5532a9aa\n752d42801b\n1f15cf9b45\nafdbee62e5\nd988705d2c\n98133e1990\n40d7f50aa6\n9ba19cf66c\naee58440f0\n1299465a45\na2e493cc9d\na474f9b90a\nedaec3abf5\na62ad3b92b\nc9e3687713\n09e6241767\n893568a256\n65fcc04117\nb06a48cc03\n125a168e24\n00a0b86241\n41c38854f8\nf84037d97a\na0eb90cc85\ne314c9ca32\na845c29757\na7aae4938d\nf1382c81a2\n1de0207408\ncdf4bf8f51\n4f13a4c5d8\nb1ec756a99\n0070c10f8f\na50efe410b\n05d7e14924\n125a168e24\n7c87180da7\n0070c10f8f\ne0235c3b49\nbe9a60b7f0\n125a168e24",
+      "testFiles": 0,
+      "workflows": [
+        "ci.yml",
+        "tracker.yml"
+      ],
+      "docs": [
+        "AGENTS.md",
+        "README.md"
+      ],
       "lastCommitDate": null
+    },
+    "pauloes-btechs/portfolio": {
+      "name": "portfolio",
+      "full": "pauloes-btechs/portfolio",
+      "private": false,
+      "description": "",
+      "homepage": "https://pauloes.com",
+      "pushedAt": "2026-11-13T21:55:52Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": null,
+      "releases": [],
+      "readme": "402e3aa98e\n6b46f0e8cb\nf7562b567d\n9b03b8cc46\n873951c7a7\n7ff756817d\n873282e1b0\ndeb26f5111\nee64b6f20b\n2860e9e69e\n14a70c3c03\n48e1f97ca2\n6747b344bc\nab61de7fd7\n4ef52e23d7\n433181fcea\na4becba37c\n045f27b90b\ne15b8abe37\n21b0cb5b7c\n763306d2fe\n8dc414a245\n494b8cb7fb\neb97c8aaf7\nb91463f259\n9e873392e1\nbbc0aff806\n18c43ad480\nbbc0aff806\n68620029c1\n6bdfde3072\n0421ae1bf3\n753813f455\nbe0a985902\n9b0eea8ce4\nff23fcbbc9\ne9e715ecc0\neb3c210859\n879152ef2f\n876a1f31f7\nbbc72d5b39\n748890da02\n0f65b3a819\n84ce9cfdeb\ne54b4e8600\na5c2338146\nf57f223f27\n1290803379\n1822f87f84\nd7af03fd16\n4d6ece26f0\nbbc0aff806\n20b8caf79c\n19e1c5b15b\ncebb97c7e4\nb58e1d64f5",
+      "testFiles": 2,
+      "workflows": [
+        "ci.yml",
+        "portfolio-watch.yml"
+      ],
+      "docs": [
+        "AGENTS.md",
+        "DEPLOY.md",
+        "README.md",
+        "docs/PORTFOLIO_AUTOMATION.md"
+      ],
+      "lastCommitDate": "2026-11-11"
+    },
+    "pauloes-btechs/renter-app": {
+      "name": "renter-app",
+      "full": "pauloes-btechs/renter-app",
+      "private": false,
+      "description": "",
+      "homepage": "https://renter-app-kohl.vercel.app",
+      "pushedAt": "2026-11-03T14:14:04Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": null,
+      "releases": [],
+      "readme": "6fcf08f691\n08b3c8cec9\nfb7f0ab520\ncd14f7e181\n8dc414a245\n494b8cb7fb\na48344f7b5\nea17ed7fd1\nbbc0aff806\n20d54045ad\n8dc414a245\ncc90702e72\n100ccf5605\nbe589a283e\nbbc0aff806\nc43fe97e09\nc025d6d08f\n91d220c646\n82ca59e625\ncb27eb182a\n7e41ab605b\n6c5522b83e\n4ace3e6acc\n8293d1ff25\n7b794912ab\nfc939b5b36\n69db2dbdcd\n931fbc86df\n3aa49797c6\n4f2e97c6d5\n00ec33f17a\n33632d7d98\n76789687cb\n8dc414a245\na6aa979aa0\n2ff8c362e6\nb41f251ebf\nbbc0aff806\n15efb8b2f6\n75ede39f8f\nfefee3bb0d\n127ff3fcf4\n3d15510504\nf6e1933f49\n4ab01b1e17\nfba99b5630\nda843cbbcd\n0f0d345f19\n458937df33\nbbc0aff806\naecbb827fc\n5f4c0a2022\n17d301aa76\n56709ae5ab\n1b0aa019b8\n91ce46dd94\n6be30c420d\nfb58728b8c\n4b48ab63ba\ne7272c3f87\n638d4f7bda\n705e3c6d32\n6379d1d5fd\n7aabdecfb7\n4e411ac994\nbbc0aff806\ne5b0870298\n77e728bf6a\n9bf16345fd\nbbc0aff806\n0d9db18457\n8f4e510fbe\na64117b5d2\n62c14db0b2\nf794dcf5dc\nbbc0aff806\ncfd5aea08e\n0892c4e474\n37cee0e7c3\n9f1ebc64a8\na1c49cc9e5\n5f3ba99f37\n32b1f88552\n8954e5a595\n733d162ea0\nff436e68a2\ne3260cdf6b\n2c54a99e61\n7d1512589f\n01ff111ad4\naa3e2b52f5\n1b18405283\n1f01e8c40d\n5417cdbf6e\n863a4b9a4a\ncc7ee1d22c\n9e701b59af\n4564e93a1e\nb0f5ac3897\n1c23126150\nf1661df090\n6e8bb0eb19\n48c30640a3\n2b7bc2351e\n0691d2441f\n934409ec0f\nd2a465222e\nd1e3d687f1\n1efa0dc4d2\n92325a5722\n4ef6384e70\n124632f1ac\n342bf54a39\n02fc0f6f84\n420b79c85a\n8e7b04a4d3\n51ea886709\n8f39b149b9\n6a8473a8a3\nf14693bfd9\nc134896976\n6a1cc4adf4\n517f1dd7f4\n427e79f970\n2d4a97114f\n4ff54d6554\nb5cc1ddee0\na797ff182d\nbea4747690\nf0ebc19e18\n0cf91e651d\nfa6fe11398\n6de5afc916\n46399175c3\n3edc883b3b\n9fadc1df0c\n20e118a2b2\n407b1aa4ac\ndb2fa77a08\n506c7956a8\n86e86512cf\n8cf62dd6e4\na1ef0c774f\n61a309fe60\nef0792af9c\n8d4278c595\n9de00d9e5d\n53a5b5f0b9\n51cc0e5441\nc9b1e00964\ne06a3c02d1\n6ee849b821\n2b61411157\nac9ccfb15b\n44cf76f6b1\ne7053dfba2\nc138d01fc6\n51596d824b\n47ea8bfa00\n773e59c8b4\n2d3200394d\n7bc311f18b\n01ab0d8b72\n326797ce22",
+      "testFiles": 11,
+      "workflows": [],
+      "docs": [
+        "README.md"
+      ],
+      "lastCommitDate": null
+    },
+    "pauloes-btechs/rust-wallet": {
+      "name": "rust-wallet",
+      "full": "pauloes-btechs/rust-wallet",
+      "private": false,
+      "description": "",
+      "homepage": "https://rust-wallet.vercel.app",
+      "pushedAt": "2026-11-16T19:12:08Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": null,
+      "releases": [],
+      "readme": "1531428bd8\nc5dff055cc\nb5480e5578\n445599fd42\nf0b6c3d104\nf6e446ade4\n8b13d634f3\nea8c43a3f6\n098985f5c7\n83823edf72\n691a394ea5\n28622725bc\n9dab41efa4\naf3070ac58\n92efa8b153\nbbc0aff806\na4ab9df88f\ne1cb7128f7\n45239ec248\na612a40b23\ne8b16181b1\nee9737adf2\n9bbcd2503a\n4bb87d7a0a\n8d27337aaf\nf5810868a0\nbd02e06351\n6cc2f1abb5\nd8a14cca04\nbbc0aff806\nfb7f0ab520\nc58a9f29b6\n95098e4c76\n9f0e24ef59\naf73726a07\n3b32a0b045\n4cde2075ea\nfcc19d098e\n6a3ede81c2\nad229f0d59\n7aea1d7f40\nddc57c98be\n9f206b7d49\n8fb37eba28\n9ee0cc934b\nbbc0aff806\n5ef208b8a1\n420075a349\n527e007219\n48edbded3a\n73a873676a\n2acaf54bea\nb75c209568\nfafdb87ab3\nc6fe9fca24\n298494a57c\n3e3b5e9dcc\ncb466e94fa\n3398deef71\n6cf3697fdd\naceea80937\nbf62129760\n871b5fa9dd\n2585daabbe\n2760e7b482\ndcc1d5f05d\neeece407ca\n0216067e04\n93e60fdca3\n05104931a3\n6e3715ac61",
+      "testFiles": 4,
+      "workflows": [
+        "ci.yml",
+        "regtest.yml",
+        "release.yml",
+        "upstream-watch.yml"
+      ],
+      "docs": [
+        "CLAUDE.md",
+        "README.md",
+        "docs/ARCHITECTURE.md",
+        "docs/HOSTING.md",
+        "docs/LOCAL_DEV_MAC.md",
+        "docs/PAYMENTS.md",
+        "docs/RELEASE.md",
+        "docs/SECURITY.md",
+        "docs/TEST_RESULTS.md",
+        "docs/UPSTREAM.md"
+      ],
+      "lastCommitDate": "2026-11-16"
     },
     "pauloes-btechs/sovereign-wallet": {
       "name": "sovereign-wallet",
       "full": "pauloes-btechs/sovereign-wallet",
       "private": false,
       "description": "",
-      "homepage": null,
+      "homepage": "https://sovereign-wallet.vercel.app",
+      "pushedAt": "2026-11-16T20:12:31Z",
+      "stars": 0,
+      "forks": 0,
       "pagesUrl": null,
-      "pushedAt": "2026-11-08T22:22:56-05:00",
       "releases": [],
       "readme": "ae8c62e15e\n8d77fbdeeb\n36d5974400\n4f2311fda5\nbc467db8fa\n2b2e8501a1\n1a17ced08a\nac1af81e5e\n66c2d31f3a\n4b9fd356c5\nd5064b2a66\n14d9d97d0e\nd1f6a9f509\n92efa8b153\nbbc0aff806\n0974d17894\na64b1f76e0\n2870e231c0\n2036bfb895\n4699e85a7d\n5f420db3df\na377c8b9ec\n2278792a67\n761d68a996\nde0f52db18\nab3d04f812\n1c57ffb183\nbbc0aff806\n1c2ec40f61\nc58a9f29b6\n4ab13ad1eb\n1c23bf77cd\n3e55bc1537\nde0466eef3\nc150e4e389\nbbc0aff806\n89b8851d0c\n673f210516\nc06b9eea0b\n44ef8b0985\nc58a9f29b6\na86248a7cb\n9caaca6ccf\n096edf711e\nbbc0aff806\n53396d7a31\n35f59685cd\n6e66a204d7\na671883559\n2ecf9d085f\nc58a9f29b6\nde94b726f4\n0bd75e2b9c\nbbc0aff806\n4ad5c7c850\n7e748e91e4\n6e57616857\nbf62129760\n9898b04048\n57b4d3c796\n08e3fc14a2\ncafc6a604d\na839b95376\n2f92c7e631\n4b2679e05b\n863044e660\naddd7965b4\n7500dded10\n527e007219\n6cb68bd972\n1bdd94ba44\ndf1fa74d7e\nd5f03518fc\n996fd12d0b\n28d90ebc2e\ncebb97c7e4\n2fe2c2391f",
-      "testFiles": 123,
+      "testFiles": 124,
       "workflows": [
         "ci.yml",
         "loop-regtest.yml",
@@ -63,16 +277,18 @@
         "docs/UPSTREAM_WATCH.md",
         "docs/WALLET_RECOVERY.md"
       ],
-      "lastCommitDate": "2026-11-08"
+      "lastCommitDate": "2026-11-16"
     },
     "pauloes-btechs/TheRepoReport": {
       "name": "TheRepoReport",
       "full": "pauloes-btechs/TheRepoReport",
       "private": false,
-      "description": "",
-      "homepage": null,
-      "pagesUrl": null,
-      "pushedAt": "2026-11-10T20:09:20-05:00",
+      "description": "Your personal AI-powered GitHub newsroom: three narrated editions a day from the repos you follow. $0 to run.",
+      "homepage": "https://pauloes-btechs.github.io/TheRepoReport/",
+      "pushedAt": "2026-11-16T21:02:40Z",
+      "stars": 0,
+      "forks": 0,
+      "pagesUrl": "https://pauloes-btechs.github.io/TheRepoReport/",
       "releases": [],
       "readme": "17dd6bf50c\n91fc577126\n9b96d7234a\n3060fa914a\n8b791c0cde\na38ea8139f\n5344735b79\n71c93e569c\nbbc0aff806\n1a4f1f4289\n1a62ab74f7\n772d7c6188\n79b637b23a\n4c99a46aae\n460dfe2bbf\nca16bb6003\nd3d6fa11e1\nbbc0aff806\nfab000952d\n91d220c646\n7641bbe8c0\n20d1068171\nad59b27c6d\n7bb70c6586\n67ca8e9249\n05b207a4a2\n3790848588\n2598aa8e33\n86352df164\n53bbedc715\n91ab88e740\n3558262b91\n3e396ba271\n8dc414a245\n36e2c238db\n48bc56bf0f\nbbc0aff806\nc9d677f734\n40d59233e0\n8dc414a245\ndf6f57d727\nb41f251ebf\neb53b3a9f2\na28ff4e496\n7e8fee4e4f\nbbc0aff806\n92cd784d77\n8dc414a245\n65e05fe0f2\nbbc0aff806\ne0f46b670b\nb25d647dea\n72d5901952\n8bd2438212\n2edab24077\nd872125b37\n8272d43233\n893770e666\n7379f571d1\nab2dcc9baa\n007def1314\n4b63c593bb\nedf1d9ea33\nc3225f3e2c",
       "testFiles": 30,
@@ -90,69 +306,7 @@
         "docs/OPERATIONS.md",
         "docs/VOICES.md"
       ],
-      "lastCommitDate": "2026-11-10"
-    },
-    "pauloes-btechs/renter-app": {
-      "name": "renter-app",
-      "full": "pauloes-btechs/renter-app",
-      "private": false,
-      "description": "",
-      "homepage": null,
-      "pagesUrl": null,
-      "pushedAt": "2026-11-03T09:11:06-05:00",
-      "releases": [],
-      "readme": "6fcf08f691\n08b3c8cec9\nfb7f0ab520\ncd14f7e181\n8dc414a245\n494b8cb7fb\na48344f7b5\nea17ed7fd1\nbbc0aff806\n20d54045ad\n8dc414a245\ncc90702e72\n100ccf5605\nbe589a283e\nbbc0aff806\nc43fe97e09\nc025d6d08f\n91d220c646\n82ca59e625\ncb27eb182a\n7e41ab605b\n6c5522b83e\n4ace3e6acc\n8293d1ff25\n7b794912ab\nfc939b5b36\n69db2dbdcd\n931fbc86df\n3aa49797c6\n4f2e97c6d5\n00ec33f17a\n33632d7d98\n76789687cb\n8dc414a245\na6aa979aa0\n2ff8c362e6\nb41f251ebf\nbbc0aff806\n15efb8b2f6\n75ede39f8f\nfefee3bb0d\n127ff3fcf4\n3d15510504\nf6e1933f49\n4ab01b1e17\nfba99b5630\nda843cbbcd\n0f0d345f19\n458937df33\nbbc0aff806\naecbb827fc\n5f4c0a2022\n17d301aa76\n56709ae5ab\n1b0aa019b8\n91ce46dd94\n6be30c420d\nfb58728b8c\n4b48ab63ba\ne7272c3f87\n638d4f7bda\n705e3c6d32\n6379d1d5fd\n7aabdecfb7\n4e411ac994\nbbc0aff806\ne5b0870298\n77e728bf6a\n9bf16345fd\nbbc0aff806\n0d9db18457\n8f4e510fbe\na64117b5d2\n62c14db0b2\nf794dcf5dc\nbbc0aff806\ncfd5aea08e\n0892c4e474\n37cee0e7c3\n9f1ebc64a8\na1c49cc9e5\n5f3ba99f37\n32b1f88552\n8954e5a595\n733d162ea0\nff436e68a2\ne3260cdf6b\n2c54a99e61\n7d1512589f\n01ff111ad4\naa3e2b52f5\n1b18405283\n1f01e8c40d\n5417cdbf6e\n863a4b9a4a\ncc7ee1d22c\n9e701b59af\n4564e93a1e\nb0f5ac3897\n1c23126150\nf1661df090\n6e8bb0eb19\n48c30640a3\n2b7bc2351e\n0691d2441f\n934409ec0f\nd2a465222e\nd1e3d687f1\n1efa0dc4d2\n92325a5722\n4ef6384e70\n124632f1ac\n342bf54a39\n02fc0f6f84\n420b79c85a\n8e7b04a4d3\n51ea886709\n8f39b149b9\n6a8473a8a3\nf14693bfd9\nc134896976\n6a1cc4adf4\n517f1dd7f4\n427e79f970\n2d4a97114f\n4ff54d6554\nb5cc1ddee0\na797ff182d\nbea4747690\nf0ebc19e18\n0cf91e651d\nfa6fe11398\n6de5afc916\n46399175c3\n3edc883b3b\n9fadc1df0c\n20e118a2b2\n407b1aa4ac\ndb2fa77a08\n506c7956a8\n86e86512cf\n8cf62dd6e4\na1ef0c774f\n61a309fe60\nef0792af9c\n8d4278c595\n9de00d9e5d\n53a5b5f0b9\n51cc0e5441\nc9b1e00964\ne06a3c02d1\n6ee849b821\n2b61411157\nac9ccfb15b\n44cf76f6b1\ne7053dfba2\nc138d01fc6\n51596d824b\n47ea8bfa00\n773e59c8b4\n2d3200394d\n7bc311f18b\n01ab0d8b72\n326797ce22",
-      "testFiles": 11,
-      "workflows": [],
-      "docs": [
-        "README.md"
-      ],
-      "lastCommitDate": "2026-11-03"
-    },
-    "pauloes-btechs/lanekeeper": {
-      "name": "lanekeeper",
-      "full": "pauloes-btechs/lanekeeper",
-      "private": false,
-      "description": "",
-      "homepage": null,
-      "pagesUrl": null,
-      "pushedAt": "2026-10-30T20:39:21+00:00",
-      "releases": [
-        {
-          "tag": "v0.1.0",
-          "date": "2026-10-12",
-          "url": "https://github.com/pauloes-btechs/lanekeeper/releases/tag/v0.1.0"
-        }
-      ],
-      "readme": "dbfc76c888\n9ef5c32069\nce29bdefbb\nf061978b56\n95516a8324\n4d68a24d67\n72018dd303\nfea3b4befb\nfe8e93eb4c\na0ca3cac9f\n6cf6d6ddd9\n0557983984\n6b0f7dd5d4\n2afb3b13e5\n25344152bd\n728ee75024\n841a2ca821\nd872125b37\n72018dd303\n210d1f31b7\ne5fd4d8763\nb4937deb54\nad2cc54027\n519c276b2e\nc58a9f29b6\n06687146e6\n484b1760f8\n66e5c384ee\nad3438de02\n9030462e5f\nbbc0aff806\n0f6bdc8309\n15a9b772f7\n695b8a2af7\n36da6b732d\nb2a4b35899\n6227290063\n69adca731f\nc58a9f29b6\n86525e6369\nbbc0aff806\n4614c1c307",
-      "testFiles": 1,
-      "workflows": [
-        "ci.yml"
-      ],
-      "docs": [
-        "AGENTS.md",
-        "README.md"
-      ],
-      "lastCommitDate": null
-    },
-    "pauloes-btechs/btechs": {
-      "name": "btechs",
-      "full": "pauloes-btechs/btechs",
-      "private": false,
-      "description": "",
-      "homepage": null,
-      "pagesUrl": null,
-      "pushedAt": "2026-10-30T19:11:43+00:00",
-      "releases": [],
-      "readme": "ac1ed80c10",
-      "testFiles": 0,
-      "workflows": [],
-      "docs": [
-        "AGENTS.md",
-        "README.md"
-      ],
-      "lastCommitDate": null
+      "lastCommitDate": "2026-11-11"
     }
-  },
-  "note": "Initial baseline built from public-repository clones on the registry verification date (scripts/portfolio-watch/snapshot-from-git.mjs). The first scheduled run replaces it with API data."
+  }
 }

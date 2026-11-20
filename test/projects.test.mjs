@@ -77,10 +77,25 @@ test("every referenced image exists in /public and has alt text", () => {
   }
 });
 
-test("concept renders are labelled as renders, never as screenshots", () => {
+test("renders and diagrams are labelled as such, never passed off as screenshots", () => {
   for (const p of projects) {
+    assert.ok(["screenshot", "render", "diagram"].includes(p.image.kind), `${p.id} image kind`);
     if (p.image.kind === "render") assert.match(p.image.alt, /render|concept|design/i, p.id);
+    if (p.image.kind === "diagram") assert.match(`${p.image.alt} ${p.image.caption || ""}`, /diagram/i, p.id);
   }
+});
+
+test("priorities are unique and the homepage features exactly the top-ranked projects", () => {
+  const pub = publishedProjects();
+  const pr = pub.map((p) => p.priority);
+  assert.equal(new Set(pr).size, pr.length, "duplicate priority");
+  const top = pub.slice(0, featuredProjects().length).map((p) => p.slug);
+  assert.deepEqual(featuredProjects().map((p) => p.slug), top);
+});
+
+test("impact order set by Pauloes: DCI map, NEARAuth, KYAgent, Foundry first", () => {
+  assert.deepEqual(publishedProjects().slice(0, 4).map((p) => p.slug),
+    ["dci-global-research-map", "nearauth", "kyagent", "foundry"]);
 });
 
 test("selectors return only approved records", () => {

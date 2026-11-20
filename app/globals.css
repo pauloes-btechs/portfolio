@@ -778,3 +778,8 @@ main { position: relative; z-index: 1; }
   font-family: var(--mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
   color: var(--blue-soft); margin-top: 24px;
 }
+.project-rank {
+  display: inline-block; margin-right: 8px; padding: 0 6px; border-radius: 5px;
+  background: rgba(53,97,142,.10); color: var(--blue-soft); letter-spacing: 1px;
+}
+.project-grid.ranked { margin-top: 22px; }
