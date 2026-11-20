@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { maturityLabel } from "../lib/projects";
+import { maturityLabel, categoryLabel } from "../lib/projects";
 
 /**
  * A Btechs engineering project. Visually kin to SiteCard (framed visual,
@@ -9,7 +9,7 @@ import { maturityLabel } from "../lib/projects";
  * variant="feature" — homepage Selected Builds (lean)
  * variant="explorer" — /portfolio grid (adds highlights + links)
  */
-export default function ProjectCard({ p, variant = "explorer" }) {
+export default function ProjectCard({ p, variant = "explorer", rank = null }) {
   const explorer = variant === "explorer";
   const href = `/portfolio/${p.slug}`;
   return (
@@ -18,10 +18,14 @@ export default function ProjectCard({ p, variant = "explorer" }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={p.image.src} alt="" loading="lazy" width={1440} height={810} />
         {p.image.kind === "render" && <span className="media-tag">concept render</span>}
+        {p.image.kind === "diagram" && <span className="media-tag">diagram</span>}
       </Link>
       <div className="project-body">
         <div className="project-kicker">
-          <span className="project-org">Btechs</span>
+          <span className="project-org">
+            {rank && <span className="project-rank">{String(rank).padStart(2, "0")}</span>}
+            {explorer ? categoryLabel(p.category) : "Btechs"}
+          </span>
           <span className={`maturity m-${p.maturity}`}>{maturityLabel(p.maturity)}</span>
         </div>
         <h3 className="project-name">
