@@ -1,0 +1,40 @@
+/* ============================================================
+   SyncGate — once-per-session "hold to sync" intro
+   ============================================================ */
+html.gate-open { overflow: hidden; }
+.gate {
+  position: fixed; inset: 0; z-index: 100;
+  background: radial-gradient(ellipse at center, #0A1208 0%, var(--bg-deep) 70%);
+  display: grid; grid-template-rows: auto 1fr auto; padding: 28px 32px;
+  font-family: var(--mono); color: var(--ink-3);
+  animation: gate-in .35s ease-out;
+}
+.gate.leaving { animation: gate-out .5s ease-in forwards; }
+@keyframes gate-in { from { opacity: 0 } to { opacity: 1 } }
+@keyframes gate-out { to { opacity: 0; transform: scale(1.04); filter: blur(4px) } }
+.gate-scan {
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(var(--g-rgb), .035) 0 1px, transparent 1px 4px);
+}
+.gate-top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 3px; color: var(--ink-4); }
+.gate-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+.gate-kicker { margin: 0; font-size: 12px; letter-spacing: 2px; color: var(--green); }
+.gate-hold {
+  position: relative; width: 168px; height: 168px; border-radius: 50%;
+  background: rgba(var(--g-rgb), .04); border: 1px solid var(--line);
+  color: var(--green); cursor: pointer; touch-action: none; user-select: none; -webkit-user-select: none;
+  transition: box-shadow .2s, background .2s;
+}
+.gate-hold:hover, .gate-hold:active { background: rgba(var(--g-rgb), .08); box-shadow: 0 0 40px rgba(var(--g-rgb), .18); }
+.gate-hold:focus-visible { outline: 2px solid var(--green); outline-offset: 6px; }
+.gate-hold svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.gate-hold .ring-bg { fill: none; stroke: var(--line-soft); stroke-width: 2; }
+.gate-hold .ring { fill: none; stroke: var(--green); stroke-width: 2.5; filter: drop-shadow(0 0 6px rgba(var(--g-rgb), .6)); }
+.gate-pct { font-size: 34px; font-weight: 700; letter-spacing: 2px; text-shadow: 0 0 18px rgba(var(--g-rgb), .45); }
+.gate-label { margin: 0; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--ink-2); }
+.gate-skip {
+  justify-self: center; background: none; border: 0; color: var(--ink-3);
+  font: 12px var(--mono); letter-spacing: 2px; text-transform: uppercase; cursor: pointer; padding: 8px 12px;
+}
+.gate-skip:hover, .gate-skip:focus-visible { color: var(--green); }
+@media (max-width: 640px) { .gate { padding: 20px; } .gate-top span:last-child { display: none; } }
