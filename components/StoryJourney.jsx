@@ -84,7 +84,7 @@ export default function StoryJourney() {
                     className="chapter-mark"
                     aria-label={`${role.company} — role details`}
                   >
-                    <CompanyMark role={role} size={60} />
+                    <CompanyMark role={role} size={60} bare />
                   </Link>
                 )}
                 <div>
