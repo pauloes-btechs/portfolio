@@ -9,6 +9,7 @@ import "./styles/terminal.css";
 import "./styles/portfolio.css";
 import "./styles/detail.css";
 import "./styles/roles.css";
+import "./styles/story.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import HudFrame from "../components/HudFrame";
