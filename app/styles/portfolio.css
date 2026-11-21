@@ -1,0 +1,40 @@
+/* ============================================================
+   /portfolio explorer + shared page-hero type
+   ============================================================ */
+.role-hero .kicker, .project-hero .kicker, .story-hero .kicker {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--green);
+}
+.portfolio-hero h1 {
+  font-family: var(--display); font-weight: 700; font-size: clamp(44px, 7vw, 88px); line-height: .98; letter-spacing: -0.045em;
+  margin-top: 14px;
+}
+.explorer-stats span { border-radius: 2px; position: relative; }
+.explorer-stats b { color: var(--green); }
+
+/* part dividers read like section headers on a spec sheet */
+.explorer-part { border-top: 1px dashed var(--line-strong); margin-top: 64px; padding-top: 28px; }
+.explorer-part .part-kicker { color: var(--green); display: flex; align-items: center; gap: 12px; }
+.explorer-part .part-kicker::before { content: ""; width: 10px; height: 10px; border: 1.5px solid var(--green); box-shadow: 0 0 8px rgba(var(--g-rgb), .5); }
+.explorer-part h2.part-title { font-family: var(--display); font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.03em; margin-top: 10px; }
+
+/* ranked cards: rank as a HUD index */
+.project-rank { background: var(--green); color: #050505; border-radius: 1px; font-weight: 700; }
+.project-org { color: var(--green); }
+.maturity { border-radius: 2px; background: rgba(5, 5, 5, .7); }
+.media-tag { border-radius: 2px; color: var(--green); border-color: var(--line-strong); }
+.project-name { font-family: var(--display); font-size: 21px; letter-spacing: -0.02em; }
+.project-media { border-bottom: 1px solid var(--line); }
+
+/* site cards: dark browser chrome */
+.site-card, .site-frame { border-radius: 2px; }
+.site-bar { background: #0D110C; }
+.site-url { border-radius: 2px; background: #050505; color: var(--ink-3); letter-spacing: .5px; }
+.wdot { border-radius: 1px; width: 8px; height: 8px; background: #1B2A18; }
+.site-card:hover .wdot.r, .site-card:hover .wdot.y, .site-card:hover .wdot.g { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.site-open { color: var(--green); font-family: var(--mono); }
+.site-card:hover .site-frame { border-color: var(--line-strong); box-shadow: 0 0 0 1px rgba(var(--g-rgb), .12), 0 18px 44px rgba(0, 0, 0, .6); }
+.site-meta h3, .site-name { font-family: var(--display); letter-spacing: -0.015em; }
+.category > h3 { font-family: var(--mono); }
+.project-links a { font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-2); }
+.project-links a:hover { color: var(--green); text-decoration: none; }
+.explorer-part .part-sub a { color: var(--green); }
