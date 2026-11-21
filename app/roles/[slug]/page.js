@@ -11,14 +11,15 @@ import { publishedProjects, maturityLabel } from "../../../lib/projects";
 
 const allRoles = [...roles, ...extraWork];
 
-function VendorChips({ vendors, small = false }) {
+/** dark — page opted into on-dark logos (role.darkLogos): no light chip, light-ink logo files. */
+function VendorChips({ vendors, small = false, dark = false }) {
   return (
-    <div className={`vendor-strip${small ? " small" : ""}`}>
+    <div className={`vendor-strip${small ? " small" : ""}${dark ? " on-dark" : ""}`}>
       {vendors.map((v) => (
         <span className="vendor" key={v.name} title={v.name}>
           {v.logo ? (
             /* eslint-disable-next-line @next/next/no-img-element */
-            <img src={v.logo} alt={v.name} loading="lazy" />
+            <img src={dark && v.logoDark ? v.logoDark : v.logo} alt={v.name} loading="lazy" />
           ) : (
             <span className="vendor-name">{v.name}</span>
           )}
@@ -159,7 +160,7 @@ export default async function RolePage({ params }) {
               <Link href="/">home</Link> / <span>roles</span> / {role.slug}
             </div>
             <div className="hero-head">
-              <CompanyMark role={role} size={72} />
+              <CompanyMark role={role} size={72} bare={!!role.darkLogos} />
               <div>
                 <h1>
                   {role.title} <span className="co">· {role.company}</span>
@@ -247,7 +248,7 @@ export default async function RolePage({ params }) {
                     <Reveal className="panel">
                       <h3>{role.vendorsHeading || "Vendors & Partners"}</h3>
                       {role.vendorsSub && <p className="panel-sub">{role.vendorsSub}</p>}
-                      <VendorChips vendors={role.vendors} small />
+                      <VendorChips vendors={role.vendors} small dark={!!role.darkLogos} />
                     </Reveal>
                   </>
                 )}
@@ -323,7 +324,7 @@ export default async function RolePage({ params }) {
               <h2>{role.vendorsHeading || "Vendors & Partners"}</h2>
               {role.vendorsSub && <p className="section-sub">{role.vendorsSub}</p>}
               <Reveal>
-                <VendorChips vendors={role.vendors} />
+                <VendorChips vendors={role.vendors} dark={!!role.darkLogos} />
               </Reveal>
             </section>
           )}
