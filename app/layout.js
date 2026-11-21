@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./styles/hud.css";
+import "./styles/nav-footer.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import HudFrame from "../components/HudFrame";
