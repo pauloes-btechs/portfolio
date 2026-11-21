@@ -35,3 +35,7 @@
 /* homepage role cards: chip-less logos */
 .card-head .co-mark.bare { width: auto !important; min-width: 42px; justify-content: flex-start; }
 .card-head .co-mark.bare img { max-width: 110px; }
+
+/* certificates inverted for the dark ground (role.darkLogos + imageDark) */
+.cert-side img[src*="/certs/dark/"] { background: transparent; border-color: var(--line); }
+.cert-side a:hover img[src*="/certs/dark/"] { border-color: var(--green); box-shadow: 0 0 18px rgba(var(--g-rgb), .18); }
