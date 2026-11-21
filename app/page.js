@@ -13,7 +13,7 @@ function RoleCard({ r, showCompanyFirst = false }) {
   return (
     <Link href={`/roles/${r.slug}`} className={`card ${r.kind}`}>
       <div className="card-head">
-        <CompanyMark role={r} size={42} compact />
+        <CompanyMark role={r} size={42} compact bare />
         <div>
           <div className="role">
             {r.title} <span className="co">· {r.company}</span>
