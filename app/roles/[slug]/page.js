@@ -261,7 +261,7 @@ export default async function RolePage({ params }) {
                         <div className="cert-side" key={c.name}>
                           <a href={c.url} target="_blank" rel="noreferrer" title={`${c.name} — verified credential`}>
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={c.image} alt={c.name} loading="lazy" />
+                            <img src={role.darkLogos && c.imageDark ? c.imageDark : c.image} alt={c.name} loading="lazy" />
                           </a>
                           <p className="cert-side-desc">{c.short} Completed {c.issued}.</p>
                         </div>
