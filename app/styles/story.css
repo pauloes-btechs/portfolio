@@ -1,0 +1,42 @@
+/* ============================================================
+   /story — neon spine, bracketed chapter blocks, hash-height years
+   ============================================================ */
+.story-hero h1 {
+  font-family: var(--display); font-weight: 700; letter-spacing: -0.045em; line-height: .98;
+  font-size: clamp(42px, 7vw, 96px); max-width: 14ch; margin: 0 auto;
+}
+.story-hero h1 .accent { color: var(--green); text-shadow: 0 0 28px rgba(var(--g-rgb), .35); }
+.scroll-cue { color: var(--green); }
+
+.spine-track { background: repeating-linear-gradient(180deg, var(--line-strong) 0 4px, transparent 4px 10px); }
+.spine-fill { background: var(--green); box-shadow: 0 0 12px rgba(var(--g-rgb), .7), 0 0 2px var(--green); }
+.spine-block { border-radius: 1px; border-color: var(--line-strong); color: var(--green); }
+.spine-block.sealed { background: var(--green); color: #050505; border-color: var(--green); box-shadow: 0 0 16px rgba(var(--g-rgb), .6); font-weight: 700; }
+
+/* chapter blocks get the same corner brackets as cards */
+.chapter-inner { --bk: rgba(var(--g-rgb), .55); border-color: var(--line); border-radius: 2px; }
+.chapter-inner::before {
+  content: ""; position: absolute; inset: -1px; pointer-events: none;
+  background:
+    linear-gradient(var(--bk), var(--bk)) top left / 16px 1.5px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) top left / 1.5px 16px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) top right / 16px 1.5px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) top right / 1.5px 16px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom left / 16px 1.5px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom left / 1.5px 16px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom right / 16px 1.5px no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom right / 1.5px 16px no-repeat;
+}
+.chapter-year { -webkit-text-stroke: 1px rgba(var(--g-rgb), .38); letter-spacing: -2px; }
+.chapter.in .chapter-year { animation: year-flicker 1.2s steps(6, end) 1; }
+@keyframes year-flicker { 0%, 40% { -webkit-text-stroke-color: rgba(var(--g-rgb), .9); } 100% { -webkit-text-stroke-color: rgba(var(--g-rgb), .38); } }
+.chapter-head h2 { font-family: var(--display); letter-spacing: -0.03em; }
+.chapter-stat .n { font-family: var(--mono); color: var(--green); letter-spacing: -1px; }
+.chapter-stat .l { font-family: var(--mono); letter-spacing: 1.4px; }
+
+/* project branch off the Btechs block */
+.branch::before { background: linear-gradient(180deg, var(--green), rgba(var(--g-rgb), .15)); box-shadow: 0 0 8px rgba(var(--g-rgb), .4); }
+.branch-title::before { border-radius: 1px; }
+.branch-node { border-radius: 2px; }
+.branch-thumb { border-radius: 1px; }
+@media (prefers-reduced-motion: reduce) { .chapter.in .chapter-year { animation: none; } }
