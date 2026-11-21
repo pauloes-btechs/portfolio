@@ -67,6 +67,18 @@ New repositories are listed as **candidates** with their evidence (tests, workfl
 public URL). Nothing is added to the site until a record with `publish: "approved"` is
 written by a person. Private repositories are listed by name only, and only when new.
 
+## Ranking and approvals
+
+- **The impact order is pinned.** Project order comes from `priority` in `lib/projects.js`,
+  set by Pauloes (today: DCI Global Research Map → NEARAuth → KYAgent → Foundry → the rest).
+  The patcher can only write `demoUrl` and `dates.end`; `priority`, `featured`, `publish`,
+  and all copy are rejected outright, and `test/projects.test.mjs` fails CI if the top four
+  change. Every report restates the pinned order so you can see it is intact.
+- **New projects are a question, not a change.** Candidates are listed under *New project
+  candidates* with an @-mention to the approver (`approver` in `config.json`). Reply on the
+  PR with **add** or **replace &lt;project&gt;** and where it should rank. Nothing is written
+  until you answer; by default an approved project goes **below** the pinned top projects.
+
 ## Safety
 
 - **Least privilege.** The workflow has `contents: write` and `pull-requests: write` on this

@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 import { planUpdates, patchRegistrySource, renderReport, DEFAULT_THRESHOLD } from "./lib.mjs";
 import { collect } from "./collect.mjs";
 import { aiEnabled, summarize } from "./ai.mjs";
-import { projects } from "../../lib/projects.js";
+import { projects, publishedProjects, featuredProjects } from "../../lib/projects.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const args = process.argv.slice(2);
@@ -70,9 +70,14 @@ if (aiEnabled()) {
   }
 }
 
+const rankMeta = {
+  ranking: publishedProjects().map((p) => p.name),
+  featured: featuredProjects().length,
+  approver: cfg.approver,
+};
 const report = renderReport(plan, {
   date: today, mode: fixture ? "fixture" : DRY ? "dry run" : "live",
-  scanned: Object.keys(next.repos).length, threshold,
+  scanned: Object.keys(next.repos).length, threshold, ...rankMeta,
 });
 
 const baseline = !prevState.repos;
@@ -102,7 +107,7 @@ if (significant) {
   reportPath = `reports/portfolio-watch/${today}.md`;
   await mkdir(path.join(ROOT, "reports/portfolio-watch"), { recursive: true });
   await writeFile(path.join(ROOT, reportPath), renderReport(plan, {
-    date: today, mode: fixture ? "fixture" : "live", scanned: Object.keys(next.repos).length, threshold,
+    date: today, mode: fixture ? "fixture" : "live", scanned: Object.keys(next.repos).length, threshold, ...rankMeta,
   }) + "\n");
 }
 

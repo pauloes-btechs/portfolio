@@ -211,6 +211,7 @@ export function patchRegistrySource(src, id, field, value) {
     if (!/dates: \{ start: "[^"]+", end: "[^"]+" \}/.test(block)) throw new Error(`${id}: dates shape not recognised`);
     block = block.replace(/(dates: \{ start: "[^"]+", end: )"[^"]+"( \})/, `$1${q}$2`);
   } else {
+    // ranking, featuring and publishing are editorial decisions — never automated
     throw new Error(`unsupported field ${field}`);
   }
   return src.slice(0, start) + block + src.slice(end);
@@ -248,8 +249,18 @@ export function renderReport(plan, meta = {}) {
     L.push("");
   }
 
+  if (meta.ranking?.length) {
+    L.push("## Impact ranking (pinned)", "");
+    L.push("The order below is set by hand in `lib/projects.js` (`priority`) and is never changed by automation. Updates above only touch evidence fields.", "");
+    meta.ranking.forEach((name, i) => L.push(`${i + 1}. ${esc(name)}${i < (meta.featured ?? 0) ? " — featured on the homepage" : ""}`));
+    L.push("");
+  }
+
   L.push("## New project candidates (approval required)", "");
   if (!plan.candidates.length) L.push("_None._", "");
+  else {
+    L.push(`${meta.approver ? `@${meta.approver} — ` : ""}nothing below is on the site. For each one you want, reply with **add** or **replace <project>**, and where it should rank; it will be written up and placed below the pinned top projects unless you say otherwise.`, "");
+  }
   for (const c of plan.candidates) {
     L.push(`- [ ] \`${c.repo}\` — ${esc(c.reason)}${c.description ? ` · “${esc(c.description)}”` : ""}${c.promising ? " · **looks portfolio-worthy**" : ""}`);
   }
