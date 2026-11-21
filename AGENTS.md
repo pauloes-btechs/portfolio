@@ -16,7 +16,9 @@ DNS on Cloudflare.
 - **Stack:** Next.js (App Router) + React; no CSS framework — hand-rolled CSS. HUD theme:
   near-black ground, neon-green signal (`--green`), steel-blue secondary (`--blue`);
   Inter / Inter Tight / JetBrains Mono self-hosted in `public/fonts` (OFL). Use the CSS
-  tokens in `app/globals.css` — never hard-code colors.
+  tokens in `app/globals.css` — never hard-code colors. Page/feature styles live in
+  `app/styles/*.css`, imported in order from `app/layout.js`; add a new layer there rather
+  than growing `globals.css`. Every animation needs a `prefers-reduced-motion` fallback.
 - **Zero-dependency visuals:** canvas animations (`ChainCanvas.jsx`,
   `StoryChainCanvas.jsx`) and SVG charts (`Charts.jsx`) use no external libraries —
   do not introduce animation or chart dependencies.

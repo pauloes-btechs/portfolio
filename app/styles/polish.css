@@ -1,0 +1,39 @@
+/* ============================================================
+   Polish — cursor, focus, links, selection, telemetry legibility
+   ============================================================ */
+a { color: var(--green); }
+a:hover { text-decoration-color: rgba(var(--g-rgb), .6); }
+::selection { background: var(--green); color: #050505; }
+
+/* one focus language everywhere */
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.project-card:has(.project-name a:focus-visible) { outline-color: var(--green); }
+.branch-node:focus-visible { outline-color: var(--green); }
+
+/* telemetry gets a backing plate so it never fights body copy */
+.hud-telemetry {
+  padding: 5px 12px; border: 1px solid var(--line-soft); border-radius: 2px;
+  background: rgba(5, 5, 5, .86); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+@media (max-width: 640px) { .hud-telemetry { display: none; } }
+
+/* crosshair pointer on fine-pointer devices (links/buttons keep the hand) */
+@media (pointer: fine) {
+  html {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 2v7M12 15v7M2 12h7M15 12h7' stroke='%233BFF14' stroke-width='1.5'/%3E%3Crect x='11' y='11' width='2' height='2' fill='%233BFF14'/%3E%3C/svg%3E") 12 12, crosshair;
+  }
+  a, button, [role="button"], label, summary, .gate-hold { cursor: pointer; }
+  input, textarea { cursor: text; }
+}
+
+/* mobile nav: one swipeable row instead of a wrapped block */
+@media (max-width: 640px) {
+  .nav-inner { flex-wrap: nowrap; }
+  .nav-links { flex-wrap: nowrap; min-width: 0; flex: 1; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { white-space: nowrap; }
+  .nav-name { white-space: nowrap; font-size: 12px; letter-spacing: 2px; }
+}
+
+/* thin signal scrollbar */
+html { scrollbar-color: var(--line-strong) var(--bg); scrollbar-width: thin; }
