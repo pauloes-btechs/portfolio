@@ -151,3 +151,20 @@ test("AI output is stripped of markup and off-site links", () => {
   assert.ok(!out.includes("evil.example"));
   assert.ok(out.includes("https://github.com/o/r"));
 });
+
+test("automation can never re-rank, feature, or publish a project", () => {
+  for (const field of ["priority", "featured", "publish", "summary", "maturity"]) {
+    assert.throws(() => patchRegistrySource(SRC, "alpha", field, 1), /unsupported field/, field);
+  }
+});
+
+test("report pins the impact ranking and asks before adding new projects", () => {
+  const md = renderReport({ updates: [], unchanged: [], candidates: [{ repo: "o/new", reason: "New public repository" }] },
+    { date: "2026-11-21", ranking: ["DCI Map", "NEARAuth", "KYAgent"], featured: 2, approver: "owner" });
+  assert.match(md, /Impact ranking \(pinned\)/);
+  assert.match(md, /1\. DCI Map — featured on the homepage/);
+  assert.match(md, /3\. KYAgent\n/);
+  assert.match(md, /@owner — nothing below is on the site/);
+  const none = renderReport({ updates: [], unchanged: [], candidates: [] }, { ranking: ["A"], approver: "owner" });
+  assert.ok(!none.includes("@owner"), "no ping when there is nothing to approve");
+});
