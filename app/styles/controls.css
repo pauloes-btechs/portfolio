@@ -49,3 +49,11 @@ main { counter-reset: sec; }
 /* accents in display type glow like the signal */
 .hero h1 .accent, .story-hero h1 .accent { color: var(--green); text-shadow: 0 0 26px rgba(var(--g-rgb), .35); }
 a { color: var(--blue-soft); }
+
+/* charts on the HUD panel */
+.viz .viz-title { font-family: var(--mono); font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--green); }
+.viz svg text { font-family: var(--mono); letter-spacing: .2px; }
+.viz .viz-note { font-family: var(--mono); letter-spacing: .4px; }
+#timeline .viz, #timeline > .reveal > div { overflow-x: auto; }
+.builds-foot a { font-family: var(--mono); font-size: 12.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--green); }
+.builds-foot a:hover { text-shadow: 0 0 12px rgba(var(--g-rgb), .5); }
