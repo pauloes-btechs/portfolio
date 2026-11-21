@@ -5,6 +5,7 @@ import "./styles/controls.css";
 import "./styles/brackets.css";
 import "./styles/gate.css";
 import "./styles/hero.css";
+import "./styles/terminal.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import HudFrame from "../components/HudFrame";
