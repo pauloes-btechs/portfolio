@@ -23,3 +23,11 @@
 .cert-side img { border-radius: 2px; }
 .cert-link { color: var(--green); font-family: var(--mono); letter-spacing: .5px; }
 .cert-card .cert-desc { color: var(--ink-2); }
+
+/* on-dark logo strips (role.darkLogos): no chip, light-ink logos, signal hover */
+.vendor-strip.on-dark { gap: 6px 10px; }
+.vendor-strip.on-dark .vendor { background: transparent; border-color: transparent; padding: 0 14px; }
+.vendor-strip.on-dark .vendor img { filter: none; opacity: .72; max-height: 30px; max-width: 124px; transition: opacity .2s, filter .2s; }
+.vendor-strip.on-dark .vendor:hover { background: transparent; border-color: var(--line); box-shadow: none; }
+.vendor-strip.on-dark .vendor:hover img { opacity: 1; filter: drop-shadow(0 0 8px rgba(var(--g-rgb), .45)); }
+.vendor-strip.on-dark .vendor-name { color: var(--ink-2); font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
