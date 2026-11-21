@@ -40,3 +40,7 @@
 .branch-node { border-radius: 2px; }
 .branch-thumb { border-radius: 1px; }
 @media (prefers-reduced-motion: reduce) { .chapter.in .chapter-year { animation: none; } }
+
+/* chapter logos sit straight on the panel — no light chip */
+.co-mark.bare { background: transparent; border: 0; padding: 0; box-shadow: none; border-radius: 0; }
+.co-mark.bare img { max-width: 190px; }
