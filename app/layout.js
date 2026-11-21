@@ -1,6 +1,21 @@
 import "./globals.css";
+import "./styles/hud.css";
+import "./styles/nav-footer.css";
+import "./styles/controls.css";
+import "./styles/brackets.css";
+import "./styles/gate.css";
+import "./styles/hero.css";
+import "./styles/terminal.css";
+import "./styles/portfolio.css";
+import "./styles/detail.css";
+import "./styles/roles.css";
+import "./styles/story.css";
+import "./styles/contact.css";
+import "./styles/polish.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import HudFrame from "../components/HudFrame";
+import SyncGate from "../components/SyncGate";
 import { site } from "../lib/data";
 
 export const metadata = {
@@ -38,6 +53,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <SyncGate />
+        <HudFrame />
         <Nav />
         <main>{children}</main>
         <Footer />

@@ -1,15 +1,15 @@
 // SVG chart components — server-rendered, dependency-free.
-// Method: dataviz skill — form first, validated palette (dark surface #10161F):
-// blue #3987E5 · orange #D95926 · aqua #199E70 · emphasis-gray #4A545E · green #0CA30C.
+// Method: dataviz skill — form first. HUD palette on the #0A0A0A panel:
+// signal green #3BFF14 (emphasis) · steel blue #6FA3E0 · aqua #2FD6A8 · de-emphasis gray #4A524A.
 // Direct labels on every mark (no value-guessing); native <title> tooltips.
 
-const INK = "#1F242B";
-const INK3 = "#66707C";
-const GRID = "#E2E6EA";
-const BLUE = "#35618E";
-const AQUA = "#1F7A66";
-const GREEN = "#2F7D45";
-const DEGRAY = "#9AA3AD";
+const INK = "#E2E6E2";
+const INK3 = "#8E948E";
+const GRID = "#1B2A18";
+const BLUE = "#6FA3E0";
+const AQUA = "#2FD6A8";
+const GREEN = "#3BFF14";
+const DEGRAY = "#4A524A";
 
 /* ---------- 1. Fees: before → after (emphasis form, indexed) ---------- */
 export function FeesChart() {

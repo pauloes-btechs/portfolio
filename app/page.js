@@ -4,8 +4,10 @@ import CompanyMark from "../components/CompanyMark";
 import ChainCanvas from "../components/ChainCanvas";
 import { TimelineChart } from "../components/Charts";
 import ProjectCard from "../components/ProjectCard";
+import Scramble from "../components/Scramble";
+import Terminal from "../components/Terminal";
 import { site, stats, roles, timeline, credentials, extraWork, portfolio } from "../lib/data";
-import { featuredProjects, publishedProjects, countWord } from "../lib/projects";
+import { featuredProjects, publishedProjects, countWord, maturityLabel } from "../lib/projects";
 
 function RoleCard({ r, showCompanyFirst = false }) {
   return (
@@ -34,6 +36,14 @@ export default function Home() {
   const builds = featuredProjects();
   const engineeringCount = publishedProjects().length;
   const siteCount = portfolio.groups.reduce((a, g) => a + g.sites.length, 0);
+  const bootLines = [
+    { cmd: "boot pauloes.sys --region nyc", ok: "ok", tone: "dim" },
+    { cmd: "load enterprise_platforms --years 11", ok: "ok", tone: "dim" },
+    { cmd: "mount founder/btechs", ok: "ok", tone: "dim" },
+    ...builds.map((p) => ({ cmd: `run ${p.slug}`, ok: maturityLabel(p.maturity).toLowerCase() })),
+    { cmd: `index portfolio --projects ${engineeringCount} --sites ${siteCount}`, ok: "ok" },
+    { cmd: "status", ok: "building", tone: "hi" },
+  ];
 
   return (
     <>
@@ -41,9 +51,13 @@ export default function Home() {
       <div className="wrap">
         {/* hero */}
         <section className="hero">
-          <div className="kicker">// technical product manager · founder · new york</div>
+          <div className="hero-meta" aria-label="At a glance">
+            <span className="hm live"><i aria-hidden="true" />Founder · Btechs</span>
+            <span className="hm">11+ yrs · platform PM</span>
+            <span className="hm">Technical PM · New York</span>
+          </div>
           <h1>
-            Product roadmaps <span className="accent">and</span> the
+            Product roadmaps <Scramble className="accent" text="and" /> the
             infrastructure underneath them.
           </h1>
           <p className="sub">
@@ -61,8 +75,9 @@ export default function Home() {
           </div>
 
           <Reveal className="stats">
-            {stats.map((s) => (
+            {stats.map((s, i) => (
               <div className="stat" key={s.l}>
+                <div className="idx" aria-hidden="true">{String(i + 1).padStart(2, "0")} / {String(stats.length).padStart(2, "0")}</div>
                 <div className="n">{s.n}</div>
                 <div className="l">{s.l}</div>
               </div>
@@ -79,6 +94,27 @@ export default function Home() {
             <div className="spacer" />
             <Link className="btn primary" href="/story">Begin at 2014 →</Link>
           </Reveal>
+        </section>
+
+        {/* now — terminal boot sequence */}
+        <section className="section" id="now">
+          <h2>Now</h2>
+          <div className="now">
+            <div className="now-copy">
+              <p className="section-sub">What&rsquo;s running right now.</p>
+              <p>
+                Btechs is where I build: research infrastructure for MIT&rsquo;s Digital Currency
+                Initiative, privacy and identity tooling, and AI agents that do real operational
+                work. Each one goes from customer problem to architecture to tested, shipped code.
+              </p>
+              <ul className="now-list">
+                {builds.map((p) => (
+                  <li key={p.slug}><b>{p.name}</b> — {maturityLabel(p.maturity)}</li>
+                ))}
+              </ul>
+            </div>
+            <Reveal><Terminal lines={bootLines} /></Reveal>
+          </div>
         </section>
 
         {/* now building */}

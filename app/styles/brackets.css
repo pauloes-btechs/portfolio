@@ -1,0 +1,42 @@
+/* ============================================================
+   Bracketed surfaces — HUD corner marks on every card-like box
+   (one pseudo-element, eight hairline gradients; no extra markup)
+   ============================================================ */
+.card, .panel, .viz, .stat, .story-band, .project-card, .site-frame,
+.branch-node, .product-row, .second-position, .cert-card {
+  --bk: rgba(var(--g-rgb), .55); --bk-len: 12px; --bk-w: 1.5px;
+  position: relative; border-radius: 2px;
+  background-color: var(--panel); border-color: var(--line);
+}
+.card::before, .panel::before, .viz::before, .stat::before, .story-band::before, .project-card::before,
+.site-frame::before, .branch-node::before, .product-row::before, .second-position::before, .cert-card::before {
+  content: ""; position: absolute; inset: -1px; pointer-events: none; z-index: 2;
+  background:
+    linear-gradient(var(--bk), var(--bk)) top left / var(--bk-len) var(--bk-w) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) top left / var(--bk-w) var(--bk-len) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) top right / var(--bk-len) var(--bk-w) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) top right / var(--bk-w) var(--bk-len) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom left / var(--bk-len) var(--bk-w) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom left / var(--bk-w) var(--bk-len) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom right / var(--bk-len) var(--bk-w) no-repeat,
+    linear-gradient(var(--bk), var(--bk)) bottom right / var(--bk-w) var(--bk-len) no-repeat;
+}
+/* hover: brackets brighten and the surface picks up a faint signal wash */
+.card:hover, .project-card:hover, .project-card:focus-within, .product-row:hover, .branch-node:hover, .stat:hover {
+  --bk: var(--green); border-color: var(--line-strong);
+  background-color: #0B100A;
+  box-shadow: 0 0 0 1px rgba(var(--g-rgb), .10), 0 18px 40px rgba(0, 0, 0, .55);
+}
+.site-card:hover .site-frame { --bk: var(--green); }
+
+/* stat tiles read like instrument readouts */
+.stat .n { font-family: var(--mono); color: var(--green); font-weight: 700; letter-spacing: -1px; text-shadow: 0 0 18px rgba(var(--g-rgb), .3); }
+.stat .l { font-family: var(--mono); letter-spacing: 1.6px; }
+
+/* panel headings + list ticks in signal colours */
+.panel h3 { color: var(--green); letter-spacing: 3px; }
+.panel li { border-bottom-color: var(--line-soft); }
+.panel li::before { content: "▸"; color: var(--green); }
+.card .more, .project-more { color: var(--green); font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+.card .co { color: var(--blue-soft); }
+.card .meta, .site-role { color: var(--ink-3); }

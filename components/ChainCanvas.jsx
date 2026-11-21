@@ -31,8 +31,8 @@ const VARIANTS = {
   minimal:    { density: 110000, greenShare: 0.25, chain: false, grid: false, linkDist: 110, glow: [0.50, 0.85, "53,97,142"] },
 };
 
-const BLUE = "53,97,142";
-const GREEN = "47,125,69";
+const BLUE = "111,163,224";
+const GREEN = "59,255,20";
 
 export default function ChainCanvas({ variant = "home" }) {
   const ref = useRef(null);
