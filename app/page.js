@@ -4,6 +4,7 @@ import CompanyMark from "../components/CompanyMark";
 import ChainCanvas from "../components/ChainCanvas";
 import { TimelineChart } from "../components/Charts";
 import ProjectCard from "../components/ProjectCard";
+import Scramble from "../components/Scramble";
 import { site, stats, roles, timeline, credentials, extraWork, portfolio } from "../lib/data";
 import { featuredProjects, publishedProjects, countWord } from "../lib/projects";
 
@@ -41,9 +42,13 @@ export default function Home() {
       <div className="wrap">
         {/* hero */}
         <section className="hero">
-          <div className="kicker">// technical product manager · founder · new york</div>
+          <div className="hero-meta" aria-label="At a glance">
+            <span className="hm live"><i aria-hidden="true" />Founder · Btechs</span>
+            <span className="hm">11+ yrs · platform PM</span>
+            <span className="hm">Technical PM · New York</span>
+          </div>
           <h1>
-            Product roadmaps <span className="accent">and</span> the
+            Product roadmaps <Scramble className="accent" text="and" /> the
             infrastructure underneath them.
           </h1>
           <p className="sub">
@@ -61,8 +66,9 @@ export default function Home() {
           </div>
 
           <Reveal className="stats">
-            {stats.map((s) => (
+            {stats.map((s, i) => (
               <div className="stat" key={s.l}>
+                <div className="idx" aria-hidden="true">{String(i + 1).padStart(2, "0")} / {String(stats.length).padStart(2, "0")}</div>
                 <div className="n">{s.n}</div>
                 <div className="l">{s.l}</div>
               </div>
