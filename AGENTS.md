@@ -6,15 +6,17 @@ end-to-end without early returns.
 
 ## Purpose
 
-Personal portfolio for Pauloes Berhe (pauloes.com) — a light, recruiter-friendly
-Next.js site with a hand-rolled design language: zero-dependency canvas animations,
+Personal portfolio for Pauloes Berhe (pauloes.com) — a dark, HUD-styled,
+recruiter-friendly Next.js site with a hand-rolled design language: zero-dependency canvas animations,
 a scroll-driven career story, and a portfolio of shipped sites. Deployed on Vercel;
 DNS on Cloudflare.
 
 ## Conventions
 
-- **Stack:** Next.js (App Router) + React; no CSS framework — hand-rolled CSS, light
-  neutral theme with steel blue `#35618E` / green `#2F7D45` accents.
+- **Stack:** Next.js (App Router) + React; no CSS framework — hand-rolled CSS. HUD theme:
+  near-black ground, neon-green signal (`--green`), steel-blue secondary (`--blue`);
+  Inter / Inter Tight / JetBrains Mono self-hosted in `public/fonts` (OFL). Use the CSS
+  tokens in `app/globals.css` — never hard-code colors.
 - **Zero-dependency visuals:** canvas animations (`ChainCanvas.jsx`,
   `StoryChainCanvas.jsx`) and SVG charts (`Charts.jsx`) use no external libraries —
   do not introduce animation or chart dependencies.
