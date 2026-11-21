@@ -1,0 +1,25 @@
+/* ============================================================
+   Role pages — headline, second position, products, vendors, certs
+   ============================================================ */
+.role-hero:not(.portfolio-hero):not(.contact-hero) h1 {
+  font-family: var(--display); font-weight: 700; letter-spacing: -0.04em; line-height: 1.02;
+  font-size: clamp(28px, 3.8vw, 46px);
+}
+.role-hero h1 .co { color: var(--green); }
+.role-hero .meta { letter-spacing: .5px; }
+.co-mark { border-radius: 2px; }
+
+.second-position { border-radius: 2px; border-color: var(--line-strong); background: linear-gradient(90deg, rgba(var(--g-rgb), .05), transparent 70%), var(--panel); }
+.sp-badge { font-family: var(--mono); color: var(--green); border-color: var(--line-strong); border-radius: 2px; }
+
+.product-row .pr-name { font-family: var(--display); font-size: 17px; letter-spacing: -0.01em; }
+.product-row:hover .pr-name { color: var(--green); }
+
+/* vendor logos stay on light chips for legibility, squared to the HUD grid */
+.vendor { border-radius: 2px; background: #DCE0DC; border-color: var(--line-strong); transition: background .2s, box-shadow .2s; }
+.vendor:hover { background: #F2F4F2; box-shadow: 0 0 0 1px var(--green), 0 0 18px rgba(var(--g-rgb), .25); }
+.vendor:hover img { filter: none; }
+
+.cert-side img { border-radius: 2px; }
+.cert-link { color: var(--green); font-family: var(--mono); letter-spacing: .5px; }
+.cert-card .cert-desc { color: var(--ink-2); }
