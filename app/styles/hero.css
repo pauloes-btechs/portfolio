@@ -1,0 +1,38 @@
+/* ============================================================
+   Homepage hero — display headline, status strip, readout tiles
+   ============================================================ */
+.hero { padding: 104px 0 48px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 26px; }
+.hero-meta .hm {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 11px/1 var(--mono); letter-spacing: 1.8px; text-transform: uppercase;
+  color: var(--ink-3); border: 1px solid var(--line); padding: 7px 10px; border-radius: 2px;
+  background: rgba(5, 5, 5, .6);
+}
+.hero-meta .hm.live { color: var(--green); border-color: var(--line-strong); }
+.hero-meta .hm i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: hud-blink 1.6s steps(2, end) infinite; }
+.hero .kicker { font-family: var(--mono); color: var(--ink-4); letter-spacing: 1.5px; font-size: 12.5px; }
+.hero h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(40px, 7.2vw, 92px); line-height: .98; letter-spacing: -0.045em;
+  max-width: 15ch; margin: 0; color: var(--ink);
+}
+.hero h1 .accent { color: var(--green); font-family: var(--mono); font-weight: 600; letter-spacing: -0.02em; }
+.hero .sub { font-size: 17px; line-height: 1.65; max-width: 680px; color: var(--ink-2); margin-top: 26px; }
+.hero .sub b { color: var(--ink); font-weight: 600; }
+
+/* stat tiles = instrument readouts */
+.stats { gap: 12px; margin-top: 52px; }
+.stat { padding: 18px 18px 20px; }
+.stat .idx { font: 10px var(--mono); letter-spacing: 2px; color: var(--ink-4); margin-bottom: 14px; }
+.stat .n { font-size: clamp(28px, 3.4vw, 40px); line-height: 1; }
+.stat .l { margin-top: 10px; color: var(--ink-3); font-size: 10.5px; }
+
+/* story band → a slim command strip */
+.story-band { margin-top: 18px; padding: 20px 22px; background: linear-gradient(90deg, rgba(var(--g-rgb), .06), transparent 60%), var(--panel); }
+.story-band .t { font-family: var(--display); font-size: 21px; letter-spacing: -0.01em; }
+.story-band .s { font-family: var(--sans); }
+@media (max-width: 640px) {
+  .hero { padding-top: 72px; }
+  .hero h1 { letter-spacing: -0.035em; }
+}
