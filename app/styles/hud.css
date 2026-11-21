@@ -1,0 +1,46 @@
+/* ============================================================
+   HUD chrome — fixed frame, grid ground, scroll rail, telemetry
+   ============================================================ */
+
+/* faint measurement grid under everything */
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(var(--g-rgb), 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--g-rgb), 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-attachment: fixed;
+}
+
+.hud { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
+
+.hud-progress {
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--green); box-shadow: 0 0 10px var(--glow-green);
+  transform-origin: 0 50%; transition: transform .12s linear;
+}
+
+.hud-corner {
+  position: absolute; width: 22px; height: 22px;
+  border-color: rgba(var(--g-rgb), 0.55); border-style: solid; border-width: 0;
+}
+.hud-corner.tl { top: 10px; left: 10px; border-top-width: 1.5px; border-left-width: 1.5px; }
+.hud-corner.tr { top: 10px; right: 10px; border-top-width: 1.5px; border-right-width: 1.5px; }
+.hud-corner.bl { bottom: 10px; left: 10px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+.hud-corner.br { bottom: 10px; right: 10px; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+
+.hud-telemetry {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 10px; white-space: nowrap;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(var(--g-rgb), 0.55);
+}
+.hud-telemetry .sep { color: var(--ink-4); }
+
+@media (max-width: 640px) {
+  .hud-corner { width: 14px; height: 14px; }
+  .hud-telemetry { font-size: 9px; letter-spacing: 1.2px; gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hud-progress { transition: none; }
+}

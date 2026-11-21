@@ -1,6 +1,8 @@
 import "./globals.css";
+import "./styles/hud.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import HudFrame from "../components/HudFrame";
 import { site } from "../lib/data";
 
 export const metadata = {
@@ -38,6 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <HudFrame />
         <Nav />
         <main>{children}</main>
         <Footer />
