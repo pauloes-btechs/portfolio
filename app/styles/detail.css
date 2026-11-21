@@ -1,0 +1,25 @@
+/* ============================================================
+   Project detail pages — dossier layout (crumbs + CTA row shared)
+   ============================================================ */
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.crumb a { color: var(--ink-3); }
+.crumb a:hover { color: var(--green); text-decoration: none; }
+.crumb { text-transform: lowercase; letter-spacing: .6px; }
+.crumb::before { content: "~/ "; color: var(--green); }
+.project-hero .kicker a { color: var(--ink); }
+
+.project-hero h1 {
+  font-family: var(--display); font-weight: 700; letter-spacing: -0.04em; line-height: 1;
+  font-size: clamp(40px, 6.4vw, 76px); margin-top: 12px;
+}
+.project-hero .tagline { font-size: clamp(17px, 1.8vw, 21px); color: var(--ink-2); margin-top: 16px; }
+.project-hero .facts > span { border-radius: 2px; background: rgba(5, 5, 5, .7); font-family: var(--mono); }
+.project-hero .facts b { color: var(--green); }
+.project-figure img { border-radius: 2px; border: 1px solid var(--line-strong); box-shadow: 0 0 0 1px rgba(var(--g-rgb), .05), 0 30px 80px rgba(0, 0, 0, .6); }
+.project-figure figcaption::before { content: "fig. "; color: var(--green); }
+
+.detail-label { color: var(--green); }
+.problem-callout { border-left-color: var(--green); background: linear-gradient(90deg, rgba(var(--g-rgb), .06), transparent 70%); }
+.panel.sources a { color: var(--ink-2); font-family: var(--mono); font-size: 12.5px; }
+.panel.sources a:hover { color: var(--green); }
+.project-pager { border-top: 1px dashed var(--line-strong); padding-top: 28px; }
