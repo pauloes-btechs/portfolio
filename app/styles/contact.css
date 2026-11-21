@@ -1,0 +1,27 @@
+/* ============================================================
+   /contact — message console + direct channels
+   ============================================================ */
+.contact-hero h1 { font-family: var(--display); font-size: clamp(44px, 7vw, 88px); letter-spacing: -0.045em; line-height: .98; margin-top: 12px; }
+.contact-hero .co { color: var(--green); }
+.lede a { color: var(--green); }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-body { position: relative; z-index: 1; padding: 6px 24px 26px; }
+.contact-console .form { max-width: none; }
+.form label { font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-3); }
+.form label::before { content: "> "; color: var(--green); }
+.form input, .form textarea {
+  border-radius: 2px; background: #050505; border-color: var(--line);
+  font-family: var(--mono); font-size: 14px; color: var(--ink); caret-color: var(--green);
+}
+.form input:focus, .form textarea:focus { border-color: var(--green); box-shadow: 0 0 0 1px var(--green), 0 0 18px rgba(var(--g-rgb), .2); outline: none; }
+.form .status { font-family: var(--mono); }
+
+.channels h3 { margin-bottom: 6px; }
+.channels ul { list-style: none; margin: 0; padding: 0; }
+.channels li { display: flex; justify-content: space-between; gap: 12px; padding: 13px 0; border-bottom: 1px dashed var(--line); }
+.channels li::before { display: none; }
+.channels .ck { font: 11px var(--mono); letter-spacing: 2px; text-transform: uppercase; color: var(--ink-4); }
+.channels a { font-family: var(--mono); font-size: 13px; color: var(--ink); overflow-wrap: anywhere; text-align: right; }
+.channels a:hover { color: var(--green); text-decoration: none; }
+.channels-note { margin: 14px 0 0; font: 11.5px var(--mono); color: var(--ink-3); letter-spacing: .5px; }
