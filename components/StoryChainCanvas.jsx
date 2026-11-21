@@ -12,9 +12,9 @@ import { useEffect, useRef } from "react";
  * "projected" blocks — the unwritten future. A block-height ticker climbs
  * from the 2014 genesis toward today's tip as you read.
  */
-const BLUE = "53,97,142";
-const GREEN = "47,125,69";
-const AQUA = "31,122,102";
+const BLUE = "111,163,224";
+const GREEN = "59,255,20";
+const AQUA = "47,214,168";
 
 const CHAPTERS = [
   { label: "GENESIS", year: "2014", hue: BLUE },
@@ -174,7 +174,7 @@ export default function StoryChainCanvas() {
         ctx.font = "700 20px ui-monospace, monospace";
         ctx.fillText(CHAPTERS[i].year, 0, -half - 16);
         ctx.font = "600 10px ui-monospace, monospace";
-        ctx.fillStyle = `rgba(31,36,43,0.62)`;
+        ctx.fillStyle = `rgba(226,230,226,0.62)`;
         ctx.fillText(CHAPTERS[i].label, 0, half + 22);
         if (sealed) {
           ctx.fillStyle = `rgba(${GREEN},0.75)`;
@@ -246,7 +246,7 @@ export default function StoryChainCanvas() {
       const height = Math.floor(313171 + smoothP * (909432 - 313171));
       ctx.font = "600 11px ui-monospace, monospace";
       ctx.textAlign = "right";
-      ctx.fillStyle = "rgba(102,112,124,0.85)";
+      ctx.fillStyle = "rgba(142,148,142,0.85)";
       ctx.fillText("block height " + height.toLocaleString("en-US"), w - 20, h - 40);
       ctx.fillStyle = `rgba(${GREEN},0.65)`;
       ctx.fillText((txs.length + 3) + " tx in mempool · chapter " + (Math.min(N, Math.floor(cam) + 1)) + "/" + N, w - 20, h - 22);
