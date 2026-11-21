@@ -7,6 +7,7 @@ import "./styles/gate.css";
 import "./styles/hero.css";
 import "./styles/terminal.css";
 import "./styles/portfolio.css";
+import "./styles/detail.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import HudFrame from "../components/HudFrame";
