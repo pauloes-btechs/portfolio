@@ -1,17 +1,21 @@
 # pauloes — portfolio
 
 Personal portfolio for **Pauloes Berhe** — Technical Product Manager & Founder.
-A light, recruiter-friendly Next.js site with a living-blockchain design language:
-parallax network canvases that react to cursor and scroll, a scroll-driven career
-story told as a growing chain, and a portfolio of shipped sites with real
-screenshots and released-feature lists.
+A dark, HUD-styled Next.js site with a living-blockchain design language: a
+hold-to-sync intro, a fixed heads-up frame (corner brackets, scroll rail, live
+New York telemetry), a terminal boot sequence over hex hash-rain, parallax network
+canvases that react to cursor and scroll, a scroll-driven career story told as a
+growing chain, and a portfolio of shipped products and sites with real screenshots.
 
 **Live:** [pauloes.com](https://pauloes.com)
 
 ## Stack
 
-- **Next.js 14** (App Router) · React 18
-- Hand-rolled CSS — light neutral theme (steel blue `#35618E` / green `#2F7D45` accents), no framework
+- **Next.js 16** (App Router) · React 19
+- Hand-rolled CSS — HUD theme (near-black ground, signal green `#3BFF14`, steel blue `#6FA3E0`), no framework.
+  Base tokens in `app/globals.css`; one layer per concern in `app/styles/` (hud, nav-footer, controls,
+  brackets, gate, hero, terminal, portfolio, detail, roles, story, contact, polish)
+- Self-hosted Inter, Inter Tight and JetBrains Mono (`public/fonts`, SIL OFL)
 - Zero-dependency canvas animations (network parallax, scroll-scrubbed story chain) and SVG charts
 - **Resend** for the contact form (`/api/contact`)
 - Deployed on **Vercel**, DNS on **Cloudflare**
