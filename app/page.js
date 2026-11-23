@@ -38,7 +38,7 @@ export default function Home() {
   const siteCount = portfolio.groups.reduce((a, g) => a + g.sites.length, 0);
   const bootLines = [
     { cmd: "boot pauloes.sys --region nyc", ok: "ok", tone: "dim" },
-    { cmd: "load enterprise_platforms --years 11", ok: "ok", tone: "dim" },
+    { cmd: "load enterprise_platforms --years 12", ok: "ok", tone: "dim" },
     { cmd: "mount founder/btechs", ok: "ok", tone: "dim" },
     ...builds.map((p) => ({ cmd: `run ${p.slug}`, ok: maturityLabel(p.maturity).toLowerCase() })),
     { cmd: `index portfolio --projects ${engineeringCount} --sites ${siteCount}`, ok: "ok" },
@@ -53,7 +53,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-meta" aria-label="At a glance">
             <span className="hm live"><i aria-hidden="true" />Founder · Btechs</span>
-            <span className="hm">11+ yrs · platform PM</span>
+            <span className="hm">12+ yrs · platform PM</span>
             <span className="hm">Technical PM · New York</span>
           </div>
           <h1>
@@ -61,7 +61,7 @@ export default function Home() {
             infrastructure underneath them.
           </h1>
           <p className="sub">
-            <b>11+ years shipping platform products at enterprise scale</b> — and for the
+            <b>12+ years shipping platform products at enterprise scale</b> — and for the
             past two years, founding mission-driven Bitcoin startups backed by{" "}
             <b>Jack Dorsey&rsquo;s #startsmall</b> initiative and{" "}
             <b>MIT&rsquo;s Digital Currency Initiative</b>. Customer discovery with

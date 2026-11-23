@@ -25,11 +25,11 @@ export const metadata = {
     template: "%s · Pauloes Berhe",
   },
   description:
-    "Technical product manager with 11+ years shipping platform products at enterprise scale; founder of mission-driven Bitcoin startups backed by Jack Dorsey's #startsmall and MIT's Digital Currency Initiative.",
+    "Technical product manager with 12+ years shipping platform products at enterprise scale; founder of mission-driven Bitcoin startups backed by Jack Dorsey's #startsmall and MIT's Digital Currency Initiative.",
   openGraph: {
     title: "Pauloes Berhe — Technical Product Manager & Founder",
     description:
-      "11+ years shipping platform products. Founder chapter backed by #startsmall and MIT DCI. New York, NY.",
+      "12+ years shipping platform products. Founder chapter backed by #startsmall and MIT DCI. New York, NY.",
     type: "website",
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Pauloes Berhe — Technical Product Manager & Founder",
     description:
-      "11+ years shipping platform products. Founder chapter backed by #startsmall and MIT DCI. New York, NY.",
+      "12+ years shipping platform products. Founder chapter backed by #startsmall and MIT DCI. New York, NY.",
     images: ["/og.png"],
   },
 };
