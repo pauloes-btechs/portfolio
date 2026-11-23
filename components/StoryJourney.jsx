@@ -18,20 +18,25 @@ export default function StoryJourney() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const chapters = wrapRef.current?.querySelectorAll("[data-chapter]");
+    // every chapter plus the closing block; reveal as soon as a block's top is
+    // a quarter of the way up the viewport — a ratio threshold never fires for
+    // chapters taller than the screen (the Btechs chapter on phones)
+    const chapters = wrapRef.current?.querySelectorAll("[data-chapter], .journey-end");
     if (!chapters?.length) return;
 
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            const idx = Number(e.target.dataset.chapter);
-            setActive((a) => Math.max(a, idx));
+            if (e.target.dataset.chapter !== undefined) {
+              const idx = Number(e.target.dataset.chapter);
+              setActive((a) => Math.max(a, idx));
+            }
             e.target.classList.add("in");
           }
         }
       },
-      { threshold: 0.35 }
+      { threshold: 0, rootMargin: "0px 0px -25% 0px" }
     );
     chapters.forEach((c) => io.observe(c));
 
