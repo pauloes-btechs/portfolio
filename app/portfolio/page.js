@@ -3,15 +3,14 @@ import ChainCanvas from "../../components/ChainCanvas";
 import Reveal from "../../components/Reveal";
 import SiteCard from "../../components/SiteCard";
 import ProjectCard from "../../components/ProjectCard";
-import { portfolio } from "../../lib/data";
+import { portfolio, siteCount } from "../../lib/data";
 import { publishedProjects, countWord } from "../../lib/projects";
 
-const totalSites = portfolio.groups.reduce((a, g) => a + g.sites.length, 0);
 const totalProjects = publishedProjects().length;
 
 export const metadata = {
   title: "Portfolio",
-  description: `${countWord(totalProjects, { capitalize: true })} Btechs engineering projects — AI agents, Bitcoin infrastructure, and research platforms — plus ${countWord(totalSites)} properties across ${countWord(portfolio.groups.length)} arenas, from founder builds to the Bloomberg estates.`,
+  description: `${countWord(totalProjects, { capitalize: true })} Btechs engineering projects — AI agents, Bitcoin infrastructure, and research platforms — plus ${countWord(siteCount)} properties across ${countWord(portfolio.groups.length)} arenas, from founder builds to the Bloomberg estates.`,
   alternates: { canonical: "/portfolio" },
 };
 
@@ -27,11 +26,11 @@ export default function PortfolioPage() {
           <p className="lede">
             What I&rsquo;m building through Btechs — software products, AI systems, and
             infrastructure, each with its architecture and the evidence behind it — and the
-            {" "}{countWord(totalSites)} digital properties shipped and owned before and alongside it.
+            {" "}{countWord(siteCount)} digital properties shipped and owned before and alongside it.
           </p>
           <div className="explorer-stats" aria-label="Portfolio at a glance">
             <span><b>{totalProjects}</b> engineering projects</span>
-            <span><b>{totalSites}</b> properties</span>
+            <span><b>{siteCount}</b> properties</span>
             <span><b>{portfolio.groups.length}</b> arenas</span>
             <span><b>1M+</b> monthly users served</span>
             <span><b>200+</b> features released</span>
@@ -54,7 +53,7 @@ export default function PortfolioPage() {
 
         {/* Part 2 — Digital Platforms & Professional Work (unchanged groups) */}
         <section className="explorer-part" id="platforms" aria-labelledby="platforms-title">
-          <div className="part-kicker">Part 2 · {totalSites} properties · {portfolio.groups.length} arenas</div>
+          <div className="part-kicker">Part 2 · {siteCount} properties · {portfolio.groups.length} arenas</div>
           <h2 className="part-title" id="platforms-title">Digital Platforms &amp; Professional Work</h2>
           <p className="part-sub">{portfolio.sub}</p>
         </section>
