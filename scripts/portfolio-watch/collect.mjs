@@ -3,6 +3,8 @@
 // we read metadata, file names, and README text; we never execute or
 // follow anything found inside another repository.
 
+import { substantiveCommits } from "./lib.mjs";
+
 const API = "https://api.github.com";
 
 export function makeClient(token) {
@@ -88,7 +90,7 @@ export async function snapshotRepo(gh, repo, since) {
     workflows: paths.filter((p) => p.startsWith(".github/workflows/")).map((p) => p.split("/").pop()).sort(),
     docs: paths.filter((p) => DOC.test(p)).sort(),
     commits: cm,
-    lastCommitDate: cm.find((c) => !/\[bot\]|dependabot/i.test(c.author))?.date || null,
+    lastCommitDate: substantiveCommits(cm)[0]?.date || null,
   };
 }
 
