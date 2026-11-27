@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { checkRateLimit } from "../../../lib/rate-limit";
+import { site } from "../../../lib/data";
 
 function clientIp(req) {
   // Vercel sets x-forwarded-for at the edge; clients cannot spoof it there.
@@ -39,7 +40,7 @@ export async function POST(req) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || "pauloes@btechs.io";
+  const to = process.env.CONTACT_TO || site.email;
   const from = process.env.CONTACT_FROM || "Portfolio <onboarding@resend.dev>";
 
   if (!apiKey) {
