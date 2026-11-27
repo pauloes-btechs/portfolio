@@ -179,6 +179,8 @@ test("GitHub client: missing resources are null, real failures throw", async () 
     }
     globalThis.fetch = async () => new Response("", { status: 502 });
     await assert.rejects(makeClient().gh("/x", { allowMissing: true }), /GitHub 502/);
+    globalThis.fetch = async () => new Response("", { status: 404 });
+    await assert.rejects(makeClient().gh("/x"), /GitHub 404/, "without allowMissing a 404 fails the run");
   } finally {
     globalThis.fetch = realFetch;
   }
