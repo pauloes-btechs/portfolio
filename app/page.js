@@ -9,7 +9,7 @@ import Terminal from "../components/Terminal";
 import { site, stats, roles, timeline, credentials, extraWork, portfolio } from "../lib/data";
 import { featuredProjects, publishedProjects, countWord, maturityLabel } from "../lib/projects";
 
-function RoleCard({ r, showCompanyFirst = false }) {
+function RoleCard({ r }) {
   return (
     <Link href={`/roles/${r.slug}`} className={`card ${r.kind}`}>
       <div className="card-head">
@@ -136,7 +136,7 @@ export default function Home() {
             The decade of platform depth the founder chapter is built on.
           </p>
           <Reveal className="cards">
-            {enterprise.map((r) => <RoleCard r={r} key={r.slug} showCompanyFirst />)}
+            {enterprise.map((r) => <RoleCard r={r} key={r.slug} />)}
           </Reveal>
         </section>
 
@@ -148,7 +148,7 @@ export default function Home() {
             product craft from the UW Product Management Center.
           </p>
           <Reveal className="cards">
-            {fellowships.map((r) => <RoleCard r={r} key={r.slug} showCompanyFirst />)}
+            {fellowships.map((r) => <RoleCard r={r} key={r.slug} />)}
           </Reveal>
         </section>
 
@@ -157,7 +157,7 @@ export default function Home() {
           <section className="section" id="nonprofit">
             <h2>Nonprofit Work</h2>
             <Reveal className="cards">
-              {nonprofit.map((r) => <RoleCard r={r} key={r.slug} showCompanyFirst />)}
+              {nonprofit.map((r) => <RoleCard r={r} key={r.slug} />)}
             </Reveal>
           </section>
         )}
@@ -165,7 +165,7 @@ export default function Home() {
           <section className="section" id="freelance">
             <h2>Freelance &amp; Consulting</h2>
             <Reveal className="cards">
-              {freelance.map((r) => <RoleCard r={r} key={r.slug} showCompanyFirst />)}
+              {freelance.map((r) => <RoleCard r={r} key={r.slug} />)}
             </Reveal>
           </section>
         )}
