@@ -51,7 +51,6 @@ app/
 components/
   ChainCanvas.jsx       # per-page animated background (parallax, cursor, tx particles)
   StoryChainCanvas.jsx  # /story scroll-scrubbed chain
-  Interactive.jsx       # magnetic buttons, card tilt, cursor spotlight
   CompanyMark.jsx       # real company logos (Badge.jsx monogram fallback)
   SiteCard.jsx          # portfolio site cards
   ProjectCard.jsx       # engineering project cards (homepage + explorer)

@@ -384,11 +384,9 @@ main { position: relative; z-index: 1; }
 }
 .nav-links a:hover::after { right: 0; }
 
-/* cursor spotlight on surfaces (mx/my set by Interactive.jsx) */
 .panel, .viz, .story-band { position: relative; }
 .story-band { overflow: hidden; }
 
-/* 3D tilt on cards (rx/ry set by Interactive.jsx) */
 .card {
   transition: border-color .25s, transform .2s ease, box-shadow .25s;
 }
