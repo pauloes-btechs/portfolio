@@ -7,7 +7,8 @@ const API = "https://api.github.com";
 
 export function makeClient(token) {
   let calls = 0;
-  async function gh(path, { allow404 = false } = {}) {
+  // allowMissing: 404 (no README / Pages) and 409 (empty repository) mean "none", not failure.
+  async function gh(path, { allowMissing = false } = {}) {
     calls++;
     const res = await fetch(API + path, {
       headers: {
@@ -17,7 +18,7 @@ export function makeClient(token) {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
     });
-    if (allow404 && res.status === 404) return null;
+    if (allowMissing && (res.status === 404 || res.status === 409)) return null;
     if (!res.ok) throw new Error(`GitHub ${res.status} on ${path.replace(/\?.*/, "")}`);
     return res.json();
   }
@@ -36,7 +37,7 @@ async function listRepos(gh, cfg) {
   if (cfg.includePrivate) await pages(`/user/repos?affiliation=owner&visibility=all`);
   else await pages(`/users/${cfg.owner}/repos?type=owner`);
   for (const org of cfg.orgs || []) {
-    try { await pages(`/orgs/${org}/repos?type=all`); } catch (e) { console.warn(`skip org ${org}: ${e.message}`); }
+    await pages(`/orgs/${org}/repos?type=all`);
   }
   const seen = new Set();
   return out.filter((r) => !r.fork && !r.archived && !seen.has(r.full_name) && seen.add(r.full_name));
@@ -55,13 +56,15 @@ export async function snapshotRepo(gh, repo, since) {
   if (repo.private) return base;
 
   const branch = repo.default_branch;
+  // Any other error fails the run: an empty field stored as the baseline would
+  // read as a new release / test suite / README rewrite on the next run.
   const [releases, tags, tree, readme, pages, commits] = await Promise.all([
-    gh(`/repos/${full}/releases?per_page=5`).catch(() => []),
-    gh(`/repos/${full}/tags?per_page=5`).catch(() => []),
-    gh(`/repos/${full}/git/trees/${encodeURIComponent(branch)}?recursive=1`, { allow404: true }).catch(() => null),
-    gh(`/repos/${full}/readme`, { allow404: true }).catch(() => null),
-    gh(`/repos/${full}/pages`, { allow404: true }).catch(() => null),
-    gh(`/repos/${full}/commits?per_page=100${since ? `&since=${encodeURIComponent(since)}` : ""}`).catch(() => []),
+    gh(`/repos/${full}/releases?per_page=5`),
+    gh(`/repos/${full}/tags?per_page=5`),
+    gh(`/repos/${full}/git/trees/${encodeURIComponent(branch)}?recursive=1`, { allowMissing: true }),
+    gh(`/repos/${full}/readme`, { allowMissing: true }),
+    gh(`/repos/${full}/pages`, { allowMissing: true }),
+    gh(`/repos/${full}/commits?per_page=100${since ? `&since=${encodeURIComponent(since)}` : ""}`, { allowMissing: true }).then((c) => c || []),
   ]);
 
   const paths = (tree?.tree || []).filter((n) => n.type === "blob").map((n) => n.path)
