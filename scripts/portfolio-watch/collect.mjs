@@ -3,7 +3,7 @@
 // we read metadata, file names, and README text; we never execute or
 // follow anything found inside another repository.
 
-import { substantiveCommits } from "./lib.mjs";
+import { substantiveCommits, TEST, DOC } from "./lib.mjs";
 
 const API = "https://api.github.com";
 
@@ -44,9 +44,6 @@ async function listRepos(gh, cfg) {
   const seen = new Set();
   return out.filter((r) => !r.fork && !r.archived && !seen.has(r.full_name) && seen.add(r.full_name));
 }
-
-const TEST = /(^|\/)(test|tests|__tests__|e2e)\/|\.(test|spec)\.[cm]?[jt]sx?$|_test\.(ts|go|py)$|(^|\/)test_[^/]+\.py$/;
-const DOC = /^(docs\/[^/]+\.md|[A-Z_]+\.md)$/;
 
 export async function snapshotRepo(gh, repo, since) {
   const full = repo.full_name;
