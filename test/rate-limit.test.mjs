@@ -12,3 +12,10 @@ test("allows max requests per window, blocks the next, recovers after the window
   assert.equal(checkRateLimit("other", opts(400)).allowed, true, "limits are per IP");
   assert.equal(checkRateLimit("ip", opts(1000)).allowed, true, "a new window starts fresh");
 });
+
+test("expired buckets are swept once the map is large", () => {
+  const store = new Map();
+  for (let i = 0; i < 1000; i++) checkRateLimit(`ip${i}`, { now: 0, windowMs: 1000, store });
+  checkRateLimit("late", { now: 1000, windowMs: 1000, store });
+  assert.deepEqual([...store.keys()], ["late"]);
+});
