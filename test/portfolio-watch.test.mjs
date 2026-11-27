@@ -6,6 +6,7 @@ import {
   compareRepo, planUpdates, patchRegistrySource, renderReport, substantiveCommits, readmeChangeRatio,
 } from "../scripts/portfolio-watch/lib.mjs";
 import { clean } from "../scripts/portfolio-watch/ai.mjs";
+import { makeClient } from "../scripts/portfolio-watch/collect.mjs";
 import { projects } from "../lib/projects.js";
 
 // A frozen two-record registry: tests must not break when real copy changes.
@@ -167,4 +168,18 @@ test("report pins the impact ranking and asks before adding new projects", () =>
   assert.match(md, /@owner — nothing below is on the site/);
   const none = renderReport({ updates: [], unchanged: [], candidates: [] }, { ranking: ["A"], approver: "owner" });
   assert.ok(!none.includes("@owner"), "no ping when there is nothing to approve");
+});
+
+test("GitHub client: missing resources are null, real failures throw", async () => {
+  const realFetch = globalThis.fetch;
+  try {
+    for (const status of [404, 409]) {
+      globalThis.fetch = async () => new Response("", { status });
+      assert.equal(await makeClient().gh("/x", { allowMissing: true }), null);
+    }
+    globalThis.fetch = async () => new Response("", { status: 502 });
+    await assert.rejects(makeClient().gh("/x", { allowMissing: true }), /GitHub 502/);
+  } finally {
+    globalThis.fetch = realFetch;
+  }
 });
