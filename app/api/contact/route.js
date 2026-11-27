@@ -21,7 +21,7 @@ export async function POST(req) {
 
   let payload;
   try {
-    payload = await req.json();
+    payload = (await req.json()) ?? {}; // a JSON `null` body would crash the field reads below
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }
