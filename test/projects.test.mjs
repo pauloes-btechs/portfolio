@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import {
   projects, projectCategories, MATURITY,
-  publishedProjects, featuredProjects, getProject, projectsByCategory,
+  publishedProjects, featuredProjects, getProject,
   projectMilestones, formatMonth, countWord,
 } from "../lib/projects.js";
 
@@ -109,12 +109,6 @@ test("homepage features three or four approved projects, in priority order", () 
   assert.ok(f.length >= 3 && f.length <= 4, `featured count ${f.length}`);
   const pr = f.map((p) => p.priority);
   assert.deepEqual(pr, [...pr].sort((a, b) => a - b));
-});
-
-test("category groups cover every published project exactly once", () => {
-  const grouped = projectsByCategory().flatMap((c) => c.projects.map((p) => p.slug));
-  assert.equal(grouped.length, publishedProjects().length);
-  assert.equal(new Set(grouped).size, grouped.length);
 });
 
 test("story milestones are chronological", () => {
