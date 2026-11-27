@@ -6,7 +6,7 @@ import { TimelineChart } from "../components/Charts";
 import ProjectCard from "../components/ProjectCard";
 import Scramble from "../components/Scramble";
 import Terminal from "../components/Terminal";
-import { site, stats, roles, timeline, credentials, extraWork, portfolio } from "../lib/data";
+import { site, stats, roles, timeline, credentials, extraWork, portfolio, siteCount } from "../lib/data";
 import { featuredProjects, publishedProjects, countWord, maturityLabel } from "../lib/projects";
 
 function RoleCard({ r }) {
@@ -35,7 +35,6 @@ export default function Home() {
   const freelance = extraWork.filter((r) => r.kind === "freelance");
   const builds = featuredProjects();
   const engineeringCount = publishedProjects().length;
-  const siteCount = portfolio.groups.reduce((a, g) => a + g.sites.length, 0);
   const bootLines = [
     { cmd: "boot pauloes.sys --region nyc", ok: "ok", tone: "dim" },
     { cmd: "load enterprise_platforms --years 12", ok: "ok", tone: "dim" },
