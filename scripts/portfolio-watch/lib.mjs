@@ -19,6 +19,10 @@ export const WEIGHTS = {
 
 export const DEFAULT_THRESHOLD = 3;
 
+/** File-path classifiers shared by both snapshot builders (API and local git). */
+export const TEST = /(^|\/)(test|tests|__tests__|e2e)\/|\.(test|spec)\.[cm]?[jt]sx?$|_test\.(ts|go|py)$|(^|\/)test_[^/]+\.py$/;
+export const DOC = /^(docs\/[^/]+\.md|[A-Z_]+\.md)$/;
+
 const BOT = /\[bot\]|dependabot|renovate|github-actions/i;
 const ROUTINE = /^(chore\(deps|build\(deps|bump |chore: bump|merge branch|merge pull request .*dependabot)/i;
 

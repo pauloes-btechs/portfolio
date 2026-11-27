@@ -7,7 +7,7 @@
 //        --since 2026-10-01 --out /tmp/snap.json owner/name=/path/to/clone ...
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
-import { substantiveCommits } from "./lib.mjs";
+import { substantiveCommits, TEST, DOC } from "./lib.mjs";
 
 const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args.splice(i, 2)[1] : null; };
@@ -17,8 +17,6 @@ const out = opt("--out");
 if (!asOf || !out) { console.error("usage: --as-of YYYY-MM-DD [--since YYYY-MM-DD] --out file owner/repo=dir ..."); process.exit(2); }
 
 const git = (dir, ...a) => execFileSync("git", ["-C", dir, ...a], { encoding: "utf8", maxBuffer: 64 << 20 }).trim();
-const TEST = /(^|\/)(test|tests|__tests__|e2e)\/|\.(test|spec)\.[cm]?[jt]sx?$|_test\.(ts|go|py)$|(^|\/)test_[^/]+\.py$/;
-const DOC = /^(docs\/[^/]+\.md|[A-Z_]+\.md)$/;
 
 const repos = {};
 for (const spec of args) {
