@@ -61,6 +61,7 @@ export async function POST(req) {
     if (error) throw new Error(error.message || "Send failed.");
     return Response.json({ ok: true });
   } catch (err) {
+    console.error("contact: send failed", err); // the visitor only sees a generic error
     return Response.json(
       { error: "Couldn't send right now — email me directly instead." },
       { status: 502 }
