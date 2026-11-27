@@ -7,6 +7,7 @@
 //        --since 2026-10-01 --out /tmp/snap.json owner/name=/path/to/clone ...
 import { execFileSync } from "node:child_process";
 import { writeFileSync } from "node:fs";
+import { substantiveCommits } from "./lib.mjs";
 
 const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(n); return i >= 0 ? args.splice(i, 2)[1] : null; };
@@ -41,7 +42,7 @@ for (const spec of args) {
     workflows: paths.filter((p) => p.startsWith(".github/workflows/")).map((p) => p.split("/").pop()).sort(),
     docs: paths.filter((p) => DOC.test(p)).sort(),
     commits: log,
-    lastCommitDate: log.find((c) => !/\[bot\]|dependabot/i.test(c.author))?.date || null,
+    lastCommitDate: substantiveCommits(log)[0]?.date || null,
   };
 }
 writeFileSync(out, JSON.stringify({ collectedAt: `${asOf}T23:59:59Z`, repos }, null, 2));
