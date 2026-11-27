@@ -1,7 +1,7 @@
 // Tests for the contact endpoint's fixed-window rate limiter.
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { checkRateLimit } from "../lib/rate-limit.js";
+import { checkRateLimit, SWEEP_AT } from "../lib/rate-limit.js";
 
 test("allows max requests per window, blocks the next, recovers after the window", () => {
   const store = new Map();
@@ -15,7 +15,7 @@ test("allows max requests per window, blocks the next, recovers after the window
 
 test("expired buckets are swept once the map is large", () => {
   const store = new Map();
-  for (let i = 0; i < 1000; i++) checkRateLimit(`ip${i}`, { now: 0, windowMs: 1000, store });
+  for (let i = 0; i < SWEEP_AT; i++) checkRateLimit(`ip${i}`, { now: 0, windowMs: 1000, store });
   checkRateLimit("late", { now: 1000, windowMs: 1000, store });
   assert.deepEqual([...store.keys()], ["late"]);
 });
