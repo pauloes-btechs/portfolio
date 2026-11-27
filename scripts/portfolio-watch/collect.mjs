@@ -6,11 +6,13 @@
 import { substantiveCommits, TEST, DOC } from "./lib.mjs";
 
 const API = "https://api.github.com";
+// 404: no such file / repo gone since listing; 409: empty repository.
+export const NONE = [404, 409];
 
 export function makeClient(token) {
   let calls = 0;
-  // allowMissing: 404 (no README / Pages) and 409 (empty repository) mean "none", not failure.
-  async function gh(path, { allowMissing = false } = {}) {
+  // missing: statuses that mean "none" for this call rather than a failed run.
+  async function gh(path, { missing = [] } = {}) {
     calls++;
     const res = await fetch(API + path, {
       headers: {
@@ -20,7 +22,7 @@ export function makeClient(token) {
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
     });
-    if (allowMissing && (res.status === 404 || res.status === 409)) return null;
+    if (missing.includes(res.status)) return null;
     if (!res.ok) throw new Error(`GitHub ${res.status} on ${path.replace(/\?.*/, "")}`);
     return res.json();
   }
@@ -58,12 +60,13 @@ export async function snapshotRepo(gh, repo, since) {
   // Any other error fails the run: an empty field stored as the baseline would
   // read as a new release / test suite / README rewrite on the next run.
   const [releases, tags, tree, readme, pages, commits] = await Promise.all([
-    gh(`/repos/${full}/releases?per_page=5`),
-    gh(`/repos/${full}/tags?per_page=5`),
-    gh(`/repos/${full}/git/trees/${encodeURIComponent(branch)}?recursive=1`, { allowMissing: true }),
-    gh(`/repos/${full}/readme`, { allowMissing: true }),
-    gh(`/repos/${full}/pages`, { allowMissing: true }),
-    gh(`/repos/${full}/commits?per_page=100${since ? `&since=${encodeURIComponent(since)}` : ""}`, { allowMissing: true }).then((c) => c || []),
+    gh(`/repos/${full}/releases?per_page=5`, { missing: NONE }).then((r) => r || []),
+    gh(`/repos/${full}/tags?per_page=5`, { missing: NONE }).then((t) => t || []),
+    gh(`/repos/${full}/git/trees/${encodeURIComponent(branch)}?recursive=1`, { missing: NONE }),
+    gh(`/repos/${full}/readme`, { missing: NONE }),
+    // 403: the token may lack Pages read for other repos; that is stable, so it never flaps the baseline
+    gh(`/repos/${full}/pages`, { missing: [...NONE, 403] }),
+    gh(`/repos/${full}/commits?per_page=100${since ? `&since=${encodeURIComponent(since)}` : ""}`, { missing: NONE }).then((c) => c || []),
   ]);
 
   const paths = (tree?.tree || []).filter((n) => n.type === "blob").map((n) => n.path)

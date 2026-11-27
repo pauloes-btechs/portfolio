@@ -6,7 +6,7 @@ import {
   compareRepo, planUpdates, patchRegistrySource, renderReport, substantiveCommits, readmeChangeRatio,
 } from "../scripts/portfolio-watch/lib.mjs";
 import { clean } from "../scripts/portfolio-watch/ai.mjs";
-import { makeClient } from "../scripts/portfolio-watch/collect.mjs";
+import { makeClient, NONE } from "../scripts/portfolio-watch/collect.mjs";
 import { projects } from "../lib/projects.js";
 
 // A frozen two-record registry: tests must not break when real copy changes.
@@ -175,12 +175,12 @@ test("GitHub client: missing resources are null, real failures throw", async () 
   try {
     for (const status of [404, 409]) {
       globalThis.fetch = async () => new Response("", { status });
-      assert.equal(await makeClient().gh("/x", { allowMissing: true }), null);
+      assert.equal(await makeClient().gh("/x", { missing: NONE }), null);
     }
     globalThis.fetch = async () => new Response("", { status: 502 });
-    await assert.rejects(makeClient().gh("/x", { allowMissing: true }), /GitHub 502/);
+    await assert.rejects(makeClient().gh("/x", { missing: NONE }), /GitHub 502/);
     globalThis.fetch = async () => new Response("", { status: 404 });
-    await assert.rejects(makeClient().gh("/x"), /GitHub 404/, "without allowMissing a 404 fails the run");
+    await assert.rejects(makeClient().gh("/x"), /GitHub 404/, "a 404 fails the run unless the call lists it as missing");
   } finally {
     globalThis.fetch = realFetch;
   }
